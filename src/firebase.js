@@ -11,7 +11,8 @@ const config = {
   // Nos emuladores qualquer chave serve; em produção ela vem do .env.
   apiKey: env.VITE_FIREBASE_API_KEY || (usingEmulators ? 'demo-key' : undefined),
   authDomain: env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: env.VITE_FIREBASE_PROJECT_ID || 'demo-carimbo',
+  // Nos emuladores usamos sempre o projeto de demonstração, igual ao do seed.
+  projectId: usingEmulators ? 'demo-carimbo' : env.VITE_FIREBASE_PROJECT_ID,
   storageBucket: env.VITE_FIREBASE_STORAGE_BUCKET,
   messagingSenderId: env.VITE_FIREBASE_MESSAGING_SENDER_ID,
   appId: env.VITE_FIREBASE_APP_ID,

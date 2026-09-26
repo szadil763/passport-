@@ -1,0 +1,74 @@
+[
+  {
+    "id": "portugal",
+    "name": "Portugal",
+    "flag": "🇵🇹",
+    "languages": ["português"],
+    "summary": "Mesmo idioma, grande comunidade brasileira e universidades que aceitam brasileiros por processos próprios, em alguns casos com a nota do ENEM. Muita gente usa Portugal como porta de entrada para a Europa.",
+    "costLevel": 2,
+    "visa": {
+      "name": "Visto de estudo, pedido ao consulado de Portugal no Brasil",
+      "work": "Estudantes podem trabalhar em algumas condições. As regras e os limites mudam: confira na fonte oficial antes de contar com essa renda.",
+      "officialUrl": "https://vistos.mne.gov.pt"
+    },
+    "highlights": [
+      "Cursos em português dispensam teste de proficiência em outro idioma.",
+      "Algumas universidades aceitam a nota do ENEM: confira o edital de cada instituição.",
+      "Depois de chegar, você pode precisar de um registro na imigração portuguesa. Veja os passos no site oficial."
+    ]
+  },
+  {
+    "id": "canada",
+    "name": "Canadá",
+    "flag": "🇨🇦",
+    "languages": ["inglês", "francês"],
+    "summary": "Destino procurado para cursos de idioma, college e universidade. O processo de visto costuma levar tempo e o custo de vida é alto.",
+    "costLevel": 3,
+    "visa": {
+      "name": "Study permit (permissão de estudo)",
+      "work": "Parte dos estudantes pode trabalhar com limite de horas. As regras mudaram nos últimos anos: confira sempre a versão atual.",
+      "officialUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada.html"
+    },
+    "highlights": [
+      "Dá para estudar em inglês ou em francês (Quebec e outras regiões francófonas).",
+      "Colleges oferecem cursos técnicos e práticos, além das universidades.",
+      "O pedido exige comprovar recursos financeiros. Veja o valor atual no site oficial."
+    ]
+  },
+  {
+    "id": "irlanda",
+    "name": "Irlanda",
+    "flag": "🇮🇪",
+    "languages": ["inglês"],
+    "summary": "Destino clássico para intercâmbio de inglês, com opção de graduação e pós. Moradia é cara, principalmente em Dublin.",
+    "costLevel": 3,
+    "visa": {
+      "name": "Permissão de estudante, com registro na imigração irlandesa após a chegada",
+      "work": "Estudantes de cursos elegíveis podem trabalhar meio período, com regras próprias nas férias. Confira quais cursos dão esse direito.",
+      "officialUrl": "https://www.irishimmigration.ie"
+    },
+    "highlights": [
+      "Confira no site oficial se você precisa de visto antes de viajar ou só do registro ao chegar.",
+      "Escolha uma escola que esteja na lista de cursos aceitos pela imigração.",
+      "Cidades como Cork, Galway e Limerick costumam ter moradia mais barata que Dublin."
+    ]
+  },
+  {
+    "id": "alemanha",
+    "name": "Alemanha",
+    "flag": "🇩🇪",
+    "languages": ["alemão", "inglês"],
+    "summary": "Universidades públicas com taxas baixas ou sem mensalidade em muitos cursos, e vários mestrados em inglês. É preciso comprovar recursos para o período de estudo.",
+    "costLevel": 2,
+    "visa": {
+      "name": "Visto nacional para fins de estudo, pedido à representação alemã no Brasil",
+      "work": "Estudantes internacionais podem trabalhar com um limite anual. Confira o limite atual na fonte oficial.",
+      "officialUrl": "https://brasil.diplo.de"
+    },
+    "highlights": [
+      "Muitas universidades públicas não cobram mensalidade, mas podem cobrar taxa semestral.",
+      "A comprovação financeira costuma ser feita com uma conta bloqueada (Sperrkonto). O valor muda todo ano.",
+      "O DAAD oferece bolsas e orientação gratuita para brasileiros."
+    ]
+  }
+]

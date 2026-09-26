@@ -1,0 +1,110 @@
+[
+  {
+    "id": "daad",
+    "title": "DAAD",
+    "url": "https://www.daad.org.br",
+    "category": "bolsas",
+    "free": true,
+    "countries": ["alemanha"],
+    "description": "Serviço Alemão de Intercâmbio Acadêmico. Divulga bolsas de graduação, mestrado, doutorado e pesquisa na Alemanha."
+  },
+  {
+    "id": "chevening",
+    "title": "Chevening",
+    "url": "https://www.chevening.org",
+    "category": "bolsas",
+    "free": true,
+    "countries": [],
+    "description": "Programa de bolsas do governo britânico para mestrado no Reino Unido."
+  },
+  {
+    "id": "fulbright-brasil",
+    "title": "Fulbright Brasil",
+    "url": "https://fulbright.org.br",
+    "category": "bolsas",
+    "free": true,
+    "countries": [],
+    "description": "Bolsas para estudar, pesquisar e lecionar nos Estados Unidos."
+  },
+  {
+    "id": "erasmus-mundus",
+    "title": "Erasmus Mundus",
+    "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en",
+    "category": "bolsas",
+    "free": true,
+    "countries": ["portugal", "irlanda", "alemanha"],
+    "description": "Catálogo de mestrados conjuntos em universidades de vários países europeus, com bolsas."
+  },
+  {
+    "id": "campus-france",
+    "title": "Campus France Brasil",
+    "url": "https://www.bresil.campusfrance.org",
+    "category": "orientacao",
+    "free": true,
+    "countries": [],
+    "description": "Agência oficial do governo francês para quem quer estudar na França: cursos, candidatura e bolsas."
+  },
+  {
+    "id": "educationusa",
+    "title": "EducationUSA",
+    "url": "https://educationusa.state.gov",
+    "category": "orientacao",
+    "free": true,
+    "countries": [],
+    "description": "Rede de orientação do governo americano para quem quer estudar nos Estados Unidos."
+  },
+  {
+    "id": "study-in-portugal",
+    "title": "Study & Research in Portugal",
+    "url": "https://www.study-research.pt",
+    "category": "orientacao",
+    "free": true,
+    "countries": ["portugal"],
+    "description": "Portal oficial com instituições, cursos e informações para estudantes internacionais em Portugal."
+  },
+  {
+    "id": "duolingo",
+    "title": "Duolingo",
+    "url": "https://www.duolingo.com",
+    "category": "idiomas",
+    "free": true,
+    "countries": [],
+    "description": "Prática diária de vocabulário e gramática. Bom para começar um idioma do zero. Tem plano pago opcional."
+  },
+  {
+    "id": "tandem",
+    "title": "Tandem",
+    "url": "https://www.tandem.net",
+    "category": "idiomas",
+    "free": true,
+    "countries": [],
+    "description": "Aplicativo de troca de idiomas: você ensina português e pratica com falantes nativos. Tem plano pago opcional."
+  },
+  {
+    "id": "italki",
+    "title": "italki",
+    "url": "https://www.italki.com",
+    "category": "idiomas",
+    "free": false,
+    "countries": [],
+    "description": "Aulas particulares online com professores de vários idiomas. Você paga por aula."
+  },
+  {
+    "id": "worldpackers",
+    "title": "Worldpackers",
+    "url": "https://www.worldpackers.com",
+    "category": "voluntariado",
+    "free": false,
+    "countries": [],
+    "description": "Plataforma de voluntariado: você troca algumas horas de trabalho por hospedagem. Cobra assinatura anual."
+  },
+  {
+    "id": "afs",
+    "title": "AFS Intercultura Brasil",
+    "url": "https://afs.org.br",
+    "category": "intercambio",
+    "free": false,
+    "countries": [],
+    "description": "Programas de intercâmbio cultural para jovens, com moradia em família anfitriã."
+  }
+]
