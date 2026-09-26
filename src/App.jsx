@@ -4,6 +4,7 @@ import { AuthProvider, useAuth } from './contexts/AuthContext';
 import Layout from './components/Layout';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
+import Roadmap from './pages/Roadmap';
 
 function Placeholder({ title }) {
   return <h1>{title}</h1>;
@@ -28,7 +29,7 @@ function AppRoutes() {
   return (
     <Routes>
       <Route element={<Layout />}>
-        <Route index element={<Placeholder title="Meu caminho" />} />
+        <Route index element={<Roadmap />} />
         <Route path="destinos" element={<Placeholder title="Destinos" />} />
         <Route path="recursos" element={<Placeholder title="Recursos" />} />
         <Route path="perfil" element={<Profile />} />
