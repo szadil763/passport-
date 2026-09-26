@@ -1,0 +1,35 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Conteúdo curado: qualquer pessoa lê, ninguém escreve pelo app.
+    // A escrita acontece só pelo script de seed (firebase-admin ignora estas regras).
+    match /countries/{countryId} {
+      allow read: if true;
+      allow write: if false;
+    }
+    match /resources/{resourceId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // Dados do usuário: só o próprio dono lê e escreve.
+    match /users/{uid} {
+      allow read, delete: if isOwner(uid);
+      allow create, update: if isOwner(uid) && validProfile(request.resource.data);
+    }
+
+    function isOwner(uid) {
+      return request.auth != null && request.auth.uid == uid;
+    }
+
+    // Aceita só os campos do modelo, com os tipos esperados.
+    function validProfile(data) {
+      return data.keys().hasOnly(['goal', 'languages', 'budget', 'roadmap', 'updatedAt'])
+        && (!('goal' in data) || data.goal is string)
+        && (!('languages' in data) || data.languages is list)
+        && (!('budget' in data) || data.budget is string)
+        && (!('roadmap' in data) || data.roadmap is map);
+    }
+  }
+}

@@ -1,0 +1,20 @@
+# Dependências e build
+node_modules/
+dist/
+
+# Segredos: nunca commitar
+.env
+.env.*
+!.env.example
+.firebaserc
+serviceAccount*.json
+
+# Firebase
+.firebase/
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+
+# Sistema
+.DS_Store
+*.local

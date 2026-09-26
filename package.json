@@ -1,0 +1,26 @@
+{
+  "name": "carimbo",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Carimbo: guia para brasileiros que querem aprender idiomas, fazer intercâmbio e estudar fora do Brasil.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "seed": "node scripts/seed.mjs",
+    "emulators": "firebase emulators:start",
+    "deploy": "npm run build && firebase deploy"
+  },
+  "dependencies": {
+    "firebase": "^10.14.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "firebase-admin": "^12.7.0",
+    "vite": "^5.4.11"
+  }
+}
