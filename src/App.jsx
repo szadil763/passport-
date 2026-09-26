@@ -1,4 +1,18 @@
 import { firebaseConfigured } from './firebase';
+import { AuthProvider, useAuth } from './contexts/AuthContext';
+import Login from './pages/Login';
+
+function Routes() {
+  const { user, loading, logout } = useAuth();
+  if (loading) return <p className="status" role="status">Carregando…</p>;
+  if (!user) return <Login />;
+  return (
+    <main className="status">
+      <h1>Olá!</h1>
+      <button className="btn" onClick={logout}>Sair</button>
+    </main>
+  );
+}
 
 export default function App() {
   if (!firebaseConfigured) {
@@ -9,5 +23,9 @@ export default function App() {
       </main>
     );
   }
-  return <main className="status"><h1>Carimbo</h1></main>;
+  return (
+    <AuthProvider>
+      <Routes />
+    </AuthProvider>
+  );
 }
