@@ -5,25 +5,39 @@
  *   1. Console Firebase > Configurações do projeto > Contas de serviço >
  *      "Gerar nova chave privada". Salve o arquivo como serviceAccount.json
  *      na raiz do projeto (ele já está no .gitignore: nunca commite).
- *   2. Rode:
- *        GOOGLE_APPLICATION_CREDENTIALS=./serviceAccount.json npm run seed
+ *   2. Rode:  npm run seed
+ *      (o script acha o serviceAccount.json sozinho; se preferir outro caminho,
+ *      defina a variável GOOGLE_APPLICATION_CREDENTIALS)
  *
  * Emulador local (com `npm run emulators` rodando em outro terminal):
  *        npm run seed:emulador
  *
  * O script é idempotente: rodar de novo sobrescreve os mesmos documentos.
  */
+import { existsSync } from 'node:fs';
 import { readFile } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
 import { initializeApp, applicationDefault } from 'firebase-admin/app';
 import { getFirestore, FieldValue } from 'firebase-admin/firestore';
 
+// --emulador liga o modo emulador sem precisar de variável de ambiente (funciona no Windows).
+if (process.argv.includes('--emulador') && !process.env.FIRESTORE_EMULATOR_HOST) {
+  process.env.FIRESTORE_EMULATOR_HOST = '127.0.0.1:8080';
+}
 const emulatorHost = process.env.FIRESTORE_EMULATOR_HOST;
+
+// Sem variável definida, procura o serviceAccount.json na raiz do projeto.
+const defaultKey = fileURLToPath(new URL('../serviceAccount.json', import.meta.url));
+if (!emulatorHost && !process.env.GOOGLE_APPLICATION_CREDENTIALS && existsSync(defaultKey)) {
+  process.env.GOOGLE_APPLICATION_CREDENTIALS = defaultKey;
+}
 
 if (!emulatorHost && !process.env.GOOGLE_APPLICATION_CREDENTIALS) {
   console.error(
     'Faltam as credenciais.\n' +
-      '• Para o Firebase de verdade: GOOGLE_APPLICATION_CREDENTIALS=./serviceAccount.json npm run seed\n' +
-      '• Para o emulador: FIRESTORE_EMULATOR_HOST=127.0.0.1:8080 npm run seed'
+      '• Para o Firebase de verdade: salve a chave da conta de serviço como serviceAccount.json\n' +
+      '  na raiz do projeto e rode "npm run seed" (passo a passo no README).\n' +
+      '• Para o emulador: rode "npm run emulators" em um terminal e "npm run seed:emulador" em outro.'
   );
   process.exit(1);
 }

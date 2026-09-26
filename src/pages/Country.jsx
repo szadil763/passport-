@@ -71,7 +71,7 @@ export default function Country() {
 
       {related.length > 0 && (
         <section aria-labelledby="titulo-links">
-          <h2 id="titulo-links">Links para quem vai para {country.name}</h2>
+          <h2 id="titulo-links">Links úteis para {country.name}</h2>
           <ul className="resource-list">
             {related.map((r) => (
               <li key={r.id}>

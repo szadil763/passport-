@@ -92,6 +92,7 @@ code { background: var(--surface); padding: 0.1rem 0.35rem; border-radius: 4px; 
 .muted { color: var(--muted); }
 .small { font-size: 0.9rem; }
 .stack { display: grid; gap: 1rem; }
+.stack > p { margin: 0; }
 .status { padding: 2rem 1rem; text-align: center; color: var(--muted); }
 .status h1 { color: var(--ink); }
 .error { color: var(--danger); font-weight: 700; }
