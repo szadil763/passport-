@@ -7,10 +7,7 @@ import Profile from './pages/Profile';
 import Roadmap from './pages/Roadmap';
 import Destinations from './pages/Destinations';
 import Country from './pages/Country';
-
-function Placeholder({ title }) {
-  return <h1>{title}</h1>;
-}
+import Resources from './pages/Resources';
 
 function AppRoutes() {
   const { user, profile, profileError, loading } = useAuth();
@@ -34,7 +31,7 @@ function AppRoutes() {
         <Route index element={<Roadmap />} />
         <Route path="destinos" element={<Destinations />} />
         <Route path="destinos/:id" element={<Country />} />
-        <Route path="recursos" element={<Placeholder title="Recursos" />} />
+        <Route path="recursos" element={<Resources />} />
         <Route path="perfil" element={<Profile />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
