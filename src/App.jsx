@@ -5,6 +5,8 @@ import Layout from './components/Layout';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Roadmap from './pages/Roadmap';
+import Destinations from './pages/Destinations';
+import Country from './pages/Country';
 
 function Placeholder({ title }) {
   return <h1>{title}</h1>;
@@ -30,7 +32,8 @@ function AppRoutes() {
     <Routes>
       <Route element={<Layout />}>
         <Route index element={<Roadmap />} />
-        <Route path="destinos" element={<Placeholder title="Destinos" />} />
+        <Route path="destinos" element={<Destinations />} />
+        <Route path="destinos/:id" element={<Country />} />
         <Route path="recursos" element={<Placeholder title="Recursos" />} />
         <Route path="perfil" element={<Profile />} />
         <Route path="*" element={<Navigate to="/" replace />} />
