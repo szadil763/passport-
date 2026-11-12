@@ -45,6 +45,10 @@ export default function Layout() {
 
       <main id="conteudo" className="page" ref={mainRef} tabIndex={-1}>
         <Outlet />
+        <footer className="site-footer">
+          <p>Feito para alunos e para quem quer expandir o conhecimento e as fronteiras.</p>
+          <p><Link to="/sobre">Sobre e créditos</Link></p>
+        </footer>
       </main>
 
       <nav className="tabbar" aria-label="Navegação principal">

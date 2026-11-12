@@ -20,6 +20,8 @@ export function AuthProvider({ children }) {
   const [user, setUser] = useState(undefined);
   const [profile, setProfile] = useState(undefined);
   const [profileError, setProfileError] = useState(null);
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [adminChecked, setAdminChecked] = useState(false);
 
   useEffect(() => onAuthStateChanged(auth, (u) => setUser(u ?? null)), []);
 
@@ -41,11 +43,31 @@ export function AuthProvider({ children }) {
     );
   }, [user]);
 
+  // Administrador: existe um documento admins/{uid}? A regra só deixa a pessoa ler o próprio.
+  useEffect(() => {
+    setIsAdmin(false);
+    setAdminChecked(false);
+    if (!user) return undefined;
+    return onSnapshot(
+      doc(db, 'admins', user.uid),
+      (snap) => {
+        setIsAdmin(snap.exists());
+        setAdminChecked(true);
+      },
+      () => {
+        setIsAdmin(false);
+        setAdminChecked(true);
+      }
+    );
+  }, [user]);
+
   const value = useMemo(
     () => ({
       user,
       profile,
       profileError,
+      isAdmin,
+      adminChecked,
       loading: user === undefined || (Boolean(user) && profile === undefined),
 
       async loginWithGoogle() {
@@ -67,7 +89,7 @@ export function AuthProvider({ children }) {
       saveProfile: (data) =>
         setDoc(doc(db, 'users', user.uid), { ...data, updatedAt: serverTimestamp() }, { merge: true }),
     }),
-    [user, profile, profileError]
+    [user, profile, profileError, isAdmin, adminChecked]
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

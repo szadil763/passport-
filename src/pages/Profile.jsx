@@ -9,7 +9,7 @@ import ChipGroup from '../components/ChipGroup';
 export default function Profile({ onboarding = false }) {
   usePageTitle(onboarding ? 'Seu perfil' : 'Perfil');
   const navigate = useNavigate();
-  const { user, profile, saveProfile } = useAuth();
+  const { user, profile, saveProfile, isAdmin } = useAuth();
   const [goal, setGoal] = useState(profile?.goal ?? '');
   const [languages, setLanguages] = useState(profile?.languages ?? []);
   const [budget, setBudget] = useState(profile?.budget ?? '');
@@ -49,6 +49,8 @@ export default function Profile({ onboarding = false }) {
             <li><Link to="/caminho"><strong>Meu caminho</strong><span>Etapas e carimbos</span></Link></li>
             <li><Link to="/favoritos"><strong>Favoritos</strong><span>Países, cidades, cursos e editais</span></Link></li>
             <li><Link to="/orcamento"><strong>Orçamento</strong><span>Some os custos do intercâmbio</span></Link></li>
+            {isAdmin && <li><Link to="/admin"><strong>Painel admin</strong><span>Edite países, cursos, editais e mais</span></Link></li>}
+            <li><Link to="/sobre"><strong>Sobre e créditos</strong><span>Para quem é o Carimbo e quem fez</span></Link></li>
           </ul>
         )}
       </div>

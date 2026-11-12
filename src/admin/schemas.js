@@ -1,0 +1,128 @@
+// Campos de cada coleção no painel admin. "source: countries" preenche a lista com os países cadastrados.
+import {
+  CATEGORIES,
+  CERTIFICATES,
+  COURSE_KINDS,
+  GOALS,
+  LANGUAGES,
+  LEVELS,
+  PRICE_TYPES,
+} from '../data/options';
+
+const fromMap = (map) => Object.entries(map).map(([id, label]) => ({ id, label }));
+
+export const COLLECTIONS = {
+  calls: {
+    label: 'Editais e bolsas',
+    singular: 'edital',
+    titleKey: 'title',
+    slugFrom: 'title',
+    fields: [
+      { key: 'title', label: 'Nome do edital', type: 'text', required: true },
+      { key: 'organization', label: 'Instituição que oferece', type: 'text', required: true },
+      { key: 'officialUrl', label: 'Site oficial', type: 'url', required: true },
+      { key: 'description', label: 'Descrição', type: 'textarea', required: true },
+      { key: 'countries', label: 'Países de destino', type: 'chips', source: 'countries', hint: 'Deixe vazio se vale para vários países.' },
+      { key: 'levels', label: 'Níveis', type: 'chips', options: LEVELS },
+      { key: 'opensAt', label: 'Abertura das inscrições', type: 'date', hint: 'Preencha só depois de confirmar no site oficial.' },
+      { key: 'closesAt', label: 'Fim das inscrições', type: 'date', hint: 'Com a data, o app mostra a contagem e cria o lembrete.' },
+      { key: 'datesNote', label: 'Aviso sobre as datas', type: 'text', hint: 'Ex.: As datas mudam a cada ciclo. Confirme no site oficial.' },
+    ],
+  },
+  courses: {
+    label: 'Cursos online',
+    singular: 'curso',
+    titleKey: 'title',
+    slugFrom: 'title',
+    fields: [
+      { key: 'title', label: 'Nome do curso', type: 'text', required: true },
+      { key: 'provider', label: 'Instituição ou plataforma', type: 'text', required: true },
+      { key: 'officialUrl', label: 'Site oficial', type: 'url', required: true },
+      { key: 'description', label: 'Descrição', type: 'textarea', required: true },
+      { key: 'kind', label: 'Tipo', type: 'select', options: COURSE_KINDS, required: true },
+      { key: 'priceType', label: 'Preço', type: 'select', options: PRICE_TYPES, required: true },
+      { key: 'certificate', label: 'Certificado', type: 'select', options: fromMap(CERTIFICATES), required: true },
+      { key: 'languages', label: 'Idiomas do curso', type: 'chips', options: LANGUAGES },
+      { key: 'country', label: 'País', type: 'select', source: 'countries', allowEmpty: true, nullable: true },
+    ],
+  },
+  resources: {
+    label: 'Recursos',
+    singular: 'recurso',
+    titleKey: 'title',
+    slugFrom: 'title',
+    fields: [
+      { key: 'title', label: 'Nome', type: 'text', required: true },
+      { key: 'url', label: 'Endereço do site', type: 'url', required: true },
+      { key: 'description', label: 'Descrição', type: 'textarea', required: true },
+      { key: 'category', label: 'Categoria', type: 'select', options: CATEGORIES, required: true },
+      { key: 'free', label: 'É gratuito', type: 'bool' },
+      { key: 'countries', label: 'Países', type: 'chips', source: 'countries', hint: 'Deixe vazio se vale para todos.' },
+    ],
+  },
+  places: {
+    label: 'Lugares (cidades)',
+    singular: 'lugar',
+    titleKey: 'name',
+    slugFrom: 'name',
+    fields: [
+      { key: 'name', label: 'Nome da cidade', type: 'text', required: true },
+      { key: 'countryId', label: 'País', type: 'select', source: 'countries', required: true },
+      { key: 'summary', label: 'Resumo', type: 'textarea', required: true },
+      { key: 'costNote', label: 'Custo de vida (texto, sem valores)', type: 'text' },
+      { key: 'goals', label: 'Bom para', type: 'chips', options: GOALS },
+      { key: 'study', label: 'Dicas para estudar', type: 'lines', hint: 'Uma dica por linha.' },
+      { key: 'work', label: 'Dicas para trabalhar', type: 'lines', hint: 'Uma dica por linha.' },
+      { key: 'living', label: 'Dicas para morar', type: 'lines', hint: 'Uma dica por linha.' },
+      {
+        key: 'universities',
+        label: 'Universidades',
+        type: 'json',
+        hint: 'Lista no formato [{"name": "Nome", "url": "https://..."}]',
+      },
+    ],
+  },
+  countries: {
+    label: 'Países',
+    singular: 'país',
+    titleKey: 'name',
+    slugFrom: 'name',
+    fields: [
+      { key: 'name', label: 'Nome do país', type: 'text', required: true },
+      { key: 'flag', label: 'Bandeira (emoji)', type: 'text', required: true },
+      { key: 'languages', label: 'Idiomas', type: 'chips', options: LANGUAGES, required: true },
+      { key: 'summary', label: 'Resumo', type: 'textarea', required: true },
+      {
+        key: 'costLevel',
+        label: 'Nível de custo',
+        type: 'select',
+        required: true,
+        numeric: true,
+        options: [
+          { id: '1', label: 'Baixo' },
+          { id: '2', label: 'Médio' },
+          { id: '3', label: 'Alto' },
+        ],
+      },
+      { key: 'visa.name', label: 'Visto: nome', type: 'text', required: true },
+      { key: 'visa.work', label: 'Visto: trabalho', type: 'textarea', required: true },
+      { key: 'visa.officialUrl', label: 'Visto: site oficial do governo', type: 'url', required: true },
+      { key: 'highlights', label: 'Bom saber', type: 'lines', hint: 'Um item por linha.' },
+      { key: 'work.students', label: 'Trabalho durante os estudos', type: 'textarea' },
+      {
+        key: 'work.programs',
+        label: 'Programas de trabalho',
+        type: 'json',
+        hint: 'Lista no formato [{"name": "Nome", "description": "Texto", "url": "https://..."}]. A url é opcional.',
+      },
+      {
+        key: 'work.jobSites',
+        label: 'Sites de vagas',
+        type: 'json',
+        hint: 'Lista no formato [{"title": "Nome", "url": "https://..."}]',
+      },
+    ],
+  },
+};
+
+export const COLLECTION_ORDER = ['calls', 'courses', 'resources', 'places', 'countries'];
