@@ -63,3 +63,17 @@ export const PRICE_TYPES = [
   { id: 'pago', label: 'Pago' },
 ];
 export const CERTIFICATES = { pago: 'Certificado pago', gratuito: 'Certificado gratuito', varia: 'Certificado: confira no site', nenhum: 'Sem certificado' };
+
+// Canais do YouTube.
+export const CHANNEL_TOPICS = [
+  { id: 'bolsas', label: 'Bolsas' },
+  { id: 'intercambio', label: 'Intercâmbio' },
+  { id: 'trabalho', label: 'Trabalho' },
+  { id: 'voluntariado', label: 'Voluntariado' },
+  { id: 'vida', label: 'Vida no exterior' },
+];
+export const CHANNEL_KINDS = [
+  { id: 'criador', label: 'Criador de conteúdo' },
+  { id: 'instituicao', label: 'Instituição' },
+  { id: 'agencia', label: 'Agência (vende pacotes)' },
+];

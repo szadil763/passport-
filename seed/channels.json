@@ -1,0 +1,161 @@
+[
+  {
+    "id": "matheus-tomoto",
+    "name": "Matheus Tomoto",
+    "url": "https://www.youtube.com/channel/UC4cqOuy3rJ_V2_cEc_SzB2w",
+    "kind": "criador",
+    "topics": [
+      "bolsas",
+      "intercambio",
+      "trabalho"
+    ],
+    "countries": [],
+    "description": "Como estudar em boas universidades do exterior sem pagar agência: intercâmbios, bolsas, trabalho fora e planejamento financeiro.",
+    "note": "Também vende mentoria paga (Escola M60). O conteúdo gratuito é útil, mas compare antes de pagar por qualquer programa."
+  },
+  {
+    "id": "partiu-intercambio",
+    "name": "Partiu Intercâmbio",
+    "url": "https://www.youtube.com/c/partiuintercambio",
+    "kind": "criador",
+    "topics": [
+      "bolsas",
+      "intercambio",
+      "trabalho"
+    ],
+    "countries": [],
+    "description": "Bolsas para graduação, mestrado e doutorado, summer job, intercâmbio gratuito e guias por país, como Alemanha e Nova Zelândia.",
+    "note": "Oferece mentoria paga. Confira prazos e regras no site oficial de cada bolsa."
+  },
+  {
+    "id": "estudar-fora",
+    "name": "Estudar Fora",
+    "url": "https://www.youtube.com/user/estudarforabr",
+    "kind": "instituicao",
+    "topics": [
+      "bolsas",
+      "intercambio"
+    ],
+    "countries": [],
+    "description": "Projeto de conteúdo da Fundação Estudar sobre tudo que envolve estudar fora, com curadoria de bolsas e playlists sobre mestrado no exterior."
+  },
+  {
+    "id": "e-dublin-tv",
+    "name": "E-Dublin TV",
+    "url": "https://www.youtube.com/channel/UC7FrM5bUoYc-4hn4qIVKzyg",
+    "kind": "criador",
+    "topics": [
+      "vida",
+      "trabalho",
+      "voluntariado",
+      "intercambio"
+    ],
+    "countries": [
+      "irlanda"
+    ],
+    "description": "Vida, estudo e trabalho na Irlanda, com vídeos sobre vistos, moradia, empregos e trabalho voluntário no país."
+  },
+  {
+    "id": "estrada-livre",
+    "name": "Estrada Livre",
+    "url": "https://www.youtube.com/c/EstradaLivretv",
+    "kind": "criador",
+    "topics": [
+      "vida",
+      "trabalho"
+    ],
+    "countries": [
+      "irlanda"
+    ],
+    "description": "Dicas e inspiração para quem quer morar no exterior, com muitos vídeos sobre a vida e o trabalho na Irlanda."
+  },
+  {
+    "id": "euro-dicas",
+    "name": "Euro Dicas",
+    "url": "https://www.youtube.com/eurodicas",
+    "kind": "criador",
+    "topics": [
+      "vida",
+      "intercambio"
+    ],
+    "countries": [
+      "portugal",
+      "irlanda",
+      "alemanha",
+      "espanha",
+      "franca",
+      "italia"
+    ],
+    "description": "Lives e vídeos sobre mudar para a Europa: como escolher o país e a cidade, imigração legal e o que fazer antes de ir.",
+    "note": "O canal também divulga serviços pagos do site Euro Dicas."
+  },
+  {
+    "id": "europar",
+    "name": "EuroPar",
+    "url": "https://www.youtube.com/c/EuroPar",
+    "kind": "criador",
+    "topics": [
+      "vida",
+      "trabalho"
+    ],
+    "countries": [
+      "portugal"
+    ],
+    "description": "Casal de brasileiros que mora em Portugal e fala de documentos, custo de vida e trabalho."
+  },
+  {
+    "id": "alumni-canada-brasil",
+    "name": "Alumni Canada-Brasil",
+    "url": "https://www.youtube.com/user/alumnicanadabrasil",
+    "kind": "instituicao",
+    "topics": [
+      "intercambio",
+      "trabalho"
+    ],
+    "countries": [
+      "canada"
+    ],
+    "description": "Organização sem fins lucrativos de ex-estudantes e profissionais, com palestras e mentorias para quem quer estudar e trabalhar no Canadá."
+  },
+  {
+    "id": "do-brasil-ao-canada",
+    "name": "Do Brasil ao Canadá",
+    "url": "https://www.youtube.com/@DoBrasilaoCanada",
+    "kind": "criador",
+    "topics": [
+      "trabalho"
+    ],
+    "countries": [
+      "canada"
+    ],
+    "description": "Conteúdo para quem quer conseguir uma oferta de emprego no Canadá ainda no Brasil: currículo canadense, entrevistas e LMIA."
+  },
+  {
+    "id": "bom-dia-canada",
+    "name": "Bom Dia, Canada!",
+    "url": "https://www.youtube.com/c/BomDiaCanada",
+    "kind": "criador",
+    "topics": [
+      "vida",
+      "trabalho"
+    ],
+    "countries": [
+      "canada"
+    ],
+    "description": "A vida de brasileiros no Canadá: trabalho, estudo, turismo e curiosidades."
+  },
+  {
+    "id": "stb-intercambio",
+    "name": "Canal do Intercâmbio STB",
+    "url": "https://www.youtube.com/@STBBrasil",
+    "kind": "agencia",
+    "topics": [
+      "intercambio",
+      "voluntariado",
+      "trabalho"
+    ],
+    "countries": [],
+    "description": "Vídeos sobre estudo e trabalho no exterior, voluntariado e universidades.",
+    "note": "É o canal de uma agência de intercâmbio, que vende pacotes. Compare preços e confirme as regras nos sites oficiais."
+  }
+]

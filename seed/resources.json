@@ -404,5 +404,102 @@
     "free": true,
     "countries": [],
     "description": "Como emitir ou renovar o passaporte brasileiro. Comece cedo: ele é pedido em quase todo processo."
+  },
+  {
+    "id": "wwoof",
+    "title": "WWOOF",
+    "url": "https://wwoof.net",
+    "category": "voluntariado",
+    "free": false,
+    "countries": [],
+    "description": "Rede de fazendas orgânicas que trocam trabalho por hospedagem e comida. Cada país tem a sua organização, que cobra uma taxa de cadastro."
+  },
+  {
+    "id": "solidarity-corps",
+    "title": "Corpo Europeu de Solidariedade",
+    "url": "https://youth.europa.eu/solidarity_en",
+    "category": "voluntariado",
+    "free": true,
+    "countries": [
+      "portugal",
+      "irlanda",
+      "alemanha",
+      "espanha",
+      "franca",
+      "italia"
+    ],
+    "description": "Programa da União Europeia de voluntariado e projetos solidários. Confira em cada projeto se pessoas de fora da União Europeia podem participar."
+  },
+  {
+    "id": "unv",
+    "title": "Voluntários das Nações Unidas",
+    "url": "https://www.unv.org",
+    "category": "voluntariado",
+    "free": true,
+    "countries": [],
+    "description": "Programa de voluntariado da ONU. Veja as vagas abertas e os requisitos de cada uma."
+  },
+  {
+    "id": "habitat",
+    "title": "Habitat for Humanity",
+    "url": "https://www.habitat.org",
+    "category": "voluntariado",
+    "free": false,
+    "countries": [],
+    "description": "ONG que constrói moradias e tem viagens de voluntariado em vários países. Em geral, o voluntário paga o custo da viagem."
+  },
+  {
+    "id": "aiesec",
+    "title": "AIESEC",
+    "url": "https://aiesec.org.br",
+    "category": "voluntariado",
+    "free": false,
+    "countries": [],
+    "description": "Organização de jovens que oferece voluntariado e estágio no exterior. Costuma cobrar taxas: confira antes de se inscrever."
+  },
+  {
+    "id": "rotary-youth",
+    "title": "Rotary: intercâmbio de jovens",
+    "url": "https://www.rotary.org",
+    "category": "intercambio",
+    "free": false,
+    "countries": [],
+    "description": "O Rotary mantém programas de intercâmbio e de paz. Procure o clube Rotary da sua cidade para saber como participar."
+  },
+  {
+    "id": "scholars4dev",
+    "title": "Scholars4Dev",
+    "url": "https://www.scholars4dev.com",
+    "category": "bolsas",
+    "free": true,
+    "countries": [],
+    "description": "Lista de bolsas de estudo do mundo todo, por país e por nível. Confirme sempre no site de cada bolsa."
+  },
+  {
+    "id": "mastersportal",
+    "title": "Mastersportal",
+    "url": "https://www.mastersportal.com",
+    "category": "orientacao",
+    "free": true,
+    "countries": [],
+    "description": "Busca de mestrados no mundo, com filtros por país, área e bolsas."
+  },
+  {
+    "id": "findaphd",
+    "title": "FindAPhD",
+    "url": "https://www.findaphd.com",
+    "category": "bolsas",
+    "free": true,
+    "countries": [],
+    "description": "Busca de vagas de doutorado, muitas com bolsa, em universidades de vários países."
+  },
+  {
+    "id": "scholarshipportal",
+    "title": "ScholarshipPortal",
+    "url": "https://www.scholarshipportal.com",
+    "category": "bolsas",
+    "free": true,
+    "countries": [],
+    "description": "Reúne bolsas de estudo para graduação, mestrado e doutorado em vários países."
   }
 ]

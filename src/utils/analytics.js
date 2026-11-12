@@ -8,6 +8,7 @@ export const SECTIONS = [
   { field: 's_lugares', label: 'Lugares' },
   { field: 's_cursos', label: 'Cursos online' },
   { field: 's_editais', label: 'Editais e bolsas' },
+  { field: 's_canais', label: 'Canais do YouTube' },
   { field: 's_recursos', label: 'Recursos' },
   { field: 's_sobre', label: 'Sobre e créditos' },
   { field: 's_conta', label: 'Conta (caminho, perfil, favoritos)' },
@@ -29,6 +30,8 @@ export function sectionOf(pathname = '/') {
       return 's_cursos';
     case 'editais':
       return 's_editais';
+    case 'canais':
+      return 's_canais';
     case 'recursos':
       return 's_recursos';
     case 'sobre':

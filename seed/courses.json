@@ -306,5 +306,131 @@
     "certificate": "pago",
     "officialUrl": "https://www.fernuni-hagen.de",
     "description": "Universidade alemã de ensino a distância. A maioria dos cursos é em alemão."
+  },
+  {
+    "id": "alison",
+    "title": "Alison",
+    "provider": "Alison",
+    "kind": "universidade",
+    "country": "irlanda",
+    "languages": [
+      "inglês"
+    ],
+    "priceType": "misto",
+    "certificate": "pago",
+    "officialUrl": "https://alison.com",
+    "description": "Plataforma irlandesa de cursos online. Dá para estudar de graça, e o certificado costuma ser pago."
+  },
+  {
+    "id": "class-central",
+    "title": "Class Central",
+    "provider": "Class Central",
+    "kind": "universidade",
+    "country": null,
+    "languages": [
+      "inglês"
+    ],
+    "priceType": "gratuito",
+    "certificate": "varia",
+    "officialUrl": "https://www.classcentral.com",
+    "description": "Catálogo que reúne cursos online de várias plataformas e universidades, para você comparar e escolher."
+  },
+  {
+    "id": "open-yale",
+    "title": "Open Yale Courses",
+    "provider": "Yale",
+    "kind": "universidade",
+    "country": "estados-unidos",
+    "languages": [
+      "inglês"
+    ],
+    "priceType": "gratuito",
+    "certificate": "nenhum",
+    "officialUrl": "https://oyc.yale.edu",
+    "description": "Aulas gravadas de disciplinas de Yale, de graça e abertas a qualquer pessoa."
+  },
+  {
+    "id": "delft-online",
+    "title": "TU Delft Online",
+    "provider": "TU Delft",
+    "kind": "universidade",
+    "country": null,
+    "languages": [
+      "inglês"
+    ],
+    "priceType": "misto",
+    "certificate": "varia",
+    "officialUrl": "https://online-learning.tudelft.nl",
+    "description": "Cursos online da Universidade de Tecnologia de Delft, nos Países Baixos. Veja o que é gratuito em cada curso."
+  },
+  {
+    "id": "fun-mooc",
+    "title": "FUN MOOC",
+    "provider": "France Université Numérique",
+    "kind": "universidade",
+    "country": "franca",
+    "languages": [
+      "francês"
+    ],
+    "priceType": "misto",
+    "certificate": "varia",
+    "officialUrl": "https://www.fun-mooc.fr",
+    "description": "Cursos online de universidades francesas, em francês. Bom para treinar o idioma e conhecer o ensino superior francês."
+  },
+  {
+    "id": "rfi-savoirs",
+    "title": "RFI Savoirs",
+    "provider": "RFI",
+    "kind": "idioma",
+    "country": "franca",
+    "languages": [
+      "francês"
+    ],
+    "priceType": "gratuito",
+    "certificate": "nenhum",
+    "officialUrl": "https://savoirs.rfi.fr",
+    "description": "Atividades e materiais para aprender francês, da rádio internacional francesa, de graça."
+  },
+  {
+    "id": "nhk-japones",
+    "title": "Easy Japanese",
+    "provider": "NHK World",
+    "kind": "idioma",
+    "country": "japao",
+    "languages": [
+      "japonês"
+    ],
+    "priceType": "gratuito",
+    "certificate": "nenhum",
+    "officialUrl": "https://www3.nhk.or.jp/nhkworld/en/learnjapanese/",
+    "description": "Lições curtas de japonês para iniciantes, da emissora pública do Japão, de graça."
+  },
+  {
+    "id": "open-universities-australia",
+    "title": "Open Universities Australia",
+    "provider": "Open Universities Australia",
+    "kind": "diploma",
+    "country": "australia",
+    "languages": [
+      "inglês"
+    ],
+    "priceType": "pago",
+    "certificate": "pago",
+    "officialUrl": "https://www.open.edu.au",
+    "description": "Reúne cursos de graduação e pós de universidades australianas para estudar online."
+  },
+  {
+    "id": "athabasca",
+    "title": "Athabasca University",
+    "provider": "Athabasca University",
+    "kind": "diploma",
+    "country": "canada",
+    "languages": [
+      "inglês"
+    ],
+    "priceType": "pago",
+    "certificate": "pago",
+    "officialUrl": "https://www.athabascau.ca",
+    "description": "Universidade canadense de ensino a distância, com graduação e pós online."
   }
 ]

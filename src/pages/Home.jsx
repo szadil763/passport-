@@ -25,12 +25,14 @@ function Landing() {
   const courses = useCollection('courses');
   const calls = useCollection('calls');
   const resources = useCollection('resources');
+  const channels = useCollection('channels');
 
   const stats = [
     ['destinos', countries.data.length],
     ['cidades', places.data.length],
     ['cursos online', courses.data.length],
     ['editais', calls.data.length],
+    ['canais', channels.data.length],
     ['recursos', resources.data.length],
   ].filter(([, n]) => n > 0);
 

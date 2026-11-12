@@ -180,5 +180,204 @@
     "opensAt": null,
     "closesAt": null,
     "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
+  },
+  {
+    "id": "rotary-peace",
+    "title": "Rotary Peace Fellowships",
+    "organization": "Rotary International",
+    "countries": [],
+    "levels": [
+      "pos-graduacao"
+    ],
+    "officialUrl": "https://www.rotary.org",
+    "description": "Bolsas para mestrado e certificado em estudos de paz e desenvolvimento, em universidades parceiras do Rotary.",
+    "opensAt": null,
+    "closesAt": null,
+    "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
+  },
+  {
+    "id": "rhodes",
+    "title": "Rhodes Scholarship",
+    "organization": "Rhodes Trust",
+    "countries": [
+      "reino-unido"
+    ],
+    "levels": [
+      "pos-graduacao"
+    ],
+    "officialUrl": "https://www.rhodeshouse.ox.ac.uk",
+    "description": "Bolsas para estudar na Universidade de Oxford. A seleção é feita por país: confira se há processo aberto para brasileiros.",
+    "opensAt": null,
+    "closesAt": null,
+    "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
+  },
+  {
+    "id": "knight-hennessy",
+    "title": "Knight-Hennessy Scholars",
+    "organization": "Universidade de Stanford",
+    "countries": [
+      "estados-unidos"
+    ],
+    "levels": [
+      "pos-graduacao"
+    ],
+    "officialUrl": "https://knight-hennessy.stanford.edu",
+    "description": "Bolsas para pós-graduação em Stanford, abertas a estudantes de vários países.",
+    "opensAt": null,
+    "closesAt": null,
+    "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
+  },
+  {
+    "id": "yenching",
+    "title": "Yenching Academy",
+    "organization": "Universidade de Pequim",
+    "countries": [],
+    "levels": [
+      "pos-graduacao"
+    ],
+    "officialUrl": "https://yenchingacademy.pku.edu.cn",
+    "description": "Mestrado na Universidade de Pequim, na China, com bolsas para estudantes internacionais.",
+    "opensAt": null,
+    "closesAt": null,
+    "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
+  },
+  {
+    "id": "csc-china",
+    "title": "Chinese Government Scholarship",
+    "organization": "Governo da China",
+    "countries": [],
+    "levels": [
+      "graduacao",
+      "pos-graduacao",
+      "pesquisa"
+    ],
+    "officialUrl": "https://www.campuschina.org",
+    "description": "Bolsas do governo chinês para estudar na China. Confira os programas e os requisitos atuais.",
+    "opensAt": null,
+    "closesAt": null,
+    "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
+  },
+  {
+    "id": "gks-korea",
+    "title": "Global Korea Scholarship",
+    "organization": "Governo da Coreia do Sul",
+    "countries": [],
+    "levels": [
+      "graduacao",
+      "pos-graduacao"
+    ],
+    "officialUrl": "https://www.studyinkorea.go.kr",
+    "description": "Bolsas do governo sul-coreano para estudar na Coreia do Sul. Veja os programas abertos.",
+    "opensAt": null,
+    "closesAt": null,
+    "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
+  },
+  {
+    "id": "turkiye-burslari",
+    "title": "Türkiye Bursları",
+    "organization": "Governo da Turquia",
+    "countries": [],
+    "levels": [
+      "graduacao",
+      "pos-graduacao",
+      "pesquisa"
+    ],
+    "officialUrl": "https://turkiyeburslari.gov.tr",
+    "description": "Bolsas do governo turco para estudantes internacionais. Confira as categorias e os requisitos.",
+    "opensAt": null,
+    "closesAt": null,
+    "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
+  },
+  {
+    "id": "holland-scholarship",
+    "title": "Holland Scholarship",
+    "organization": "Governo dos Países Baixos",
+    "countries": [],
+    "levels": [
+      "graduacao",
+      "pos-graduacao"
+    ],
+    "officialUrl": "https://www.studyinnl.org",
+    "description": "Bolsa para estudantes de fora do Espaço Econômico Europeu que estudam em instituições dos Países Baixos. Confira as instituições participantes.",
+    "opensAt": null,
+    "closesAt": null,
+    "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
+  },
+  {
+    "id": "stipendium-hungaricum",
+    "title": "Stipendium Hungaricum",
+    "organization": "Governo da Hungria",
+    "countries": [],
+    "levels": [
+      "graduacao",
+      "pos-graduacao",
+      "pesquisa"
+    ],
+    "officialUrl": "https://stipendiumhungaricum.hu",
+    "description": "Bolsas do governo húngaro para estudantes de vários países. Veja se o Brasil participa no ciclo atual.",
+    "opensAt": null,
+    "closesAt": null,
+    "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
+  },
+  {
+    "id": "italia-maeci",
+    "title": "Bolsas do governo italiano",
+    "organization": "Governo da Itália",
+    "countries": [
+      "italia"
+    ],
+    "levels": [
+      "graduacao",
+      "pos-graduacao",
+      "pesquisa"
+    ],
+    "officialUrl": "https://studyinitaly.esteri.it",
+    "description": "Bolsas do governo italiano para estudar na Itália. Confira se há vagas para brasileiros no ciclo atual.",
+    "opensAt": null,
+    "closesAt": null,
+    "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
+  },
+  {
+    "id": "swiss-excellence",
+    "title": "Swiss Government Excellence Scholarships",
+    "organization": "Governo da Suíça",
+    "countries": [],
+    "levels": [
+      "pos-graduacao",
+      "pesquisa"
+    ],
+    "officialUrl": "https://www.sbfi.admin.ch",
+    "description": "Bolsas do governo suíço para pesquisa e pós-graduação. Veja a lista de países elegíveis no site oficial.",
+    "opensAt": null,
+    "closesAt": null,
+    "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
+  },
+  {
+    "id": "fundacao-lemann",
+    "title": "Fundação Lemann",
+    "organization": "Fundação Lemann",
+    "countries": [],
+    "levels": [
+      "pos-graduacao"
+    ],
+    "officialUrl": "https://fundacaolemann.org.br",
+    "description": "Programas para brasileiros estudarem em universidades parceiras no exterior. Confira os que estão abertos.",
+    "opensAt": null,
+    "closesAt": null,
+    "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
+  },
+  {
+    "id": "oea",
+    "title": "Bolsas da OEA",
+    "organization": "Organização dos Estados Americanos",
+    "countries": [],
+    "levels": [
+      "pos-graduacao"
+    ],
+    "officialUrl": "https://www.oas.org",
+    "description": "A OEA oferece bolsas acadêmicas em parceria com universidades. Confira os programas abertos.",
+    "opensAt": null,
+    "closesAt": null,
+    "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
   }
 ]

@@ -11,6 +11,7 @@ import AdminStats from './pages/admin/AdminStats';
 import AdminList from './pages/admin/AdminList';
 import Budget from './pages/Budget';
 import Calls from './pages/Calls';
+import Channels from './pages/Channels';
 import Compare from './pages/Compare';
 import Country from './pages/Country';
 import Courses from './pages/Courses';
@@ -66,6 +67,7 @@ function AppRoutes() {
         <Route path="lugares/:id" element={<Place />} />
         <Route path="cursos" element={<Courses />} />
         <Route path="editais" element={<Calls />} />
+        <Route path="canais" element={<Channels />} />
         <Route path="recursos" element={<Resources />} />
         <Route path="sobre" element={<About />} />
         {/* Pessoais */}

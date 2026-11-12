@@ -20,6 +20,10 @@ service cloud.firestore {
       allow read: if true;
       allow write: if isAdmin();
     }
+    match /channels/{channelId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
     match /resources/{resourceId} {
       allow read: if true;
       allow write: if isAdmin();
@@ -64,7 +68,7 @@ service cloud.firestore {
 
     function statFields() {
       return ['views', 'visitors', 's_inicio', 's_destinos', 's_lugares', 's_cursos', 's_editais',
-              's_recursos', 's_sobre', 's_conta', 's_outros'];
+              's_canais', 's_recursos', 's_sobre', 's_conta', 's_outros'];
     }
 
     function isOwner(uid) {

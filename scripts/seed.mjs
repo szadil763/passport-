@@ -1,5 +1,5 @@
 /**
- * Envia o conteúdo de seed/*.json (countries, places, courses, calls e resources) para o Firestore.
+ * Envia o conteúdo de seed/*.json (countries, places, courses, calls, channels e resources) para o Firestore.
  *
  * Produção (projeto real no Firebase):
  *   1. Console Firebase > Configurações do projeto > Contas de serviço >
@@ -81,6 +81,7 @@ try {
   await seed('places', await load('places.json'));
   await seed('courses', await load('courses.json'));
   await seed('calls', await load('calls.json'));
+  await seed('channels', await load('channels.json'));
   await seed('resources', await load('resources.json'));
   console.log('Seed concluído.');
 } catch (error) {

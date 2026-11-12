@@ -76,6 +76,7 @@ test('sectionOf agrupa as rotas por seção', () => {
   assert.equal(sectionOf('/destinos/canada'), 's_destinos');
   assert.equal(sectionOf('/comparar?p=a,b'), 's_destinos');
   assert.equal(sectionOf('/lugares/toronto'), 's_lugares');
+  assert.equal(sectionOf('/canais'), 's_canais');
   assert.equal(sectionOf('/perfil'), 's_conta');
   assert.equal(sectionOf('/qualquer-coisa'), 's_outros');
   assert.ok(SECTIONS.every((s) => s.field.startsWith('s_')));

@@ -34,7 +34,7 @@ export default function Layout() {
     { to: '/', label: 'Início', Icon: IconHome, active: (p) => p === '/' || starts('/caminho')(p) },
     { to: '/destinos', label: 'Destinos', Icon: IconGlobe, active: starts('/destinos', '/comparar') },
     { to: '/lugares', label: 'Lugares', Icon: IconPin, active: starts('/lugares') },
-    { to: '/cursos', label: 'Estudar', Icon: IconBook, active: starts('/cursos', '/editais', '/recursos') },
+    { to: '/cursos', label: 'Estudar', Icon: IconBook, active: starts('/cursos', '/editais', '/canais', '/recursos') },
     user
       ? { to: '/perfil', label: 'Perfil', Icon: IconUser, active: starts('/perfil', '/favoritos', '/orcamento') }
       : { to: '/entrar', label: 'Entrar', Icon: IconUser, active: starts('/entrar') },

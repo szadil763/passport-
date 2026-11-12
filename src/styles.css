@@ -378,7 +378,7 @@ header > .head-actions { margin-top: 0.5rem; }
 .search { display: grid; gap: 0.3rem; }
 .search-box { position: relative; }
 .search-box svg { position: absolute; left: 0.75rem; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; color: var(--muted); pointer-events: none; }
-.search-box input { width: 100%; padding-left: 2.5rem; }
+.search-box input[type='search'] { width: 100%; padding-left: 2.75rem; }
 input[type='search'], input[type='date'], select {
   font: inherit; min-height: 48px; padding: 0.6rem 0.8rem;
   border: 1px solid var(--muted); border-radius: var(--radius-s);
