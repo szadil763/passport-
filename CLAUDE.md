@@ -25,16 +25,18 @@ Para usar os emuladores no app, coloque `VITE_USE_EMULATORS=true` no `.env`.
 ## Estrutura
 - `src/firebase.js`: inicialização do Firebase (lê o `.env`)
 - `src/contexts/AuthContext.jsx`: usuário logado + perfil `users/{uid}` em tempo real, `saveProfile()` com merge
-- `src/hooks/useFirestore.js`: `useCollection` e `useDocument` com loading e erro
-- `src/data/`: opções fixas (`options.js`), etapas do caminho (`roadmap.js`), mensagens de erro do Auth (`authErrors.js`)
-- `src/components/`: `Layout`, `Stamp` (carimbo SVG), `ChipGroup`, `VisaNotice`, `LoadState`, `Icons`
-- `src/pages/`: `Login`, `Profile` (onboarding e aba Perfil), `Roadmap`, `Destinations`, `Country`, `Resources`
-- `seed/`: conteúdo curado; `scripts/seed.mjs`: envia o seed com firebase-admin
+- `src/hooks/useFirestore.js`: `useCollection` e `useDocument` com loading e erro; `useFavorites.js`: favoritos em `users/{uid}.favorites`
+- `src/data/`: opções fixas (`options.js`), etapas do caminho (`roadmap.js`), itens e contas do orçamento (`budget.js`), mensagens de erro do Auth (`authErrors.js`)
+- `public/`: `manifest.webmanifest`, ícones e `sw.js` (PWA: app abre sem internet)
+- `src/components/`: `Layout`, `Stamp` (carimbo SVG), `ChipGroup`, `VisaNotice`, `LoadState`, `Icons`, `PlaceRow`, `FavoriteButton`
+- `src/pages/`: `Login`, `Profile` (onboarding e aba Perfil), `Roadmap`, `Destinations`, `Country`, `Places`, `Place`, `Resources`, `Favorites`, `Budget`
+- `seed/`: conteúdo curado (`countries`, `places`, `resources`); `scripts/seed.mjs`: envia o seed com firebase-admin
 
 ## Modelo de dados (Firestore)
-- `countries/{id}`: name, flag, languages[], summary, costLevel (1-3), visa{name, work, officialUrl}, highlights[], updatedAt
+- `countries/{id}`: name, flag, languages[], summary, costLevel (1-3), visa{name, work, officialUrl}, work{students, programs[{name, description, url?}], jobSites[{title, url}]}, highlights[], updatedAt
+- `places/{id}`: countryId, name, summary, costNote (texto relativo, sem valores), goals[], study[], work[], living[], universities[{name, url}], updatedAt
 - `resources/{id}`: title, url, category, free, countries[], description, updatedAt
-- `users/{uid}`: goal, languages[], budget, roadmap{etapaId: boolean}, updatedAt
+- `users/{uid}`: goal, languages[], budget, roadmap{etapaId: boolean}, budgetPlan{values, months}, favorites{countries[], places[], resources[]}, updatedAt
 
 Os `id` de `src/data/options.js` e `src/data/roadmap.js` são gravados no Firestore: não renomeie sem migrar os dados.
 Os idiomas de `countries.languages` precisam usar os mesmos ids de `LANGUAGES` (em minúsculas, com acento).

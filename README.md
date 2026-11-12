@@ -118,7 +118,7 @@ firebase deploy --only firestore:rules,firestore:indexes
 
 ## 7. Enviar o conteúdo inicial (seed)
 
-O seed grava os países e os recursos (pastas `seed/`) no Firestore.
+O seed grava países, lugares e recursos (pasta `seed/`) no Firestore.
 
 1. No console do Firebase, abra ⚙️ **Configurações do projeto > Contas de serviço**.
 2. Clique em **Gerar nova chave privada** e confirme. Um arquivo `.json` é baixado.
@@ -218,7 +218,7 @@ Lembre de voltar para `VITE_USE_EMULATORS=false` antes de publicar.
 ├─ docs/ROADMAP.md                próximas versões
 ├─ public/favicon.svg
 ├─ scripts/seed.mjs               envia o seed para o Firestore
-├─ seed/                          países e recursos (conteúdo curado)
+├─ seed/                          países, lugares e recursos (conteúdo curado)
 ├─ src/
 │  ├─ components/                 Layout, Stamp (carimbo), ChipGroup, VisaNotice...
 │  ├─ contexts/AuthContext.jsx    usuário logado e perfil
