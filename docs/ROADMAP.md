@@ -9,7 +9,8 @@ O MVP (v0.1) entrega login, perfil, o caminho com carimbos, destinos e recursos.
 - Favoritos, "Esqueci minha senha" e PWA com cache offline.
 - Acesso público sem login, página inicial, painel "próximo passo", busca e filtros, comparador de países e carimbo por país.
 - Cursos online (22) e editais e bolsas (11), com lembrete no calendário (.ics).
-- Falta: alerta por notificação ou e-mail (precisa de Cloud Functions e do plano Blaze) e painel admin para manter os prazos dos editais.
+- Painel admin (`/admin`) para editar países, cidades, cursos, editais e recursos, e página "Sobre e créditos".
+- Falta: alerta por notificação ou e-mail (precisa de Cloud Functions e do plano Blaze).
 
 O que segue abaixo ainda não foi feito.
 
@@ -22,7 +23,6 @@ As próximas versões estão em ordem de prioridade sugerida. Cada item traz a i
 - **Alertas de editais:** avisar quando abrir um edital de bolsa de interesse. Primeiro passo: coleção `calls/{id}` com datas de abertura e fechamento e Firebase Cloud Messaging para notificações.
 
 ## v0.4: gestão de conteúdo
-- **Painel admin:** editar países e recursos sem mexer no JSON. Primeiro passo: custom claim `admin` no Auth e regras que liberam escrita só para admins.
 - **Simulador de custos:** estimar o custo do primeiro ano por destino e tipo de curso. A calculadora manual já existe. Próximo passo: faixas de custo revisadas por país (com fonte e data), sem valores inventados.
 
 ## v0.5: inteligência

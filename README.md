@@ -248,3 +248,21 @@ Lembre de voltar para `VITE_USE_EMULATORS=false` antes de publicar.
 ---
 
 Próximas versões: veja [docs/ROADMAP.md](docs/ROADMAP.md).
+
+
+## Painel admin
+
+O painel fica em `/admin` e permite editar países, cidades, cursos, editais e recursos sem mexer nos arquivos.
+
+### Como virar administrador
+1. Entre no app com a sua conta e abra `/admin`. A tela mostra o seu **identificador**.
+2. No console do Firebase, abra **Firestore Database** e crie a coleção `admins`.
+3. Em **ID do documento**, cole o seu identificador. Crie um campo qualquer (por exemplo `ativo`, com o valor `true`) e salve.
+4. Recarregue o app. O Perfil passa a mostrar o link "Painel admin".
+
+Para tirar o acesso, apague o documento. Só o console do Firebase cria ou apaga esses documentos: o app não consegue.
+
+### Cuidados
+- Depois de editar pelo painel, rode o seed só com `npm run seed -- --somente-novos`. Sem essa opção, o seed sobrescreve o que foi editado.
+- As regras (`firestore.rules`) mudaram: publique-as de novo (`firebase deploy --only firestore` ou pelo console).
+- Editais: preencha `Fim das inscrições` só depois de confirmar a data no site oficial.

@@ -22,6 +22,11 @@ function fetchCollection(name) {
   return inflight.get(name);
 }
 
+// Esquece o cache de uma coleção (o painel admin chama depois de salvar ou excluir).
+export function invalidateCollection(name) {
+  collections.delete(name);
+}
+
 // Lê todos os documentos de uma coleção (countries, places, courses, calls ou resources).
 export function useCollection(name) {
   const cached = collections.get(name);

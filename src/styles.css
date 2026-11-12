@@ -421,6 +421,29 @@ input[type='search'], input[type='date'], select {
 }
 @keyframes brilho { from { background-position: 200% 0; } to { background-position: -200% 0; } }
 
+/* ---------- Rodapé, sobre e painel admin ---------- */
+.site-footer { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+.site-footer p { margin: 0 0 0.3rem; }
+.lead { font-family: var(--font-display); font-size: 1.3rem; line-height: 1.35; max-width: 32ch; }
+.about .hero-stamp { width: 56px; height: 56px; }
+
+.menu-link { display: grid; padding: 0.8rem 1rem; text-decoration: none; color: inherit; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-s); }
+.menu-link:hover { border-color: var(--muted); }
+.menu-link span { color: var(--muted); font-size: 0.9rem; }
+.btn-inline { display: inline-flex; width: auto; text-decoration: none; }
+.btn-danger { background: var(--danger); border-color: var(--danger); color: #fff; }
+.form-field { display: grid; gap: 0.3rem; }
+.form-field > label, .form-field > legend { font-weight: 700; display: block; }
+.form-field input[type='text'], .form-field input[type='url'], .form-field input[type='date'], .form-field select, .form-field textarea {
+  width: 100%; font: inherit; padding: 0.6rem 0.8rem; min-height: 48px;
+  border: 1px solid var(--muted); border-radius: var(--radius-s); background: var(--surface); color: var(--ink);
+}
+.form-field textarea { resize: vertical; }
+.form-field [aria-invalid='true'] { border-color: var(--danger); border-width: 2px; }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.9rem; }
+.error-summary { border-left-color: var(--danger); }
+.danger-zone { border-left-color: var(--danger); }
+
 /* ---------- Orçamento ---------- */
 .step-link { display: inline-flex; align-items: center; min-height: 44px; margin: 0.25rem 0 0 1rem; font-weight: 700; }
 .budget-form { display: grid; gap: 1.5rem; }

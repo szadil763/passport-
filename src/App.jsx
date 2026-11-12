@@ -3,6 +3,11 @@ import { firebaseConfigured } from './firebase';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import Layout from './components/Layout';
 import { Loading } from './components/LoadState';
+import RequireAdmin from './components/RequireAdmin';
+import About from './pages/About';
+import AdminEdit from './pages/admin/AdminEdit';
+import AdminHome from './pages/admin/AdminHome';
+import AdminList from './pages/admin/AdminList';
 import Budget from './pages/Budget';
 import Calls from './pages/Calls';
 import Compare from './pages/Compare';
@@ -61,11 +66,16 @@ function AppRoutes() {
         <Route path="cursos" element={<Courses />} />
         <Route path="editais" element={<Calls />} />
         <Route path="recursos" element={<Resources />} />
+        <Route path="sobre" element={<About />} />
         {/* Pessoais */}
         <Route path="caminho" element={<RequireAuth><Roadmap /></RequireAuth>} />
         <Route path="orcamento" element={<RequireAuth><Budget /></RequireAuth>} />
         <Route path="favoritos" element={<RequireAuth><Favorites /></RequireAuth>} />
         <Route path="perfil" element={<RequireAuth><Profile /></RequireAuth>} />
+        {/* Painel admin: só quem tem o documento admins/{uid} */}
+        <Route path="admin" element={<RequireAdmin><AdminHome /></RequireAdmin>} />
+        <Route path="admin/:collection" element={<RequireAdmin><AdminList /></RequireAdmin>} />
+        <Route path="admin/:collection/:id" element={<RequireAdmin><AdminEdit /></RequireAdmin>} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

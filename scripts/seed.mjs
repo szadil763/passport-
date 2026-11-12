@@ -13,6 +13,8 @@
  *        npm run seed:emulador
  *
  * O script é idempotente: rodar de novo sobrescreve os mesmos documentos.
+ * Com --somente-novos (npm run seed -- --somente-novos), só grava o que ainda não existe:
+ * use depois de editar conteúdo pelo painel admin, para não desfazer as edições.
  */
 import { existsSync } from 'node:fs';
 import { readFile } from 'node:fs/promises';
@@ -52,14 +54,25 @@ async function load(file) {
   return JSON.parse(text);
 }
 
+// --somente-novos: não mexe em documentos que já existem (preserva o que foi editado no painel admin).
+const onlyNew = process.argv.includes('--somente-novos');
+
 async function seed(collectionName, items) {
   const batch = db.batch();
+  let written = 0;
+  let skipped = 0;
   for (const { id, ...data } of items) {
     if (!id) throw new Error(`Item sem "id" em ${collectionName}: ${JSON.stringify(data).slice(0, 80)}`);
-    batch.set(db.collection(collectionName).doc(id), { ...data, updatedAt: FieldValue.serverTimestamp() });
+    const ref = db.collection(collectionName).doc(id);
+    if (onlyNew && (await ref.get()).exists) {
+      skipped += 1;
+      continue;
+    }
+    batch.set(ref, { ...data, updatedAt: FieldValue.serverTimestamp() });
+    written += 1;
   }
-  await batch.commit();
-  console.log(`✔ ${items.length} documentos gravados em "${collectionName}"`);
+  if (written) await batch.commit();
+  console.log(`✔ ${written} documentos gravados em "${collectionName}"${skipped ? ` (${skipped} já existiam e foram mantidos)` : ''}`);
 }
 
 try {
