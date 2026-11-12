@@ -12,6 +12,14 @@ service cloud.firestore {
       allow read: if true;
       allow write: if false;
     }
+    match /courses/{courseId} {
+      allow read: if true;
+      allow write: if false;
+    }
+    match /calls/{callId} {
+      allow read: if true;
+      allow write: if false;
+    }
     match /resources/{resourceId} {
       allow read: if true;
       allow write: if false;

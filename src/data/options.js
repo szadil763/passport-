@@ -42,3 +42,24 @@ export const COST_LABELS = { 1: 'Custo baixo', 2: 'Custo médio', 3: 'Custo alto
 
 // Busca o rótulo de um id numa lista de opções.
 export const labelOf = (options, id) => options.find((o) => o.id === id)?.label ?? id;
+
+// Nível dos editais.
+export const LEVELS = [
+  { id: 'graduacao', label: 'Graduação' },
+  { id: 'pos-graduacao', label: 'Pós-graduação' },
+  { id: 'pesquisa', label: 'Pesquisa' },
+  { id: 'idioma', label: 'Idioma' },
+];
+
+// Cursos online.
+export const COURSE_KINDS = [
+  { id: 'universidade', label: 'Cursos de universidades' },
+  { id: 'idioma', label: 'Idiomas' },
+  { id: 'diploma', label: 'Graduação e pós online' },
+];
+export const PRICE_TYPES = [
+  { id: 'gratuito', label: 'Gratuito' },
+  { id: 'misto', label: 'Parte gratuita' },
+  { id: 'pago', label: 'Pago' },
+];
+export const CERTIFICATES = { pago: 'Certificado pago', gratuito: 'Certificado gratuito', varia: 'Certificado: confira no site', nenhum: 'Sem certificado' };

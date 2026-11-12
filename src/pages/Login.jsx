@@ -1,10 +1,14 @@
 import { useState } from 'react';
+import { Link, Navigate, useLocation } from 'react-router-dom';
+import { usePageTitle } from '../hooks/usePageTitle';
 import { useAuth } from '../contexts/AuthContext';
 import { authErrorMessage, resetErrorMessage } from '../data/authErrors';
 import { IconGoogle, Logo } from '../components/Icons';
 
 export default function Login() {
-  const { loginWithGoogle, loginWithEmail, signupWithEmail, resetPassword } = useAuth();
+  usePageTitle('Entrar');
+  const location = useLocation();
+  const { user, loginWithGoogle, loginWithEmail, signupWithEmail, resetPassword } = useAuth();
   const [mode, setMode] = useState('login'); // 'login' ou 'signup'
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -13,6 +17,9 @@ export default function Login() {
   const [info, setInfo] = useState('');
 
   const isSignup = mode === 'signup';
+
+  // Já entrou: volta para onde a pessoa estava (ou para o início).
+  if (user) return <Navigate to={location.state?.from ?? '/'} replace />;
 
   async function run(action) {
     setError('');
@@ -55,6 +62,7 @@ export default function Login() {
 
   return (
     <main className="login">
+      <Link to="/" className="back">Voltar ao início</Link>
       <div className="login-hero">
         <Logo />
         <h1>Seu passaporte começa aqui.</h1>

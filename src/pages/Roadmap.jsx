@@ -1,11 +1,13 @@
-// Tela inicial: as etapas até a chegada. Cada etapa concluída ganha um carimbo.
+// Meu caminho: as etapas até a chegada. Cada etapa concluída ganha um carimbo.
 import { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { Link } from 'react-router-dom';
 import { stepsFor } from '../data/roadmap';
+import { usePageTitle } from '../hooks/usePageTitle';
 import Stamp from '../components/Stamp';
 
 export default function Roadmap() {
+  usePageTitle('Meu caminho');
   const { profile, saveProfile } = useAuth();
   const [justStamped, setJustStamped] = useState(null); // anima só o carimbo recém-marcado
   const [error, setError] = useState('');

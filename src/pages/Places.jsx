@@ -1,16 +1,21 @@
 // Dicas de cidades: filtre por país e por objetivo.
 import { useState } from 'react';
 import { useCollection } from '../hooks/useFirestore';
+import { usePageTitle } from '../hooks/usePageTitle';
 import { GOALS } from '../data/options';
+import { matchesQuery } from '../utils/text';
+import SearchField from '../components/SearchField';
 import ChipGroup from '../components/ChipGroup';
 import PlaceRow from '../components/PlaceRow';
 import { LoadError, Loading } from '../components/LoadState';
 
 export default function Places() {
+  usePageTitle('Lugares');
   const places = useCollection('places');
   const countries = useCollection('countries');
   const [countryId, setCountryId] = useState('todos');
   const [goal, setGoal] = useState('todos');
+  const [query, setQuery] = useState('');
 
   if (places.loading || countries.loading) return <Loading>Carregando lugares…</Loading>;
   if (places.error || countries.error) return <LoadError what="os lugares" />;
@@ -26,6 +31,7 @@ export default function Places() {
   const goalOptions = [{ id: 'todos', label: 'Qualquer objetivo' }, ...GOALS];
 
   const list = places.data
+    .filter((p) => matchesQuery(query, p.name, byId[p.countryId]?.name, p.summary, p.universities?.map((u) => u.name)))
     .filter((p) => countryId === 'todos' || p.countryId === countryId)
     .filter((p) => goal === 'todos' || p.goals?.includes(goal))
     .sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
@@ -36,6 +42,7 @@ export default function Places() {
       <p className="muted">Cidades para estudar, trabalhar e morar, com dicas de cada uma.</p>
 
       <div className="filters">
+        <SearchField label="Buscar cidade" value={query} onChange={setQuery} placeholder="Ex.: Toronto, universidade" />
         <p id="rotulo-pais" className="sr-only">Filtrar por país</p>
         <ChipGroup options={countryOptions} value={countryId} onChange={setCountryId} labelledBy="rotulo-pais" />
         <p id="rotulo-objetivo" className="sr-only">Filtrar por objetivo</p>

@@ -4,6 +4,9 @@ import { useCollection, useDocument } from '../hooks/useFirestore';
 import { CATEGORIES, COST_LABELS, labelOf } from '../data/options';
 import { LoadError, Loading } from '../components/LoadState';
 import PlaceRow from '../components/PlaceRow';
+import { usePageTitle } from '../hooks/usePageTitle';
+import CountryStamp from '../components/CountryStamp';
+import ShareButton from '../components/ShareButton';
 import FavoriteButton from '../components/FavoriteButton';
 import VisaNotice from '../components/VisaNotice';
 
@@ -12,6 +15,7 @@ export default function Country() {
   const { data: country, loading, error } = useDocument('countries', id);
   const { data: resources } = useCollection('resources');
   const { data: places } = useCollection('places');
+  usePageTitle(country?.name);
 
   if (loading) return <Loading />;
   if (error) return <LoadError what="este destino" />;
@@ -33,9 +37,12 @@ export default function Country() {
       <Link to="/destinos" className="back">Voltar para Destinos</Link>
 
       <header className="country-head">
-        <span className="flag" aria-hidden="true">{country.flag}</span>
+        <CountryStamp country={country} size="lg" />
         <h1>{country.name}</h1>
-        <FavoriteButton kind="countries" id={country.id} name={country.name} />
+        <div className="head-actions">
+          <FavoriteButton kind="countries" id={country.id} name={country.name} />
+          <ShareButton title={country.name} text={`${country.name}: visto, trabalho, cidades e cursos no Carimbo.`} />
+        </div>
       </header>
       <p>{country.summary}</p>
 

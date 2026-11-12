@@ -2,10 +2,13 @@
 import { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { GOALS, LANGUAGES, BUDGETS } from '../data/options';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { usePageTitle } from '../hooks/usePageTitle';
 import ChipGroup from '../components/ChipGroup';
 
 export default function Profile({ onboarding = false }) {
+  usePageTitle(onboarding ? 'Seu perfil' : 'Perfil');
+  const navigate = useNavigate();
   const { user, profile, saveProfile } = useAuth();
   const [goal, setGoal] = useState(profile?.goal ?? '');
   const [languages, setLanguages] = useState(profile?.languages ?? []);
@@ -21,6 +24,7 @@ export default function Profile({ onboarding = false }) {
     try {
       await saveProfile({ goal, languages, budget, roadmap: profile?.roadmap ?? {} });
       setStatus('saved');
+      if (onboarding) navigate('/', { replace: true });
     } catch {
       setStatus('error');
     }
@@ -41,11 +45,11 @@ export default function Profile({ onboarding = false }) {
         </p>
         {!onboarding && user?.email && <p className="small muted">Conta: {user.email}</p>}
         {!onboarding && (
-          <p>
-            <Link to="/favoritos">Ver meus favoritos</Link>
-            {' · '}
-            <Link to="/orcamento">Abrir meu orçamento</Link>
-          </p>
+          <ul className="menu-cards">
+            <li><Link to="/caminho"><strong>Meu caminho</strong><span>Etapas e carimbos</span></Link></li>
+            <li><Link to="/favoritos"><strong>Favoritos</strong><span>Países, cidades, cursos e editais</span></Link></li>
+            <li><Link to="/orcamento"><strong>Orçamento</strong><span>Some os custos do intercâmbio</span></Link></li>
+          </ul>
         )}
       </div>
 
@@ -80,5 +84,5 @@ export default function Profile({ onboarding = false }) {
     </form>
   );
 
-  return onboarding ? <main className="onboarding">{content}</main> : content;
+  return onboarding ? <div className="onboarding">{content}</div> : content;
 }

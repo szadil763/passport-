@@ -1,0 +1,310 @@
+[
+  {
+    "id": "coursera",
+    "title": "Coursera",
+    "provider": "Coursera",
+    "kind": "universidade",
+    "country": null,
+    "languages": [
+      "inglês"
+    ],
+    "priceType": "misto",
+    "certificate": "pago",
+    "officialUrl": "https://www.coursera.org",
+    "description": "Cursos de universidades e empresas do mundo. Muitos podem ser assistidos de graça, e o certificado costuma ser pago."
+  },
+  {
+    "id": "edx",
+    "title": "edX",
+    "provider": "edX",
+    "kind": "universidade",
+    "country": null,
+    "languages": [
+      "inglês"
+    ],
+    "priceType": "misto",
+    "certificate": "pago",
+    "officialUrl": "https://www.edx.org",
+    "description": "Cursos de universidades de vários países, de introdução a programas profissionais. Confira o que é gratuito em cada curso."
+  },
+  {
+    "id": "futurelearn",
+    "title": "FutureLearn",
+    "provider": "FutureLearn",
+    "kind": "universidade",
+    "country": "reino-unido",
+    "languages": [
+      "inglês"
+    ],
+    "priceType": "misto",
+    "certificate": "pago",
+    "officialUrl": "https://www.futurelearn.com",
+    "description": "Cursos curtos de universidades britânicas e de outros países. Dá para estudar de graça por um tempo limitado."
+  },
+  {
+    "id": "openlearn",
+    "title": "OpenLearn",
+    "provider": "The Open University",
+    "kind": "universidade",
+    "country": "reino-unido",
+    "languages": [
+      "inglês"
+    ],
+    "priceType": "gratuito",
+    "certificate": "varia",
+    "officialUrl": "https://www.open.edu/openlearn",
+    "description": "Cursos e materiais gratuitos da Open University, do Reino Unido. Bom para testar a área antes de se candidatar."
+  },
+  {
+    "id": "mit-ocw",
+    "title": "MIT OpenCourseWare",
+    "provider": "MIT",
+    "kind": "universidade",
+    "country": "estados-unidos",
+    "languages": [
+      "inglês"
+    ],
+    "priceType": "gratuito",
+    "certificate": "nenhum",
+    "officialUrl": "https://ocw.mit.edu",
+    "description": "Materiais de disciplinas do MIT, de graça e abertos a qualquer pessoa. Não dá certificado."
+  },
+  {
+    "id": "cs50",
+    "title": "CS50",
+    "provider": "Harvard",
+    "kind": "universidade",
+    "country": "estados-unidos",
+    "languages": [
+      "inglês"
+    ],
+    "priceType": "gratuito",
+    "certificate": "varia",
+    "officialUrl": "https://cs50.harvard.edu",
+    "description": "Curso introdutório de ciência da computação de Harvard, de graça. Confira as opções de certificado no site."
+  },
+  {
+    "id": "harvard-online",
+    "title": "Harvard Online",
+    "provider": "Harvard",
+    "kind": "universidade",
+    "country": "estados-unidos",
+    "languages": [
+      "inglês"
+    ],
+    "priceType": "misto",
+    "certificate": "pago",
+    "officialUrl": "https://online.harvard.edu",
+    "description": "Cursos online de Harvard em várias áreas. Alguns são gratuitos e outros pagos."
+  },
+  {
+    "id": "stanford-online",
+    "title": "Stanford Online",
+    "provider": "Stanford",
+    "kind": "universidade",
+    "country": "estados-unidos",
+    "languages": [
+      "inglês"
+    ],
+    "priceType": "misto",
+    "certificate": "varia",
+    "officialUrl": "https://online.stanford.edu",
+    "description": "Cursos online e programas da Stanford. Confira o preço de cada um."
+  },
+  {
+    "id": "learnenglish",
+    "title": "LearnEnglish",
+    "provider": "British Council",
+    "kind": "idioma",
+    "country": "reino-unido",
+    "languages": [
+      "inglês"
+    ],
+    "priceType": "gratuito",
+    "certificate": "nenhum",
+    "officialUrl": "https://learnenglish.britishcouncil.org",
+    "description": "Aulas, jogos e exercícios de inglês do British Council, de graça."
+  },
+  {
+    "id": "bbc-learning-english",
+    "title": "BBC Learning English",
+    "provider": "BBC",
+    "kind": "idioma",
+    "country": "reino-unido",
+    "languages": [
+      "inglês"
+    ],
+    "priceType": "gratuito",
+    "certificate": "nenhum",
+    "officialUrl": "https://www.bbc.co.uk/learningenglish",
+    "description": "Lições curtas, vídeos e áudios de inglês da BBC, de graça."
+  },
+  {
+    "id": "dw-learn-german",
+    "title": "Learn German",
+    "provider": "Deutsche Welle",
+    "kind": "idioma",
+    "country": "alemanha",
+    "languages": [
+      "alemão"
+    ],
+    "priceType": "gratuito",
+    "certificate": "nenhum",
+    "officialUrl": "https://learngerman.dw.com",
+    "description": "Curso de alemão da emissora alemã Deutsche Welle, com vários níveis, de graça."
+  },
+  {
+    "id": "tv5monde",
+    "title": "Apprendre le français",
+    "provider": "TV5Monde",
+    "kind": "idioma",
+    "country": "franca",
+    "languages": [
+      "francês"
+    ],
+    "priceType": "gratuito",
+    "certificate": "nenhum",
+    "officialUrl": "https://apprendre.tv5monde.com",
+    "description": "Exercícios e vídeos para aprender francês, de graça."
+  },
+  {
+    "id": "cvc-cervantes",
+    "title": "Centro Virtual Cervantes",
+    "provider": "Instituto Cervantes",
+    "kind": "idioma",
+    "country": "espanha",
+    "languages": [
+      "espanhol"
+    ],
+    "priceType": "gratuito",
+    "certificate": "nenhum",
+    "officialUrl": "https://cvc.cervantes.es",
+    "description": "Recursos gratuitos de língua e cultura em espanhol, do Instituto Cervantes."
+  },
+  {
+    "id": "minato",
+    "title": "Minato, cursos de japonês",
+    "provider": "Fundação Japão",
+    "kind": "idioma",
+    "country": "japao",
+    "languages": [
+      "japonês"
+    ],
+    "priceType": "misto",
+    "certificate": "varia",
+    "officialUrl": "https://minato-jf.jp",
+    "description": "Cursos online de japonês da Fundação Japão. Há opções gratuitas e com tutor pago."
+  },
+  {
+    "id": "unistrasi",
+    "title": "Università per Stranieri di Siena",
+    "provider": "Università per Stranieri di Siena",
+    "kind": "idioma",
+    "country": "italia",
+    "languages": [
+      "italiano"
+    ],
+    "priceType": "misto",
+    "certificate": "varia",
+    "officialUrl": "https://www.unistrasi.it",
+    "description": "Universidade italiana especializada em italiano para estrangeiros. Veja as opções de curso e de aula online."
+  },
+  {
+    "id": "goethe-online",
+    "title": "Goethe-Institut online",
+    "provider": "Goethe-Institut",
+    "kind": "idioma",
+    "country": "alemanha",
+    "languages": [
+      "alemão"
+    ],
+    "priceType": "pago",
+    "certificate": "pago",
+    "officialUrl": "https://www.goethe.de",
+    "description": "Cursos de alemão online com professor, em vários níveis, e preparação para os exames."
+  },
+  {
+    "id": "open-university",
+    "title": "The Open University",
+    "provider": "The Open University",
+    "kind": "diploma",
+    "country": "reino-unido",
+    "languages": [
+      "inglês"
+    ],
+    "priceType": "pago",
+    "certificate": "pago",
+    "officialUrl": "https://www.open.ac.uk",
+    "description": "Universidade britânica de ensino a distância, com graduação e pós online."
+  },
+  {
+    "id": "london-online",
+    "title": "University of London, ensino online",
+    "provider": "University of London",
+    "kind": "diploma",
+    "country": "reino-unido",
+    "languages": [
+      "inglês"
+    ],
+    "priceType": "pago",
+    "certificate": "pago",
+    "officialUrl": "https://www.london.ac.uk",
+    "description": "Graduações e pós-graduações a distância da Universidade de Londres."
+  },
+  {
+    "id": "asu-online",
+    "title": "ASU Online",
+    "provider": "Arizona State University",
+    "kind": "diploma",
+    "country": "estados-unidos",
+    "languages": [
+      "inglês"
+    ],
+    "priceType": "pago",
+    "certificate": "pago",
+    "officialUrl": "https://asuonline.asu.edu",
+    "description": "Graduações e pós-graduações 100% online de uma universidade pública dos EUA."
+  },
+  {
+    "id": "universidade-aberta",
+    "title": "Universidade Aberta",
+    "provider": "Universidade Aberta",
+    "kind": "diploma",
+    "country": "portugal",
+    "languages": [
+      "português"
+    ],
+    "priceType": "pago",
+    "certificate": "pago",
+    "officialUrl": "https://portal.uab.pt",
+    "description": "Universidade pública portuguesa de ensino a distância, com cursos em português."
+  },
+  {
+    "id": "uned",
+    "title": "UNED",
+    "provider": "UNED",
+    "kind": "diploma",
+    "country": "espanha",
+    "languages": [
+      "espanhol"
+    ],
+    "priceType": "pago",
+    "certificate": "pago",
+    "officialUrl": "https://www.uned.es",
+    "description": "Universidade espanhola de ensino a distância, com graduação e pós em espanhol."
+  },
+  {
+    "id": "fernuni-hagen",
+    "title": "FernUniversität in Hagen",
+    "provider": "FernUniversität in Hagen",
+    "kind": "diploma",
+    "country": "alemanha",
+    "languages": [
+      "alemão"
+    ],
+    "priceType": "pago",
+    "certificate": "pago",
+    "officialUrl": "https://www.fernuni-hagen.de",
+    "description": "Universidade alemã de ensino a distância. A maioria dos cursos é em alemão."
+  }
+]

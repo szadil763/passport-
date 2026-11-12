@@ -1,0 +1,184 @@
+[
+  {
+    "id": "chevening",
+    "title": "Chevening",
+    "organization": "Governo do Reino Unido",
+    "countries": [
+      "reino-unido"
+    ],
+    "levels": [
+      "pos-graduacao"
+    ],
+    "officialUrl": "https://www.chevening.org",
+    "description": "Bolsas do governo britânico para mestrado no Reino Unido. Costuma pedir experiência profissional e perfil de liderança.",
+    "opensAt": null,
+    "closesAt": null,
+    "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
+  },
+  {
+    "id": "fulbright",
+    "title": "Fulbright Brasil",
+    "organization": "Comissão Fulbright",
+    "countries": [
+      "estados-unidos"
+    ],
+    "levels": [
+      "pos-graduacao",
+      "pesquisa"
+    ],
+    "officialUrl": "https://fulbright.org.br",
+    "description": "Bolsas para brasileiros estudarem, pesquisarem ou ensinarem nos Estados Unidos. Cada programa tem seu próprio prazo.",
+    "opensAt": null,
+    "closesAt": null,
+    "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
+  },
+  {
+    "id": "daad",
+    "title": "DAAD",
+    "organization": "Serviço Alemão de Intercâmbio Acadêmico",
+    "countries": [
+      "alemanha"
+    ],
+    "levels": [
+      "pos-graduacao",
+      "pesquisa"
+    ],
+    "officialUrl": "https://www.daad.org.br",
+    "description": "Bolsas para mestrado, doutorado e pesquisa na Alemanha. Veja os programas abertos para brasileiros.",
+    "opensAt": null,
+    "closesAt": null,
+    "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
+  },
+  {
+    "id": "erasmus-mundus",
+    "title": "Erasmus Mundus",
+    "organization": "União Europeia",
+    "countries": [
+      "portugal",
+      "irlanda",
+      "alemanha",
+      "espanha",
+      "franca",
+      "italia"
+    ],
+    "levels": [
+      "pos-graduacao"
+    ],
+    "officialUrl": "https://erasmus-plus.ec.europa.eu",
+    "description": "Mestrados conjuntos de universidades europeias, com bolsas. A candidatura é feita em cada mestrado.",
+    "opensAt": null,
+    "closesAt": null,
+    "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
+  },
+  {
+    "id": "eiffel",
+    "title": "Eiffel Excellence",
+    "organization": "Governo da França",
+    "countries": [
+      "franca"
+    ],
+    "levels": [
+      "pos-graduacao"
+    ],
+    "officialUrl": "https://www.campusfrance.org",
+    "description": "Bolsa do governo francês para mestrado e doutorado. Em geral, quem indica é a instituição francesa.",
+    "opensAt": null,
+    "closesAt": null,
+    "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
+  },
+  {
+    "id": "mext",
+    "title": "MEXT",
+    "organization": "Governo do Japão",
+    "countries": [
+      "japao"
+    ],
+    "levels": [
+      "graduacao",
+      "pos-graduacao",
+      "pesquisa"
+    ],
+    "officialUrl": "https://www.br.emb-japan.go.jp",
+    "description": "Bolsas do governo japonês para estudar no Japão. A seleção para brasileiros costuma ser feita pela embaixada ou pelos consulados.",
+    "opensAt": null,
+    "closesAt": null,
+    "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
+  },
+  {
+    "id": "gates-cambridge",
+    "title": "Gates Cambridge",
+    "organization": "Universidade de Cambridge",
+    "countries": [
+      "reino-unido"
+    ],
+    "levels": [
+      "pos-graduacao"
+    ],
+    "officialUrl": "https://www.gatescambridge.org",
+    "description": "Bolsas para pós-graduação em Cambridge, para quem vem de fora do Reino Unido.",
+    "opensAt": null,
+    "closesAt": null,
+    "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
+  },
+  {
+    "id": "vanier",
+    "title": "Vanier Canada",
+    "organization": "Governo do Canadá",
+    "countries": [
+      "canada"
+    ],
+    "levels": [
+      "pesquisa"
+    ],
+    "officialUrl": "https://vanier.gc.ca",
+    "description": "Bolsas para doutorado em universidades canadenses. A indicação é feita pela universidade.",
+    "opensAt": null,
+    "closesAt": null,
+    "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
+  },
+  {
+    "id": "capes",
+    "title": "CAPES",
+    "organization": "Governo do Brasil",
+    "countries": [],
+    "levels": [
+      "pos-graduacao",
+      "pesquisa"
+    ],
+    "officialUrl": "https://www.gov.br/capes",
+    "description": "Editais do governo brasileiro com bolsas para estudar ou pesquisar no exterior. Os programas mudam: veja os abertos.",
+    "opensAt": null,
+    "closesAt": null,
+    "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
+  },
+  {
+    "id": "cnpq",
+    "title": "CNPq",
+    "organization": "Governo do Brasil",
+    "countries": [],
+    "levels": [
+      "pos-graduacao",
+      "pesquisa"
+    ],
+    "officialUrl": "https://www.gov.br/cnpq",
+    "description": "Agência que apoia pesquisa e tem bolsas no exterior. Veja as chamadas abertas.",
+    "opensAt": null,
+    "closesAt": null,
+    "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
+  },
+  {
+    "id": "fundacao-estudar",
+    "title": "Fundação Estudar",
+    "organization": "Fundação Estudar",
+    "countries": [],
+    "levels": [
+      "graduacao",
+      "pos-graduacao"
+    ],
+    "officialUrl": "https://www.estudar.org.br",
+    "description": "Apoio financeiro e orientação para jovens brasileiros estudarem em universidades no exterior. Confira os programas e os requisitos atuais.",
+    "opensAt": null,
+    "closesAt": null,
+    "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
+  }
+]

@@ -218,7 +218,7 @@ Lembre de voltar para `VITE_USE_EMULATORS=false` antes de publicar.
 ├─ docs/ROADMAP.md                próximas versões
 ├─ public/favicon.svg
 ├─ scripts/seed.mjs               envia o seed para o Firestore
-├─ seed/                          países, lugares e recursos (conteúdo curado)
+├─ seed/                          países, lugares, cursos, editais e recursos (conteúdo curado)
 ├─ src/
 │  ├─ components/                 Layout, Stamp (carimbo), ChipGroup, VisaNotice...
 │  ├─ contexts/AuthContext.jsx    usuário logado e perfil

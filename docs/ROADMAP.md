@@ -2,12 +2,14 @@
 
 O MVP (v0.1) entrega login, perfil, o caminho com carimbos, destinos e recursos.
 
-## Já entregue (v0.2 e v0.3, parcial)
+## Já entregue (v0.2 a v0.4, parcial)
 - 14 países, 32 cidades (aba Lugares) e seção "Trabalhar em" em cada país.
 - Objetivo "Trabalhar no exterior", etapas do caminho por objetivo, 39 recursos (testes de idioma, trabalho, bolsas).
 - Calculadora de orçamento (a pessoa digita os valores; o app não sugere preços).
 - Favoritos, "Esqueci minha senha" e PWA com cache offline.
-- Falta da v0.3: alertas de editais (precisa de Cloud Messaging).
+- Acesso público sem login, página inicial, painel "próximo passo", busca e filtros, comparador de países e carimbo por país.
+- Cursos online (22) e editais e bolsas (11), com lembrete no calendário (.ics).
+- Falta: alerta por notificação ou e-mail (precisa de Cloud Functions e do plano Blaze) e painel admin para manter os prazos dos editais.
 
 O que segue abaixo ainda não foi feito.
 
