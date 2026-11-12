@@ -158,7 +158,7 @@ No final, ele mostra o endereço do site, algo como `https://SEU-ID.web.app`.
 ## 10. Deploy automático pelo GitHub
 
 O arquivo `.github/workflows/deploy.yml` faz o deploy sozinho:
-- **Push na `main`:** publica no site oficial.
+- **Push na `claude/carimbo-web-app-umx2xc` (ou na `main`, se você criar):** publica no site oficial.
 - **Pull request:** publica num link de pré-visualização (válido por 7 dias) e comenta o link no PR.
 
 ### 10.1 Criar a conta de serviço do deploy
@@ -190,7 +190,7 @@ Depois de salvar, apague o JSON do seu computador.
 
 ### 10.3 Testar
 
-Faça um push na `main` e acompanhe na aba **Actions** do GitHub. Se ficar verde, o site foi publicado.
+Faça um push na `claude/carimbo-web-app-umx2xc` e acompanhe na aba **Actions** do GitHub. Se ficar verde, o site foi publicado.
 
 > O workflow publica **só o Hosting**. Quando mudar `firestore.rules`, publique as regras com `firebase deploy --only firestore:rules`.
 
