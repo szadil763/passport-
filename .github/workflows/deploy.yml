@@ -1,12 +1,12 @@
 # Deploy automático no Firebase Hosting.
-# - Push na main: publica no site oficial (canal "live").
+# - Push na branch de produção (claude/carimbo-web-app-umx2xc ou main): publica no site oficial (canal "live").
 # - Pull request: publica num link de pré-visualização temporário e comenta o link no PR.
 # Os secrets necessários estão listados no README (seção "Deploy automático").
 name: Deploy no Firebase Hosting
 
 on:
   push:
-    branches: [main]
+    branches: [claude/carimbo-web-app-umx2xc, main]
   pull_request:
 
 permissions:
@@ -53,7 +53,7 @@ jobs:
           projectId: ${{ secrets.VITE_FIREBASE_PROJECT_ID }}
           expires: 7d
 
-      - name: Publicar no site oficial (main)
+      - name: Publicar no site oficial (push)
         if: github.event_name == 'push'
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
