@@ -72,6 +72,45 @@ export default function Country() {
         </section>
       )}
 
+      {country.work && (
+        <section className="stack" aria-labelledby="titulo-trabalho">
+          <h2 id="titulo-trabalho">Trabalhar em {country.name}</h2>
+          {country.work.students && <p><strong>Durante os estudos:</strong> {country.work.students}</p>}
+
+          {country.work.programs?.length > 0 && (
+            <ul className="resource-list">
+              {country.work.programs.map((p) => (
+                <li key={p.name}>
+                  {p.url ? (
+                    <a href={p.url} target="_blank" rel="noopener noreferrer">
+                      {p.name}<span className="sr-only"> (abre em nova aba)</span>
+                    </a>
+                  ) : (
+                    <strong>{p.name}</strong>
+                  )}
+                  <p>{p.description}</p>
+                </li>
+              ))}
+            </ul>
+          )}
+
+          {country.work.jobSites?.length > 0 && (
+            <div>
+              <h3>Onde procurar vagas</h3>
+              <ul className="link-list">
+                {country.work.jobSites.map((j) => (
+                  <li key={j.url}>
+                    <a href={j.url} target="_blank" rel="noopener noreferrer">
+                      {j.title}<span className="sr-only"> (abre em nova aba)</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </section>
+      )}
+
       {countryPlaces.length > 0 && (
         <section aria-labelledby="titulo-lugares">
           <h2 id="titulo-lugares">Lugares em {country.name}</h2>

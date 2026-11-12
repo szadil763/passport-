@@ -18,6 +18,7 @@ export const LANGUAGES = [
   { id: 'alemão', label: 'Alemão' },
   { id: 'italiano', label: 'Italiano' },
   { id: 'português', label: 'Português' },
+  { id: 'japonês', label: 'Japonês' },
 ];
 
 export const BUDGETS = [

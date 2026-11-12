@@ -3,7 +3,9 @@
     "id": "portugal",
     "name": "Portugal",
     "flag": "🇵🇹",
-    "languages": ["português"],
+    "languages": [
+      "português"
+    ],
     "summary": "Mesmo idioma, grande comunidade brasileira e universidades que aceitam brasileiros por processos próprios, em alguns casos com a nota do ENEM. Muita gente usa Portugal como porta de entrada para a Europa.",
     "costLevel": 2,
     "visa": {
@@ -15,13 +17,36 @@
       "Cursos em português dispensam teste de proficiência em outro idioma.",
       "Algumas universidades aceitam a nota do ENEM: confira o edital de cada instituição.",
       "Depois de chegar, você pode precisar de um registro na imigração portuguesa. Veja os passos no site oficial."
-    ]
+    ],
+    "work": {
+      "students": "Estudantes podem trabalhar em algumas condições. Confira os limites no site oficial.",
+      "programs": [
+        {
+          "name": "Visto para procurar trabalho",
+          "description": "Existe visto para quem quer ir procurar emprego qualificado. Confira os requisitos atuais.",
+          "url": "https://vistos.mne.gov.pt"
+        }
+      ],
+      "jobSites": [
+        {
+          "title": "IEFP, serviço público de emprego",
+          "url": "https://www.iefp.pt"
+        },
+        {
+          "title": "EURES, portal europeu de vagas",
+          "url": "https://eures.europa.eu"
+        }
+      ]
+    }
   },
   {
     "id": "canada",
     "name": "Canadá",
     "flag": "🇨🇦",
-    "languages": ["inglês", "francês"],
+    "languages": [
+      "inglês",
+      "francês"
+    ],
     "summary": "Destino procurado para cursos de idioma, college e universidade. O processo de visto costuma levar tempo e o custo de vida é alto.",
     "costLevel": 3,
     "visa": {
@@ -33,13 +58,31 @@
       "Dá para estudar em inglês ou em francês (Quebec e outras regiões francófonas).",
       "Colleges oferecem cursos técnicos e práticos, além das universidades.",
       "O pedido exige comprovar recursos financeiros. Veja o valor atual no site oficial."
-    ]
+    ],
+    "work": {
+      "students": "Parte dos estudantes pode trabalhar com limite de horas durante as aulas. Confira o limite atual.",
+      "programs": [
+        {
+          "name": "Permissão de trabalho depois da formatura",
+          "description": "Alguns cursos em instituições elegíveis dão direito a trabalhar depois de formado. Confira se o seu curso e a instituição entram.",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada.html"
+        }
+      ],
+      "jobSites": [
+        {
+          "title": "Job Bank, portal de vagas do governo",
+          "url": "https://www.jobbank.gc.ca"
+        }
+      ]
+    }
   },
   {
     "id": "irlanda",
     "name": "Irlanda",
     "flag": "🇮🇪",
-    "languages": ["inglês"],
+    "languages": [
+      "inglês"
+    ],
     "summary": "Destino clássico para intercâmbio de inglês, com opção de graduação e pós. Moradia é cara, principalmente em Dublin.",
     "costLevel": 3,
     "visa": {
@@ -51,13 +94,36 @@
       "Confira no site oficial se você precisa de visto antes de viajar ou só do registro ao chegar.",
       "Escolha uma escola que esteja na lista de cursos aceitos pela imigração.",
       "Cidades como Cork, Galway e Limerick costumam ter moradia mais barata que Dublin."
-    ]
+    ],
+    "work": {
+      "students": "Estudantes de cursos elegíveis podem trabalhar meio período. Confira se o seu curso dá esse direito.",
+      "programs": [
+        {
+          "name": "Período para procurar emprego depois do curso",
+          "description": "Quem conclui certos cursos pode ter um tempo para procurar emprego no país. Confira o programa atual.",
+          "url": "https://www.irishimmigration.ie"
+        }
+      ],
+      "jobSites": [
+        {
+          "title": "JobsIreland, portal de vagas do governo",
+          "url": "https://jobsireland.ie"
+        },
+        {
+          "title": "EURES, portal europeu de vagas",
+          "url": "https://eures.europa.eu"
+        }
+      ]
+    }
   },
   {
     "id": "alemanha",
     "name": "Alemanha",
     "flag": "🇩🇪",
-    "languages": ["alemão", "inglês"],
+    "languages": [
+      "alemão",
+      "inglês"
+    ],
     "summary": "Universidades públicas com taxas baixas ou sem mensalidade em muitos cursos, e vários mestrados em inglês. É preciso comprovar recursos para o período de estudo.",
     "costLevel": 2,
     "visa": {
@@ -69,6 +135,396 @@
       "Muitas universidades públicas não cobram mensalidade, mas podem cobrar taxa semestral.",
       "A comprovação financeira costuma ser feita com uma conta bloqueada (Sperrkonto). O valor muda todo ano.",
       "O DAAD oferece bolsas e orientação gratuita para brasileiros."
-    ]
+    ],
+    "work": {
+      "students": "Estudantes podem trabalhar com limite de dias ou horas por ano. Confira o limite atual.",
+      "programs": [
+        {
+          "name": "Cartão de oportunidade (Chancenkarte)",
+          "description": "Permite procurar emprego no país por pontos de qualificação, sem oferta de trabalho prévia. Confira os requisitos no portal oficial.",
+          "url": "https://www.make-it-in-germany.com"
+        },
+        {
+          "name": "Au pair",
+          "description": "Programa de convivência com família e cuidado de crianças, com idade e idioma mínimos. Use só agências reconhecidas."
+        }
+      ],
+      "jobSites": [
+        {
+          "title": "Make it in Germany, portal do governo",
+          "url": "https://www.make-it-in-germany.com"
+        },
+        {
+          "title": "Bundesagentur für Arbeit, agência federal de emprego",
+          "url": "https://www.arbeitsagentur.de"
+        },
+        {
+          "title": "EURES, portal europeu de vagas",
+          "url": "https://eures.europa.eu"
+        }
+      ]
+    }
+  },
+  {
+    "id": "espanha",
+    "name": "Espanha",
+    "flag": "🇪🇸",
+    "languages": [
+      "espanhol"
+    ],
+    "summary": "Muitas escolas de espanhol, universidades de nome e uma cultura próxima da brasileira.",
+    "costLevel": 2,
+    "visa": {
+      "name": "Visto de estudante, pedido ao consulado da Espanha no Brasil",
+      "work": "Estudantes podem trabalhar em algumas condições. Confira os limites no site oficial.",
+      "officialUrl": "https://www.exteriores.gob.es"
+    },
+    "highlights": [
+      "Cursos de espanhol para estrangeiros existem em quase todas as cidades universitárias.",
+      "Para cursos de graduação, o diploma e as notas do Brasil costumam precisar de reconhecimento. Veja o processo no site oficial.",
+      "Barcelona também usa o catalão: em algumas faculdades, parte das aulas é nesse idioma."
+    ],
+    "work": {
+      "students": "Estudantes podem trabalhar em algumas condições. Confira as regras atuais.",
+      "programs": [
+        {
+          "name": "Autorização para procurar emprego depois dos estudos",
+          "description": "Depois de certos cursos, pode haver autorização para buscar trabalho. Confira as regras atuais.",
+          "url": "https://www.inclusion.gob.es"
+        }
+      ],
+      "jobSites": [
+        {
+          "title": "SEPE, serviço público de emprego",
+          "url": "https://www.sepe.es"
+        },
+        {
+          "title": "EURES, portal europeu de vagas",
+          "url": "https://eures.europa.eu"
+        }
+      ]
+    }
+  },
+  {
+    "id": "franca",
+    "name": "França",
+    "flag": "🇫🇷",
+    "languages": [
+      "francês"
+    ],
+    "summary": "Universidades públicas de nome, cursos de francês para estrangeiros e um sistema de candidatura centralizado para estudantes de fora.",
+    "costLevel": 2,
+    "visa": {
+      "name": "Visto de longa duração para estudos, pedido pelo portal oficial",
+      "work": "Estudantes estrangeiros podem trabalhar com limite de horas. Confira o limite atual.",
+      "officialUrl": "https://france-visas.gouv.fr"
+    },
+    "highlights": [
+      "A candidatura de estrangeiros costuma passar pelo Campus France Brasil.",
+      "Muitos cursos pedem prova de francês. Veja qual teste a instituição aceita.",
+      "Universidades públicas cobram menos que as privadas: confira o valor atual de cada curso."
+    ],
+    "work": {
+      "students": "Estudantes estrangeiros podem trabalhar com limite de horas. Confira o limite atual.",
+      "programs": [
+        {
+          "name": "Autorização provisória para procurar emprego",
+          "description": "Quem conclui certos diplomas pode pedir um período para procurar emprego. Confira as regras atuais.",
+          "url": "https://france-visas.gouv.fr"
+        }
+      ],
+      "jobSites": [
+        {
+          "title": "France Travail, serviço público de emprego",
+          "url": "https://www.francetravail.fr"
+        },
+        {
+          "title": "EURES, portal europeu de vagas",
+          "url": "https://eures.europa.eu"
+        }
+      ]
+    }
+  },
+  {
+    "id": "italia",
+    "name": "Itália",
+    "flag": "🇮🇹",
+    "languages": [
+      "italiano"
+    ],
+    "summary": "Muitas universidades históricas, cursos de arte, design, moda e gastronomia e uma língua que muitos brasileiros acham fácil de aprender.",
+    "costLevel": 2,
+    "visa": {
+      "name": "Visto nacional de estudo, pedido ao consulado da Itália no Brasil",
+      "work": "Estudantes podem trabalhar com limite de horas. Confira o limite atual.",
+      "officialUrl": "https://vistoperitalia.esteri.it"
+    },
+    "highlights": [
+      "A pré-inscrição para estrangeiros é feita pelo portal Universitaly.",
+      "Quem tem ascendente italiano pode ter direito à cidadania, mas as regras mudaram. Consulte o consulado.",
+      "Muitos cursos de graduação são em italiano. Há opções em inglês, principalmente na pós."
+    ],
+    "work": {
+      "students": "Estudantes podem trabalhar com limite de horas. Confira o limite atual.",
+      "programs": [
+        {
+          "name": "Conversão do visto de estudo em visto de trabalho",
+          "description": "Em alguns casos, é possível mudar o tipo de permissão depois de formado. Confira as regras e as cotas atuais.",
+          "url": "https://vistoperitalia.esteri.it"
+        }
+      ],
+      "jobSites": [
+        {
+          "title": "ClicLavoro, portal de vagas do governo",
+          "url": "https://www.cliclavoro.gov.it"
+        },
+        {
+          "title": "EURES, portal europeu de vagas",
+          "url": "https://eures.europa.eu"
+        }
+      ]
+    }
+  },
+  {
+    "id": "reino-unido",
+    "name": "Reino Unido",
+    "flag": "🇬🇧",
+    "languages": [
+      "inglês"
+    ],
+    "summary": "Universidades muito procuradas, com cursos de graduação mais curtos que no Brasil e muitos cursos de inglês. O custo de vida e as mensalidades são altos.",
+    "costLevel": 3,
+    "visa": {
+      "name": "Student visa, pedido pelo site do governo britânico",
+      "work": "Estudantes podem trabalhar com limite de horas durante as aulas. Confira o limite atual.",
+      "officialUrl": "https://www.gov.uk/student-visa"
+    },
+    "highlights": [
+      "A candidatura para graduação costuma passar pelo UCAS.",
+      "Há taxa de saúde cobrada junto com o visto. Veja o valor atual no site oficial.",
+      "Londres é a cidade mais cara. Cidades menores podem custar menos."
+    ],
+    "work": {
+      "students": "Estudantes podem trabalhar com limite de horas durante as aulas. Confira o limite atual.",
+      "programs": [
+        {
+          "name": "Graduate route",
+          "description": "Quem conclui certos cursos pode ficar um tempo para trabalhar ou procurar emprego. Confira as regras atuais.",
+          "url": "https://www.gov.uk/graduate-visa"
+        },
+        {
+          "name": "Skilled Worker",
+          "description": "Visto para quem tem oferta de uma empresa autorizada. Confira vagas e requisitos atuais.",
+          "url": "https://www.gov.uk/skilled-worker-visa"
+        }
+      ],
+      "jobSites": [
+        {
+          "title": "Find a job, portal de vagas do governo",
+          "url": "https://findajob.dwp.gov.uk"
+        }
+      ]
+    }
+  },
+  {
+    "id": "estados-unidos",
+    "name": "Estados Unidos",
+    "flag": "🇺🇸",
+    "languages": [
+      "inglês"
+    ],
+    "summary": "Muitas opções de escolas de inglês, colleges e universidades, e programas de intercâmbio como au pair e trabalho de verão. As mensalidades costumam ser altas.",
+    "costLevel": 3,
+    "visa": {
+      "name": "Visto de estudante (F-1 ou M-1) ou de intercâmbio (J-1), pedido ao consulado dos EUA",
+      "work": "Em geral, as regras de trabalho para estudantes são restritas. Confirme com a escola e no site oficial.",
+      "officialUrl": "https://travel.state.gov"
+    },
+    "highlights": [
+      "A escola precisa estar autorizada a receber estudantes estrangeiros. Confirme antes de pagar.",
+      "O pedido de visto pede entrevista no consulado e prova de recursos financeiros.",
+      "Bolsas parciais de universidades e da Fulbright ajudam a reduzir o custo."
+    ],
+    "work": {
+      "students": "Em geral, estudantes têm restrições fortes para trabalhar. Confirme as regras com a escola e no site oficial.",
+      "programs": [
+        {
+          "name": "J-1, visto de intercâmbio",
+          "description": "Inclui programas como au pair, estágio e trabalho de verão. É preciso passar por uma organização patrocinadora oficial.",
+          "url": "https://j1visa.state.gov"
+        },
+        {
+          "name": "Trabalho ligado ao curso",
+          "description": "Alguns estudantes podem ter autorização de trabalho ligada ao curso. Pergunte ao escritório internacional da escola.",
+          "url": "https://studyinthestates.dhs.gov"
+        }
+      ],
+      "jobSites": []
+    }
+  },
+  {
+    "id": "australia",
+    "name": "Austrália",
+    "flag": "🇦🇺",
+    "languages": [
+      "inglês"
+    ],
+    "summary": "Destino forte para cursos de inglês, cursos técnicos e universidade, com boa qualidade de vida. Distância e custo de vida são altos.",
+    "costLevel": 3,
+    "visa": {
+      "name": "Student visa, pedido pelo site do Departamento de Assuntos Internos",
+      "work": "Estudantes podem trabalhar com limite de horas. Confira o limite atual.",
+      "officialUrl": "https://immi.homeaffairs.gov.au"
+    },
+    "highlights": [
+      "A instituição precisa estar registrada para receber estudantes estrangeiros. Confira a lista oficial.",
+      "O seguro-saúde para estudantes é obrigatório.",
+      "As estações seguem o hemisfério sul, como no Brasil: o verão é em dezembro."
+    ],
+    "work": {
+      "students": "Estudantes podem trabalhar com limite de horas. Confira o limite atual.",
+      "programs": [
+        {
+          "name": "Visto temporário para graduados",
+          "description": "Depois de certos cursos, é possível ficar um tempo para trabalhar. Confira os requisitos atuais.",
+          "url": "https://immi.homeaffairs.gov.au"
+        }
+      ],
+      "jobSites": [
+        {
+          "title": "Jobsearch, portal de vagas do governo",
+          "url": "https://jobsearch.gov.au"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nova-zelandia",
+    "name": "Nova Zelândia",
+    "flag": "🇳🇿",
+    "languages": [
+      "inglês"
+    ],
+    "summary": "País pequeno e tranquilo, com natureza forte, cursos de inglês e universidades. Fica longe do Brasil e o custo de vida é alto.",
+    "costLevel": 3,
+    "visa": {
+      "name": "Student visa, pedido pelo site da imigração neozelandesa",
+      "work": "Estudantes podem trabalhar com limite de horas. Confira o limite atual.",
+      "officialUrl": "https://www.immigration.govt.nz"
+    },
+    "highlights": [
+      "Confira se a instituição está aprovada para receber estudantes estrangeiros.",
+      "Algumas cidades têm moradia limitada: busque com antecedência.",
+      "As estações seguem o hemisfério sul, como no Brasil: o verão é em dezembro."
+    ],
+    "work": {
+      "students": "Estudantes podem trabalhar com limite de horas. Confira o limite atual.",
+      "programs": [
+        {
+          "name": "Visto de trabalho depois dos estudos",
+          "description": "Depois de certos cursos, é possível pedir autorização para trabalhar. Confira os requisitos atuais.",
+          "url": "https://www.immigration.govt.nz"
+        }
+      ],
+      "jobSites": []
+    }
+  },
+  {
+    "id": "chile",
+    "name": "Chile",
+    "flag": "🇨🇱",
+    "languages": [
+      "espanhol"
+    ],
+    "summary": "Opção próxima para aprender espanhol e fazer graduação ou pós, com boas universidades e viagem mais barata que para outros continentes.",
+    "costLevel": 2,
+    "visa": {
+      "name": "Visto de estudante ou residência temporária, pelo serviço de migração do Chile",
+      "work": "Confira no site de migração se o seu tipo de permissão permite trabalhar.",
+      "officialUrl": "https://www.serviciomigraciones.cl"
+    },
+    "highlights": [
+      "Brasileiros podem usar o acordo de residência do Mercosul. Confirme as regras atuais.",
+      "O espanhol chileno tem expressões e velocidade próprias: dê um tempo para se acostumar.",
+      "O país tem risco de terremotos: conheça o plano de segurança da sua moradia."
+    ],
+    "work": {
+      "students": "Confira no site de migração se o seu tipo de permissão permite trabalhar.",
+      "programs": [
+        {
+          "name": "Residência pelo acordo do Mercosul",
+          "description": "Brasileiros podem ter caminho facilitado para pedir residência. Confirme as regras atuais.",
+          "url": "https://www.serviciomigraciones.cl"
+        }
+      ],
+      "jobSites": [
+        {
+          "title": "Bolsa Nacional de Empleo, portal do governo",
+          "url": "https://www.bne.cl"
+        }
+      ]
+    }
+  },
+  {
+    "id": "japao",
+    "name": "Japão",
+    "flag": "🇯🇵",
+    "languages": [
+      "japonês",
+      "inglês"
+    ],
+    "summary": "Escolas de japonês, universidades com programas em inglês e uma grande comunidade de descendentes de japoneses no Brasil. O idioma é a maior barreira.",
+    "costLevel": 2,
+    "visa": {
+      "name": "Visto de estudante, pedido ao consulado do Japão no Brasil",
+      "work": "Estudantes precisam de autorização específica para trabalhar meio período. Pergunte à escola e à imigração.",
+      "officialUrl": "https://www.mofa.go.jp"
+    },
+    "highlights": [
+      "Muitas escolas de japonês pedem comprovação de renda ou um garantidor.",
+      "O portal Study in Japan reúne cursos e bolsas. Confira os prazos de cada um.",
+      "Bolsas do governo japonês existem para brasileiros: confirme os editais atuais."
+    ],
+    "work": {
+      "students": "Estudantes precisam de autorização específica para trabalhar meio período. Pergunte à escola e à imigração.",
+      "programs": [],
+      "jobSites": [
+        {
+          "title": "Hello Work, serviço público de emprego",
+          "url": "https://www.hellowork.mhlw.go.jp"
+        }
+      ]
+    }
+  },
+  {
+    "id": "argentina",
+    "name": "Argentina",
+    "flag": "🇦🇷",
+    "languages": [
+      "espanhol"
+    ],
+    "summary": "País vizinho, com universidades públicas e cursos de espanhol. Muitos brasileiros escolhem a Argentina por ser perto e por facilitar a documentação.",
+    "costLevel": 1,
+    "visa": {
+      "name": "Residência temporária pelo acordo do Mercosul, pelo serviço de migração",
+      "work": "Confira no site de migração se o seu tipo de permissão permite trabalhar.",
+      "officialUrl": "https://www.argentina.gob.ar/interior/migraciones"
+    },
+    "highlights": [
+      "Universidades públicas costumam ser gratuitas para residentes. Confirme as regras de cada curso.",
+      "O espanhol argentino tem sotaque e vocabulário próprios.",
+      "O câmbio e a inflação variam muito: confirme os valores antes de planejar."
+    ],
+    "work": {
+      "students": "Confira no site de migração se o seu tipo de permissão permite trabalhar.",
+      "programs": [
+        {
+          "name": "Residência pelo acordo do Mercosul",
+          "description": "Brasileiros podem ter caminho facilitado para pedir residência. Confirme as regras atuais.",
+          "url": "https://www.argentina.gob.ar/interior/migraciones"
+        }
+      ],
+      "jobSites": []
+    }
   }
 ]
