@@ -7,6 +7,8 @@ import Profile from './pages/Profile';
 import Roadmap from './pages/Roadmap';
 import Destinations from './pages/Destinations';
 import Country from './pages/Country';
+import Places from './pages/Places';
+import Place from './pages/Place';
 import Resources from './pages/Resources';
 
 function AppRoutes() {
@@ -31,6 +33,8 @@ function AppRoutes() {
         <Route index element={<Roadmap />} />
         <Route path="destinos" element={<Destinations />} />
         <Route path="destinos/:id" element={<Country />} />
+        <Route path="lugares" element={<Places />} />
+        <Route path="lugares/:id" element={<Place />} />
         <Route path="recursos" element={<Resources />} />
         <Route path="perfil" element={<Profile />} />
         <Route path="*" element={<Navigate to="/" replace />} />

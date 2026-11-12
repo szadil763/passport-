@@ -7,6 +7,7 @@ export const GOALS = [
   { id: 'pos-graduacao', label: 'Mestrado ou doutorado' },
   { id: 'intercambio', label: 'Intercâmbio curto' },
   { id: 'voluntariado', label: 'Voluntariado' },
+  { id: 'trabalho', label: 'Trabalhar no exterior' },
 ];
 
 // Os nomes precisam ser iguais aos usados em countries/{id}.languages.

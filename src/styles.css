@@ -132,7 +132,7 @@ code { background: var(--surface); padding: 0.1rem 0.35rem; border-radius: 4px; 
 
 .tabbar {
   position: fixed; bottom: 0; left: 0; right: 0; z-index: 10;
-  display: grid; grid-template-columns: repeat(4, 1fr);
+  display: grid; grid-template-columns: repeat(5, 1fr);
   background: var(--surface); border-top: 1px solid var(--line);
   padding-bottom: env(safe-area-inset-bottom, 0px);
 }
@@ -317,10 +317,24 @@ legend { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; 
 .pill { border: 1px solid var(--line); border-radius: 999px; padding: 0 0.55rem; }
 .pill--free { color: var(--stamp-green); border-color: currentColor; font-weight: 700; }
 
+/* ---------- Lugares ---------- */
+.place-list { list-style: none; padding: 0; margin: 1rem 0; display: grid; gap: 0.75rem; }
+.place-row {
+  display: grid; gap: 0.25rem; padding: 1rem; text-decoration: none; color: inherit;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-s);
+}
+.place-row:hover { border-color: var(--muted); }
+.place-name { font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; }
+.place-where { color: var(--muted); font-size: 0.9rem; }
+.place-row p { margin: 0; }
+.place-sections { display: grid; gap: 1rem; }
+.link-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.25rem; }
+.link-list a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
+
 /* ---------- Telas maiores ---------- */
 @media (min-width: 720px) {
   .page { padding-left: 1.5rem; padding-right: 1.5rem; }
-  .tabbar { justify-content: center; grid-template-columns: repeat(4, minmax(0, 160px)); }
+  .tabbar { justify-content: center; grid-template-columns: repeat(5, minmax(0, 140px)); }
 }
 
 /* ---------- Movimento reduzido ---------- */

@@ -8,6 +8,10 @@ service cloud.firestore {
       allow read: if true;
       allow write: if false;
     }
+    match /places/{placeId} {
+      allow read: if true;
+      allow write: if false;
+    }
     match /resources/{resourceId} {
       allow read: if true;
       allow write: if false;
