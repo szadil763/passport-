@@ -1,47 +1,72 @@
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { Link, Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { firebaseConfigured } from './firebase';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import Layout from './components/Layout';
-import Login from './pages/Login';
-import Profile from './pages/Profile';
-import Roadmap from './pages/Roadmap';
-import Destinations from './pages/Destinations';
-import Country from './pages/Country';
-import Places from './pages/Places';
-import Place from './pages/Place';
+import { Loading } from './components/LoadState';
 import Budget from './pages/Budget';
+import Calls from './pages/Calls';
+import Compare from './pages/Compare';
+import Country from './pages/Country';
+import Courses from './pages/Courses';
+import Destinations from './pages/Destinations';
 import Favorites from './pages/Favorites';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Place from './pages/Place';
+import Places from './pages/Places';
+import Profile from './pages/Profile';
 import Resources from './pages/Resources';
+import Roadmap from './pages/Roadmap';
 
-function AppRoutes() {
+// Telas pessoais: exigem login. Quem ainda não escolheu um objetivo faz o onboarding primeiro.
+function RequireAuth({ children }) {
   const { user, profile, profileError, loading } = useAuth();
+  const { pathname } = useLocation();
 
-  if (loading) return <p className="status" role="status">Carregando…</p>;
-  if (!user) return <Login />;
+  if (loading) return <Loading />;
+  if (!user) return <Navigate to="/entrar" state={{ from: pathname }} replace />;
   if (profileError) {
     return (
-      <main className="status">
+      <div className="status">
         <h1>Não foi possível carregar seu perfil</h1>
         <p>Verifique sua conexão e recarregue a página.</p>
-      </main>
+      </div>
     );
   }
-  // Primeiro acesso: sem objetivo salvo, mostra o onboarding.
   if (!profile?.goal) return <Profile onboarding />;
+  return children;
+}
 
+function NotFound() {
+  return (
+    <div className="status">
+      <h1>Página não encontrada</h1>
+      <p><Link to="/">Voltar ao início</Link></p>
+    </div>
+  );
+}
+
+function AppRoutes() {
   return (
     <Routes>
+      <Route path="entrar" element={<Login />} />
       <Route element={<Layout />}>
-        <Route index element={<Roadmap />} />
+        {/* Públicas */}
+        <Route index element={<Home />} />
         <Route path="destinos" element={<Destinations />} />
         <Route path="destinos/:id" element={<Country />} />
+        <Route path="comparar" element={<Compare />} />
         <Route path="lugares" element={<Places />} />
         <Route path="lugares/:id" element={<Place />} />
-        <Route path="orcamento" element={<Budget />} />
-        <Route path="favoritos" element={<Favorites />} />
+        <Route path="cursos" element={<Courses />} />
+        <Route path="editais" element={<Calls />} />
         <Route path="recursos" element={<Resources />} />
-        <Route path="perfil" element={<Profile />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
+        {/* Pessoais */}
+        <Route path="caminho" element={<RequireAuth><Roadmap /></RequireAuth>} />
+        <Route path="orcamento" element={<RequireAuth><Budget /></RequireAuth>} />
+        <Route path="favoritos" element={<RequireAuth><Favorites /></RequireAuth>} />
+        <Route path="perfil" element={<RequireAuth><Profile /></RequireAuth>} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   );

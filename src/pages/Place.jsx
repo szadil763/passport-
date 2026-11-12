@@ -2,6 +2,8 @@
 import { Link, useParams } from 'react-router-dom';
 import { useDocument } from '../hooks/useFirestore';
 import { GOALS, labelOf } from '../data/options';
+import { usePageTitle } from '../hooks/usePageTitle';
+import ShareButton from '../components/ShareButton';
 import FavoriteButton from '../components/FavoriteButton';
 import { LoadError, Loading } from '../components/LoadState';
 
@@ -17,6 +19,7 @@ export default function Place() {
   const countryId = place.data?.countryId;
   // Só busca o país depois de saber qual é (id vazio devolve "não encontrado").
   const country = useDocument('countries', countryId ?? '_');
+  usePageTitle(place.data?.name);
 
   if (place.loading) return <Loading />;
   if (place.error) return <LoadError what="este lugar" />;
@@ -42,7 +45,10 @@ export default function Place() {
             <Link to={`/destinos/${c.id}`}>{c.flag} {c.name}</Link>
           </p>
         )}
-        <FavoriteButton kind="places" id={p.id} name={p.name} />
+        <div className="head-actions">
+          <FavoriteButton kind="places" id={p.id} name={p.name} />
+          <ShareButton title={p.name} text={`${p.name}: dicas para estudar, trabalhar e morar, no Carimbo.`} />
+        </div>
       </header>
       <p>{p.summary}</p>
 

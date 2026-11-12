@@ -1,8 +1,8 @@
-// Favoritos do usuário em users/{uid}.favorites = { countries: [], places: [], resources: [] }.
+// Favoritos do usuário em users/{uid}.favorites = { countries, places, resources, courses, calls }, listas de ids.
 import { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 
-export const FAVORITE_KINDS = ['countries', 'places', 'resources'];
+export const FAVORITE_KINDS = ['countries', 'places', 'resources', 'courses', 'calls'];
 
 export function useFavorites() {
   const { profile, saveProfile } = useAuth();

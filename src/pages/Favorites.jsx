@@ -3,23 +3,30 @@ import { Link } from 'react-router-dom';
 import { useCollection } from '../hooks/useFirestore';
 import { useFavorites } from '../hooks/useFavorites';
 import { LoadError, Loading } from '../components/LoadState';
+import { usePageTitle } from '../hooks/usePageTitle';
+import CountryCard from '../components/CountryCard';
 import PlaceRow from '../components/PlaceRow';
 
 export default function Favorites() {
+  usePageTitle('Favoritos');
   const { favorites } = useFavorites();
   const countries = useCollection('countries');
   const places = useCollection('places');
   const resources = useCollection('resources');
+  const courses = useCollection('courses');
+  const calls = useCollection('calls');
 
-  if (countries.loading || places.loading || resources.loading) return <Loading />;
-  if (countries.error || places.error || resources.error) return <LoadError what="seus favoritos" />;
+  if (countries.loading || places.loading || resources.loading || courses.loading || calls.loading) return <Loading />;
+  if (countries.error || places.error || resources.error || courses.error || calls.error) return <LoadError what="seus favoritos" />;
 
   const pick = (list, ids = []) => list.filter((x) => ids.includes(x.id));
   const favCountries = pick(countries.data, favorites.countries);
   const favPlaces = pick(places.data, favorites.places);
   const favResources = pick(resources.data, favorites.resources);
+  const favCourses = pick(courses.data, favorites.courses);
+  const favCalls = pick(calls.data, favorites.calls);
   const byId = Object.fromEntries(countries.data.map((c) => [c.id, c]));
-  const empty = !favCountries.length && !favPlaces.length && !favResources.length;
+  const empty = ![favCountries, favPlaces, favResources, favCourses, favCalls].some((l) => l.length);
 
   return (
     <section className="stack">
@@ -28,23 +35,16 @@ export default function Favorites() {
 
       {empty && (
         <p className="status">
-          Você ainda não favoritou nada. Toque em "Favoritar" na página de um país, de uma cidade ou de um
-          recurso.
+          Você ainda não favoritou nada. Toque em "Favoritar" na página de um país, de uma cidade, de um
+          curso, de um edital ou de um recurso.
         </p>
       )}
 
       {favCountries.length > 0 && (
         <section aria-labelledby="f-paises">
           <h2 id="f-paises">Países</h2>
-          <ul className="country-list">
-            {favCountries.map((c) => (
-              <li key={c.id}>
-                <Link to={`/destinos/${c.id}`} className="country-row">
-                  <span className="flag" aria-hidden="true">{c.flag}</span>
-                  <span className="country-name">{c.name}</span>
-                </Link>
-              </li>
-            ))}
+          <ul className="card-grid">
+            {favCountries.map((c) => <li key={c.id}><CountryCard country={c} /></li>)}
           </ul>
         </section>
       )}
@@ -54,6 +54,38 @@ export default function Favorites() {
           <h2 id="f-lugares">Lugares</h2>
           <ul className="place-list">
             {favPlaces.map((p) => <li key={p.id}><PlaceRow place={p} country={byId[p.countryId]} /></li>)}
+          </ul>
+        </section>
+      )}
+
+      {favCourses.length > 0 && (
+        <section aria-labelledby="f-cursos">
+          <h2 id="f-cursos">Cursos online</h2>
+          <ul className="resource-list">
+            {favCourses.map((c) => (
+              <li key={c.id}>
+                <a href={c.officialUrl} target="_blank" rel="noopener noreferrer">
+                  {c.title}<span className="sr-only"> (abre em nova aba)</span>
+                </a>
+                <p>{c.description}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {favCalls.length > 0 && (
+        <section aria-labelledby="f-editais">
+          <h2 id="f-editais">Editais e bolsas</h2>
+          <ul className="resource-list">
+            {favCalls.map((c) => (
+              <li key={c.id}>
+                <a href={c.officialUrl} target="_blank" rel="noopener noreferrer">
+                  {c.title}<span className="sr-only"> (abre em nova aba)</span>
+                </a>
+                <p>{c.description}</p>
+              </li>
+            ))}
           </ul>
         </section>
       )}

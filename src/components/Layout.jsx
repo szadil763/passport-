@@ -1,19 +1,14 @@
-// Estrutura das telas logadas: barra superior, conteúdo e barra inferior fixa.
-import { NavLink, Outlet, useLocation } from 'react-router-dom';
+// Estrutura das telas: barra superior, conteúdo e barra inferior fixa.
+// As telas de conteúdo são públicas; quem não entrou vê "Entrar" no topo e na barra inferior.
+import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 import { useAuth } from '../contexts/AuthContext';
-import { IconBook, IconGlobe, IconPath, IconPin, IconUser, Logo } from './Icons';
+import { IconBook, IconGlobe, IconHome, IconPin, IconUser, Logo } from './Icons';
 
-const TABS = [
-  { to: '/', label: 'Meu caminho', Icon: IconPath, end: true },
-  { to: '/destinos', label: 'Destinos', Icon: IconGlobe },
-  { to: '/lugares', label: 'Lugares', Icon: IconPin },
-  { to: '/recursos', label: 'Recursos', Icon: IconBook },
-  { to: '/perfil', label: 'Perfil', Icon: IconUser },
-];
+const starts = (...prefixes) => (path) => prefixes.some((p) => path === p || path.startsWith(`${p}/`));
 
 export default function Layout() {
-  const { logout } = useAuth();
+  const { user, logout } = useAuth();
   const { pathname } = useLocation();
   const mainRef = useRef(null);
 
@@ -23,15 +18,29 @@ export default function Layout() {
     mainRef.current?.focus({ preventScroll: true });
   }, [pathname]);
 
+  const tabs = [
+    { to: '/', label: 'Início', Icon: IconHome, active: (p) => p === '/' || starts('/caminho')(p) },
+    { to: '/destinos', label: 'Destinos', Icon: IconGlobe, active: starts('/destinos', '/comparar') },
+    { to: '/lugares', label: 'Lugares', Icon: IconPin, active: starts('/lugares') },
+    { to: '/cursos', label: 'Estudar', Icon: IconBook, active: starts('/cursos', '/editais', '/recursos') },
+    user
+      ? { to: '/perfil', label: 'Perfil', Icon: IconUser, active: starts('/perfil', '/favoritos', '/orcamento') }
+      : { to: '/entrar', label: 'Entrar', Icon: IconUser, active: starts('/entrar') },
+  ];
+
   return (
     <div className="shell">
       <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
       <header className="topbar">
-        <NavLink to="/" className="brand" aria-label="Carimbo, ir para Meu caminho">
+        <NavLink to="/" className="brand" aria-label="Carimbo, ir para o início">
           <Logo />
           Carimbo
         </NavLink>
-        <button className="link-button" type="button" onClick={logout}>Sair</button>
+        {user ? (
+          <button className="link-button" type="button" onClick={logout}>Sair</button>
+        ) : (
+          <Link className="topbar-link" to="/entrar" state={{ from: pathname }}>Entrar</Link>
+        )}
       </header>
 
       <main id="conteudo" className="page" ref={mainRef} tabIndex={-1}>
@@ -39,12 +48,15 @@ export default function Layout() {
       </main>
 
       <nav className="tabbar" aria-label="Navegação principal">
-        {TABS.map(({ to, label, Icon, end }) => (
-          <NavLink key={to} to={to} end={end}>
-            <Icon />
-            {label}
-          </NavLink>
-        ))}
+        {tabs.map(({ to, label, Icon, active }) => {
+          const current = active(pathname);
+          return (
+            <Link key={to} to={to} className={current ? 'active' : undefined} aria-current={current ? 'page' : undefined}>
+              <Icon />
+              {label}
+            </Link>
+          );
+        })}
       </nav>
     </div>
   );

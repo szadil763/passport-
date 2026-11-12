@@ -1,6 +1,11 @@
 // Sites curados, com filtro por categoria e opção "Só gratuitos".
 import { useState } from 'react';
 import { useCollection } from '../hooks/useFirestore';
+import { usePageTitle } from '../hooks/usePageTitle';
+import { matchesQuery } from '../utils/text';
+import SearchField from '../components/SearchField';
+import SelectField from '../components/SelectField';
+import StudyNav from '../components/StudyNav';
 import { CATEGORIES, labelOf } from '../data/options';
 import ChipGroup from '../components/ChipGroup';
 import FavoriteButton from '../components/FavoriteButton';
@@ -9,14 +14,28 @@ import { LoadError, Loading } from '../components/LoadState';
 const FILTERS = [{ id: 'todas', label: 'Todas' }, ...CATEGORIES];
 
 export default function Resources() {
+  usePageTitle('Recursos');
   const { data, loading, error } = useCollection('resources');
+  const countries = useCollection('countries');
+  const [query, setQuery] = useState('');
+  const [countryId, setCountryId] = useState('todos');
   const [category, setCategory] = useState('todas');
   const [onlyFree, setOnlyFree] = useState(false);
 
-  if (loading) return <Loading>Carregando recursos…</Loading>;
-  if (error) return <LoadError what="os recursos" />;
+  if (loading || countries.loading) return <Loading>Carregando recursos…</Loading>;
+  if (error || countries.error) return <LoadError what="os recursos" />;
+
+  const countryOptions = [
+    { id: 'todos', label: 'Qualquer país' },
+    ...countries.data
+      .filter((c) => data.some((r) => r.countries?.includes(c.id)))
+      .sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'))
+      .map((c) => ({ id: c.id, label: `${c.flag} ${c.name}` })),
+  ];
 
   const list = data
+    .filter((r) => matchesQuery(query, r.title, r.description))
+    .filter((r) => countryId === 'todos' || r.countries?.includes(countryId))
     .filter((r) => category === 'todas' || r.category === category)
     .filter((r) => !onlyFree || r.free)
     .sort((a, b) => a.title.localeCompare(b.title, 'pt-BR'));
@@ -24,9 +43,12 @@ export default function Resources() {
   return (
     <section>
       <h1>Recursos</h1>
+      <StudyNav />
       <p className="muted">Sites e programas selecionados para cada etapa do seu caminho.</p>
 
       <div className="filters">
+        <SearchField label="Buscar recurso" value={query} onChange={setQuery} placeholder="Ex.: IELTS, bolsa" />
+        <SelectField label="País" value={countryId} onChange={setCountryId} options={countryOptions} />
         <p id="rotulo-categoria" className="sr-only">Filtrar por categoria</p>
         <ChipGroup options={FILTERS} value={category} onChange={setCategory} labelledBy="rotulo-categoria" />
         <label className="checkbox">

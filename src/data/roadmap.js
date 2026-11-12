@@ -7,6 +7,8 @@ export const ROADMAP_STEPS = [
     id: 'destino',
     title: 'Escolher o destino',
     hint: 'Compare idioma, custo e regras de visto na aba Destinos.',
+    to: '/destinos',
+    linkLabel: 'Ver destinos',
   },
   {
     id: 'orcamento',
@@ -19,6 +21,8 @@ export const ROADMAP_STEPS = [
     id: 'proficiencia',
     title: 'Fazer o teste de proficiência',
     hint: 'Veja qual teste a instituição aceita antes de marcar a prova.',
+    to: '/cursos',
+    linkLabel: 'Ver cursos de idioma online',
   },
   {
     id: 'curriculo',
@@ -35,6 +39,8 @@ export const ROADMAP_STEPS = [
     id: 'candidatura',
     title: 'Enviar a candidatura',
     hint: 'Prepare carta de motivação, currículo e cartas de recomendação com antecedência.',
+    to: '/editais',
+    linkLabel: 'Ver editais e bolsas',
   },
   {
     id: 'aceite',

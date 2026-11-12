@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
+import { usePageTitle } from '../hooks/usePageTitle';
 import { BUDGETS, labelOf } from '../data/options';
 import {
   BUDGET_LIMITS,
@@ -32,6 +33,7 @@ function MoneyField({ item, value, onChange }) {
 }
 
 export default function Budget() {
+  usePageTitle('Orçamento');
   const { profile, saveProfile } = useAuth();
   const saved = profile?.budgetPlan ?? {};
   const [values, setValues] = useState(saved.values ?? {});
@@ -72,7 +74,7 @@ export default function Budget() {
   return (
     <form className="budget-form" onSubmit={submit}>
       <div>
-        <Link to="/" className="back">Voltar para Meu caminho</Link>
+        <Link to="/caminho" className="back">Voltar para Meu caminho</Link>
         <h1>Orçamento</h1>
         <p className="muted">
           Digite estimativas em reais. O app não sugere valores: pesquise nos sites da instituição e nos sites

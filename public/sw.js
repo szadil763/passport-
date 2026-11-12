@@ -1,6 +1,6 @@
 // Service worker do Carimbo: deixa o app abrir sem internet.
 // Guarda só arquivos do próprio site. Os dados do Firestore ficam no cache do próprio Firebase.
-const CACHE = 'carimbo-v1';
+const CACHE = 'carimbo-v2';
 const SHELL = ['/', '/manifest.webmanifest', '/favicon.svg', '/icon-192.png'];
 
 self.addEventListener('install', (event) => {
