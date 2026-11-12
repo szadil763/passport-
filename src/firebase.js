@@ -40,6 +40,15 @@ function createDb() {
 }
 export const db = app ? createDb() : null;
 
+// Conexão separada, sem cache offline, só para contar acessos. Com o cache offline uma escrita pendente
+// seria reenviada depois de recarregar a página e contaria a visita duas vezes.
+function createStatsDb() {
+  const statsDb = getFirestore(initializeApp(config, 'stats'));
+  if (usingEmulators) connectFirestoreEmulator(statsDb, '127.0.0.1', 8080);
+  return statsDb;
+}
+export const statsDb = app ? createStatsDb() : null;
+
 if (app && usingEmulators) {
   connectAuthEmulator(auth, 'http://127.0.0.1:9099', { disableWarnings: true });
   connectFirestoreEmulator(db, '127.0.0.1', 8080);

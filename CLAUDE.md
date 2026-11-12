@@ -29,7 +29,7 @@ Para usar os emuladores no app, coloque `VITE_USE_EMULATORS=true` no `.env`.
 - `src/hooks/useFirestore.js`: `useCollection` e `useDocument` com cache em memória, loading e erro; `useFavorites.js`: favoritos em `users/{uid}.favorites`; `usePageTitle.js`: título da aba
 - `src/data/`: opções fixas (`options.js`), etapas do caminho (`roadmap.js`), itens e contas do orçamento (`budget.js`), mensagens de erro do Auth (`authErrors.js`)
 - `src/admin/`: painel admin. `schemas.js` (campos de cada coleção), `forms.js` (conversão e validação, testada), `useFresh.js` (leitura sem cache). Para um campo novo em uma coleção, acrescente-o em `schemas.js`.
-- `src/utils/`: `text.js` (busca sem acento), `dates.js` (prazos de editais), `ics.js` (lembrete de calendário)
+- `src/utils/`: `text.js` (busca sem acento), `dates.js` (prazos de editais), `ics.js` (lembrete de calendário), `analytics.js` e `track.js` (contador de acessos)
 - `public/`: `manifest.webmanifest`, ícones e `sw.js` (PWA: app abre sem internet)
 - `src/components/`: `Layout`, `Stamp` (carimbo SVG), `ChipGroup`, `VisaNotice`, `LoadState`, `Icons`, `PlaceRow`, `FavoriteButton`, `CountryCard`, `CountryStamp`, `CostScale`, `SearchField`, `SelectField`, `ShareButton`, `StudyNav`
 - `src/pages/`: `Login`, `Profile` (onboarding e aba Perfil), `Roadmap`, `Destinations`, `Country`, `Home` (landing pública e painel), `Compare`, `Places`, `Place`, `Courses`, `Calls`, `Resources`, `Favorites`, `Budget`, `About` (créditos), `admin/` (`AdminHome`, `AdminList`, `AdminEdit`)
@@ -42,6 +42,7 @@ Para usar os emuladores no app, coloque `VITE_USE_EMULATORS=true` no `.env`.
 - `calls/{id}`: title, organization, countries[], levels[], officialUrl, description, opensAt?, closesAt? ("AAAA-MM-DD"), datesNote, updatedAt
 - `resources/{id}`: title, url, category, free, countries[], description, updatedAt
 - `admins/{uid}`: qualquer campo (ex.: `ativo: true`). Só o console do Firebase cria. Quem tem o documento é administrador (`isAdmin()` em `firestore.rules`) e escreve no conteúdo curado.
+- `stats/{AAAA-MM-DD}`: views, visitors e um contador por seção (`s_inicio`, `s_destinos`...). Contador anônimo de acessos: qualquer visitante só soma +1 (regras em `firestore.rules`); só admin lê. Gravado por `src/utils/track.js`, por uma conexão do Firestore sem cache offline (`statsDb` em `src/firebase.js`). Visitas de admin e "não rastrear" não contam.
 - `users/{uid}`: goal, languages[], budget, roadmap{etapaId: boolean}, budgetPlan{values, months}, favorites{countries[], places[], resources[], courses[], calls[]}, updatedAt
 
 Os `id` de `src/data/options.js` e `src/data/roadmap.js` são gravados no Firestore: não renomeie sem migrar os dados.
@@ -52,7 +53,7 @@ Ao adicionar campos em `users/{uid}`, atualize também `validProfile()` em `fire
 - Públicas (sem login): `/`, `/destinos`, `/destinos/:id`, `/comparar`, `/lugares`, `/lugares/:id`, `/cursos`, `/editais`, `/recursos`, `/entrar`.
 - Também públicas: `/sobre` (créditos e missão; quem desenvolveu (`AUTHOR`) e o e-mail de contato (`CONTACT`) ficam em `src/data/credits.js`).
 - Pessoais (`RequireAuth` em `App.jsx`): `/caminho`, `/orcamento`, `/favoritos`, `/perfil`. Quem não tem objetivo salvo faz o onboarding.
-- Admin (`RequireAdmin`): `/admin`, `/admin/:colecao`, `/admin/:colecao/:id` (`novo` cria).
+- Admin (`RequireAdmin`): `/admin`, `/admin/acessos` (contador de acessos), `/admin/:colecao`, `/admin/:colecao/:id` (`novo` cria).
 
 ## Convenções
 - Conteúdo curado (países, lugares, cursos, editais e recursos) nasce em `seed/*.json`, é **somente leitura** para o público e editável só por administradores, no painel `/admin` (ver `firestore.rules`). O `npm run seed` sobrescreve o que foi editado no painel: depois de editar, use `npm run seed -- --somente-novos`.

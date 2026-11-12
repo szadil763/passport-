@@ -36,6 +36,11 @@ export default function About() {
           Você pode explorar tudo sem criar conta. Quando entra, o app guarda só o seu perfil, o seu caminho, o
           seu orçamento e os seus favoritos, e só você consegue ler esses dados.
         </p>
+        <p>
+          O app também conta os acessos de forma anônima, para sabermos quantas pessoas usam cada tela. Não
+          guardamos nome, e-mail nem endereço de IP nessa contagem. Se o seu navegador pede "não rastrear", o
+          app respeita.
+        </p>
       </section>
 
       <section aria-labelledby="creditos">

@@ -27,6 +27,12 @@ export default function AdminHome() {
         aparecem no site quando a página é recarregada.
       </p>
       <ul className="menu-cards">
+        <li>
+          <Link to="/admin/acessos" className="menu-link">
+            <strong>Acessos ao site</strong>
+            <span>Páginas vistas e visitantes por dia</span>
+          </Link>
+        </li>
         {COLLECTION_ORDER.map((name) => <Entry key={name} name={name} />)}
       </ul>
       <p className="panel small">
