@@ -317,6 +317,18 @@ legend { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; 
 .pill { border: 1px solid var(--line); border-radius: 999px; padding: 0 0.55rem; }
 .pill--free { color: var(--stamp-green); border-color: currentColor; font-weight: 700; }
 
+/* ---------- Favoritos ---------- */
+.fav {
+  display: inline-flex; align-items: center; gap: 0.4rem; min-height: 44px; padding: 0 0.9rem;
+  font: inherit; font-weight: 700; color: var(--ink); cursor: pointer;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 999px;
+}
+.fav svg { width: 20px; height: 20px; }
+.fav[aria-pressed='true'] { color: var(--stamp-magenta); border-color: currentColor; }
+.country-head { flex-wrap: wrap; }
+.country-head .fav { margin-left: auto; }
+.resource-list .fav { justify-self: start; margin-top: 0.4rem; }
+
 /* ---------- Orçamento ---------- */
 .step-link { display: inline-flex; align-items: center; min-height: 44px; margin: 0.25rem 0 0 1rem; font-weight: 700; }
 .budget-form { display: grid; gap: 1.5rem; }

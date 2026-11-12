@@ -4,6 +4,7 @@ import { useCollection, useDocument } from '../hooks/useFirestore';
 import { CATEGORIES, COST_LABELS, labelOf } from '../data/options';
 import { LoadError, Loading } from '../components/LoadState';
 import PlaceRow from '../components/PlaceRow';
+import FavoriteButton from '../components/FavoriteButton';
 import VisaNotice from '../components/VisaNotice';
 
 export default function Country() {
@@ -34,6 +35,7 @@ export default function Country() {
       <header className="country-head">
         <span className="flag" aria-hidden="true">{country.flag}</span>
         <h1>{country.name}</h1>
+        <FavoriteButton kind="countries" id={country.id} name={country.name} />
       </header>
       <p>{country.summary}</p>
 

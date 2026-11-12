@@ -10,6 +10,7 @@ import Country from './pages/Country';
 import Places from './pages/Places';
 import Place from './pages/Place';
 import Budget from './pages/Budget';
+import Favorites from './pages/Favorites';
 import Resources from './pages/Resources';
 
 function AppRoutes() {
@@ -37,6 +38,7 @@ function AppRoutes() {
         <Route path="lugares" element={<Places />} />
         <Route path="lugares/:id" element={<Place />} />
         <Route path="orcamento" element={<Budget />} />
+        <Route path="favoritos" element={<Favorites />} />
         <Route path="recursos" element={<Resources />} />
         <Route path="perfil" element={<Profile />} />
         <Route path="*" element={<Navigate to="/" replace />} />

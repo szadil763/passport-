@@ -23,6 +23,14 @@ const MESSAGES = {
 };
 
 // Códigos que não são erro de verdade (a pessoa só cancelou): não mostramos nada.
+// Mensagem para o envio do e-mail de redefinição de senha.
+export function resetErrorMessage(error) {
+  const known = ['auth/invalid-email', 'auth/network-request-failed', 'auth/too-many-requests'];
+  return known.includes(error?.code)
+    ? MESSAGES[error.code]
+    : 'Não foi possível enviar o e-mail agora. Tente de novo em instantes.';
+}
+
 const SILENT = new Set(['auth/cancelled-popup-request']);
 
 export function authErrorMessage(error) {

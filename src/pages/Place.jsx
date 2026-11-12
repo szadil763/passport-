@@ -2,6 +2,7 @@
 import { Link, useParams } from 'react-router-dom';
 import { useDocument } from '../hooks/useFirestore';
 import { GOALS, labelOf } from '../data/options';
+import FavoriteButton from '../components/FavoriteButton';
 import { LoadError, Loading } from '../components/LoadState';
 
 const SECTIONS = [
@@ -41,6 +42,7 @@ export default function Place() {
             <Link to={`/destinos/${c.id}`}>{c.flag} {c.name}</Link>
           </p>
         )}
+        <FavoriteButton kind="places" id={p.id} name={p.name} />
       </header>
       <p>{p.summary}</p>
 

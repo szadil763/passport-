@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { GOALS, LANGUAGES, BUDGETS } from '../data/options';
+import { Link } from 'react-router-dom';
 import ChipGroup from '../components/ChipGroup';
 
 export default function Profile({ onboarding = false }) {
@@ -39,6 +40,13 @@ export default function Profile({ onboarding = false }) {
           Suas respostas decidem quais destinos aparecem primeiro. Você pode mudar tudo depois na aba Perfil.
         </p>
         {!onboarding && user?.email && <p className="small muted">Conta: {user.email}</p>}
+        {!onboarding && (
+          <p>
+            <Link to="/favoritos">Ver meus favoritos</Link>
+            {' · '}
+            <Link to="/orcamento">Abrir meu orçamento</Link>
+          </p>
+        )}
       </div>
 
       <fieldset>

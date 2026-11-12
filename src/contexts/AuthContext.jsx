@@ -7,6 +7,7 @@ import {
   GoogleAuthProvider,
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
+  sendPasswordResetEmail,
   signOut,
 } from 'firebase/auth';
 import { doc, onSnapshot, setDoc, serverTimestamp } from 'firebase/firestore';
@@ -59,6 +60,7 @@ export function AuthProvider({ children }) {
       },
       loginWithEmail: (email, password) => signInWithEmailAndPassword(auth, email, password),
       signupWithEmail: (email, password) => createUserWithEmailAndPassword(auth, email, password),
+      resetPassword: (email) => sendPasswordResetEmail(auth, email),
       logout: () => signOut(auth),
 
       // Grava só os campos enviados, sem apagar os outros (merge).
