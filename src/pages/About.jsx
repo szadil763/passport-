@@ -1,7 +1,7 @@
 // Sobre o Carimbo: para quem é, como o conteúdo é feito, privacidade e créditos.
 import { Link } from 'react-router-dom';
 import { usePageTitle } from '../hooks/usePageTitle';
-import { AUTHOR, MISSION, TECH } from '../data/credits';
+import { AUTHOR, CONTACT, MISSION, TECH } from '../data/credits';
 import { Logo } from '../components/Icons';
 
 export default function About() {
@@ -41,12 +41,24 @@ export default function About() {
       <section aria-labelledby="creditos">
         <h2 id="creditos">Créditos</h2>
         <ul className="bullets">
-          {AUTHOR && <li><strong>Idealização e curadoria:</strong> {AUTHOR}</li>}
-          <li><strong>Desenvolvimento:</strong> com apoio do Claude Code, da Anthropic.</li>
+          <li>
+            <strong>Desenvolvido por:</strong> {AUTHOR || 'a equipe do Carimbo'}, com apoio do Claude Code, da
+            Anthropic.
+          </li>
           {TECH.map((t) => <li key={t}>{t}.</li>)}
           <li><strong>Conteúdo:</strong> sites oficiais de governos, universidades e programas, indicados em cada página. As marcas pertencem aos seus donos.</li>
         </ul>
       </section>
+
+      {CONTACT && (
+        <section aria-labelledby="contato">
+          <h2 id="contato">Contato</h2>
+          <p>
+            Encontrou um erro, um link quebrado ou quer sugerir um curso ou uma bolsa? Escreva para{' '}
+            <a href={`mailto:${CONTACT}`}>{CONTACT}</a>.
+          </p>
+        </section>
+      )}
 
       <p><Link to="/">Voltar ao início</Link></p>
     </article>

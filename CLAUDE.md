@@ -50,7 +50,7 @@ Ao adicionar campos em `users/{uid}`, atualize também `validProfile()` em `fire
 
 ## Rotas
 - Públicas (sem login): `/`, `/destinos`, `/destinos/:id`, `/comparar`, `/lugares`, `/lugares/:id`, `/cursos`, `/editais`, `/recursos`, `/entrar`.
-- Também públicas: `/sobre` (créditos e missão; o nome de quem idealizou vai em `AUTHOR`, em `src/data/credits.js`).
+- Também públicas: `/sobre` (créditos e missão; quem desenvolveu (`AUTHOR`) e o e-mail de contato (`CONTACT`) ficam em `src/data/credits.js`).
 - Pessoais (`RequireAuth` em `App.jsx`): `/caminho`, `/orcamento`, `/favoritos`, `/perfil`. Quem não tem objetivo salvo faz o onboarding.
 - Admin (`RequireAdmin`): `/admin`, `/admin/:colecao`, `/admin/:colecao/:id` (`novo` cria).
 

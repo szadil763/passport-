@@ -3,6 +3,7 @@
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 import { useAuth } from '../contexts/AuthContext';
+import { AUTHOR } from '../data/credits';
 import { IconBook, IconGlobe, IconHome, IconPin, IconUser, Logo } from './Icons';
 
 const starts = (...prefixes) => (path) => prefixes.some((p) => path === p || path.startsWith(`${p}/`));
@@ -47,7 +48,10 @@ export default function Layout() {
         <Outlet />
         <footer className="site-footer">
           <p>Feito para alunos e para quem quer expandir o conhecimento e as fronteiras.</p>
-          <p><Link to="/sobre">Sobre e créditos</Link></p>
+          <p>
+            {AUTHOR && <>Desenvolvido por {AUTHOR} · </>}
+            <Link to="/sobre">Sobre e créditos</Link>
+          </p>
         </footer>
       </main>
 
