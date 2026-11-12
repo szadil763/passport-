@@ -5,7 +5,9 @@
     "url": "https://www.daad.org.br",
     "category": "bolsas",
     "free": true,
-    "countries": ["alemanha"],
+    "countries": [
+      "alemanha"
+    ],
     "description": "Serviço Alemão de Intercâmbio Acadêmico. Divulga bolsas de graduação, mestrado, doutorado e pesquisa na Alemanha."
   },
   {
@@ -32,7 +34,11 @@
     "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en",
     "category": "bolsas",
     "free": true,
-    "countries": ["portugal", "irlanda", "alemanha"],
+    "countries": [
+      "portugal",
+      "irlanda",
+      "alemanha"
+    ],
     "description": "Catálogo de mestrados conjuntos em universidades de vários países europeus, com bolsas."
   },
   {
@@ -59,7 +65,9 @@
     "url": "https://www.study-research.pt",
     "category": "orientacao",
     "free": true,
-    "countries": ["portugal"],
+    "countries": [
+      "portugal"
+    ],
     "description": "Portal oficial com instituições, cursos e informações para estudantes internacionais em Portugal."
   },
   {
@@ -106,5 +114,295 @@
     "free": false,
     "countries": [],
     "description": "Programas de intercâmbio cultural para jovens, com moradia em família anfitriã."
+  },
+  {
+    "id": "ielts",
+    "title": "IELTS",
+    "url": "https://www.ielts.org",
+    "category": "testes",
+    "free": false,
+    "countries": [],
+    "description": "Teste de inglês aceito por muitas universidades e pelos governos para visto. Veja se a sua instituição aceita."
+  },
+  {
+    "id": "toefl",
+    "title": "TOEFL",
+    "url": "https://www.ets.org/toefl",
+    "category": "testes",
+    "free": false,
+    "countries": [],
+    "description": "Teste de inglês muito pedido por universidades, principalmente nos EUA. Confira a versão aceita pela sua instituição."
+  },
+  {
+    "id": "cambridge-english",
+    "title": "Cambridge English",
+    "url": "https://www.cambridgeenglish.org",
+    "category": "testes",
+    "free": false,
+    "countries": [],
+    "description": "Exames de inglês de vários níveis, com certificado que não expira."
+  },
+  {
+    "id": "dele",
+    "title": "DELE, diploma de espanhol",
+    "url": "https://examenes.cervantes.es",
+    "category": "testes",
+    "free": false,
+    "countries": [
+      "espanha",
+      "chile",
+      "argentina"
+    ],
+    "description": "Exame oficial de espanhol do Instituto Cervantes, em vários níveis."
+  },
+  {
+    "id": "delf-dalf",
+    "title": "DELF e DALF, diplomas de francês",
+    "url": "https://www.france-education-international.fr",
+    "category": "testes",
+    "free": false,
+    "countries": [
+      "franca",
+      "canada"
+    ],
+    "description": "Diplomas oficiais de francês do governo francês, em vários níveis."
+  },
+  {
+    "id": "goethe",
+    "title": "Goethe-Zertifikat",
+    "url": "https://www.goethe.de",
+    "category": "testes",
+    "free": false,
+    "countries": [
+      "alemanha"
+    ],
+    "description": "Exames oficiais de alemão do Goethe-Institut, em vários níveis."
+  },
+  {
+    "id": "cils",
+    "title": "CILS, certificação de italiano",
+    "url": "https://cils.unistrasi.it",
+    "category": "testes",
+    "free": false,
+    "countries": [
+      "italia"
+    ],
+    "description": "Certificação de italiano para estrangeiros, da Universidade para Estrangeiros de Siena."
+  },
+  {
+    "id": "jlpt",
+    "title": "JLPT, teste de japonês",
+    "url": "https://www.jlpt.jp",
+    "category": "testes",
+    "free": false,
+    "countries": [
+      "japao"
+    ],
+    "description": "Teste de proficiência em japonês, com cinco níveis. Veja as datas de inscrição."
+  },
+  {
+    "id": "capes",
+    "title": "CAPES",
+    "url": "https://www.gov.br/capes",
+    "category": "bolsas",
+    "free": true,
+    "countries": [],
+    "description": "Agência do governo brasileiro que oferece bolsas de estudo no exterior para pós-graduação. Veja os editais abertos."
+  },
+  {
+    "id": "cnpq",
+    "title": "CNPq",
+    "url": "https://www.gov.br/cnpq",
+    "category": "bolsas",
+    "free": true,
+    "countries": [],
+    "description": "Agência do governo brasileiro que apoia pesquisa. Tem bolsas no exterior para pesquisadores."
+  },
+  {
+    "id": "europass",
+    "title": "Europass",
+    "url": "https://europass.europa.eu",
+    "category": "trabalho",
+    "free": true,
+    "countries": [
+      "portugal",
+      "irlanda",
+      "alemanha",
+      "espanha",
+      "franca",
+      "italia"
+    ],
+    "description": "Ferramenta gratuita para montar currículo no padrão europeu."
+  },
+  {
+    "id": "eures",
+    "title": "EURES",
+    "url": "https://eures.europa.eu",
+    "category": "trabalho",
+    "free": true,
+    "countries": [
+      "portugal",
+      "irlanda",
+      "alemanha",
+      "espanha",
+      "franca",
+      "italia"
+    ],
+    "description": "Portal europeu de vagas, com informações sobre trabalhar em cada país."
+  },
+  {
+    "id": "j1-visa",
+    "title": "J-1, programas de intercâmbio dos EUA",
+    "url": "https://j1visa.state.gov",
+    "category": "trabalho",
+    "free": true,
+    "countries": [
+      "estados-unidos"
+    ],
+    "description": "Site oficial do governo dos EUA com a lista de organizações patrocinadoras, como au pair e trabalho de verão."
+  },
+  {
+    "id": "workaway",
+    "title": "Workaway",
+    "url": "https://www.workaway.info",
+    "category": "voluntariado",
+    "free": false,
+    "countries": [],
+    "description": "Troca de ajuda por hospedagem e comida em casas e projetos pelo mundo. Cobra uma taxa de inscrição."
+  },
+  {
+    "id": "linkedin-jobs",
+    "title": "LinkedIn Vagas",
+    "url": "https://www.linkedin.com/jobs",
+    "category": "trabalho",
+    "free": true,
+    "countries": [],
+    "description": "Busca de vagas no mundo todo e contato com empresas. Mantenha o perfil em inglês."
+  },
+  {
+    "id": "indeed",
+    "title": "Indeed",
+    "url": "https://www.indeed.com",
+    "category": "trabalho",
+    "free": true,
+    "countries": [],
+    "description": "Busca de vagas em muitos países. Escolha o país no site para ver a versão local."
+  },
+  {
+    "id": "study-in-japan",
+    "title": "Study in Japan",
+    "url": "https://www.studyinjapan.go.jp",
+    "category": "orientacao",
+    "free": true,
+    "countries": [
+      "japao"
+    ],
+    "description": "Portal oficial do governo japonês, com cursos, bolsas e orientações para estudantes estrangeiros."
+  },
+  {
+    "id": "study-australia",
+    "title": "Study Australia",
+    "url": "https://www.studyaustralia.gov.au",
+    "category": "orientacao",
+    "free": true,
+    "countries": [
+      "australia"
+    ],
+    "description": "Site oficial do governo australiano, com cursos, instituições e orientações."
+  },
+  {
+    "id": "study-nz",
+    "title": "Study in New Zealand",
+    "url": "https://www.studyinnewzealand.govt.nz",
+    "category": "orientacao",
+    "free": true,
+    "countries": [
+      "nova-zelandia"
+    ],
+    "description": "Site oficial do governo neozelandês, com cursos e orientações."
+  },
+  {
+    "id": "study-uk",
+    "title": "Study UK, do British Council",
+    "url": "https://study-uk.britishcouncil.org",
+    "category": "orientacao",
+    "free": true,
+    "countries": [
+      "reino-unido"
+    ],
+    "description": "Guia oficial para estudar no Reino Unido, com cursos, candidatura e bolsas."
+  },
+  {
+    "id": "ucas",
+    "title": "UCAS",
+    "url": "https://www.ucas.com",
+    "category": "orientacao",
+    "free": true,
+    "countries": [
+      "reino-unido"
+    ],
+    "description": "Serviço de candidatura para graduação no Reino Unido."
+  },
+  {
+    "id": "universitaly",
+    "title": "Universitaly",
+    "url": "https://www.universitaly.it",
+    "category": "orientacao",
+    "free": true,
+    "countries": [
+      "italia"
+    ],
+    "description": "Portal oficial do governo italiano para pré-inscrição de estrangeiros nas universidades."
+  },
+  {
+    "id": "education-ireland",
+    "title": "Education in Ireland",
+    "url": "https://www.educationinireland.com",
+    "category": "orientacao",
+    "free": true,
+    "countries": [
+      "irlanda"
+    ],
+    "description": "Portal oficial de estudo na Irlanda, com cursos e orientações."
+  },
+  {
+    "id": "educanada",
+    "title": "EduCanada",
+    "url": "https://www.educanada.ca",
+    "category": "orientacao",
+    "free": true,
+    "countries": [
+      "canada"
+    ],
+    "description": "Portal oficial do governo canadense para estudantes estrangeiros."
+  },
+  {
+    "id": "study-in-germany",
+    "title": "Study in Germany",
+    "url": "https://www.study-in-germany.de",
+    "category": "orientacao",
+    "free": true,
+    "countries": [
+      "alemanha"
+    ],
+    "description": "Portal do DAAD com cursos, candidatura e orientações para estudar na Alemanha."
+  },
+  {
+    "id": "portal-consular",
+    "title": "Portal Consular do Itamaraty",
+    "url": "https://www.gov.br/mre/pt-br/assuntos/portal-consular",
+    "category": "orientacao",
+    "free": true,
+    "countries": [],
+    "description": "Serviços consulares do governo brasileiro e orientações para brasileiros no exterior."
+  },
+  {
+    "id": "passaporte-pf",
+    "title": "Passaporte, Polícia Federal",
+    "url": "https://www.gov.br/pf/pt-br/assuntos/passaporte",
+    "category": "orientacao",
+    "free": true,
+    "countries": [],
+    "description": "Como emitir ou renovar o passaporte brasileiro. Comece cedo: ele é pedido em quase todo processo."
   }
 ]

@@ -34,6 +34,8 @@ export const CATEGORIES = [
   { id: 'intercambio', label: 'Intercâmbio' },
   { id: 'voluntariado', label: 'Voluntariado' },
   { id: 'orientacao', label: 'Orientação oficial' },
+  { id: 'testes', label: 'Testes de idioma' },
+  { id: 'trabalho', label: 'Trabalho' },
 ];
 
 export const COST_LABELS = { 1: 'Custo baixo', 2: 'Custo médio', 3: 'Custo alto' };
