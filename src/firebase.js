@@ -2,7 +2,13 @@
 // As chaves vêm do arquivo .env (veja .env.example e o README).
 import { initializeApp } from 'firebase/app';
 import { getAuth, connectAuthEmulator } from 'firebase/auth';
-import { getFirestore, connectFirestoreEmulator } from 'firebase/firestore';
+import {
+  getFirestore,
+  initializeFirestore,
+  persistentLocalCache,
+  persistentMultipleTabManager,
+  connectFirestoreEmulator,
+} from 'firebase/firestore';
 
 const env = import.meta.env;
 const usingEmulators = env.VITE_USE_EMULATORS === 'true';
@@ -23,7 +29,16 @@ export const firebaseConfigured = Boolean(config.apiKey);
 
 export const app = firebaseConfigured ? initializeApp(config) : null;
 export const auth = app ? getAuth(app) : null;
-export const db = app ? getFirestore(app) : null;
+
+// Cache local do Firestore: o que já foi aberto continua disponível sem internet.
+function createDb() {
+  try {
+    return initializeFirestore(app, { localCache: persistentLocalCache({ tabManager: persistentMultipleTabManager() }) });
+  } catch {
+    return getFirestore(app); // navegador sem suporte a cache local
+  }
+}
+export const db = app ? createDb() : null;
 
 if (app && usingEmulators) {
   connectAuthEmulator(auth, 'http://127.0.0.1:9099', { disableWarnings: true });
