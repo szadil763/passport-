@@ -317,6 +317,21 @@ legend { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; 
 .pill { border: 1px solid var(--line); border-radius: 999px; padding: 0 0.55rem; }
 .pill--free { color: var(--stamp-green); border-color: currentColor; font-weight: 700; }
 
+/* ---------- Orçamento ---------- */
+.step-link { display: inline-flex; align-items: center; min-height: 44px; margin: 0.25rem 0 0 1rem; font-weight: 700; }
+.budget-form { display: grid; gap: 1.5rem; }
+.budget-group { display: grid; gap: 1rem; border: 0; padding: 0; margin: 0; }
+.budget-group legend { font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; padding: 0; margin-bottom: 0.5rem; }
+.money-field { display: grid; gap: 0.2rem; }
+.money-field label { font-weight: 700; }
+.money-field input {
+  min-height: 44px; padding: 0.5rem 0.75rem; font: inherit; color: var(--ink);
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-s);
+}
+.money-field input:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.budget-total { display: grid; gap: 0.5rem; }
+.budget-total .big { font-family: var(--font-display); font-weight: 800; font-size: 1.8rem; margin: 0; }
+
 /* ---------- Lugares ---------- */
 .place-list { list-style: none; padding: 0; margin: 1rem 0; display: grid; gap: 0.75rem; }
 .place-row {
