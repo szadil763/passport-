@@ -262,7 +262,10 @@ O painel fica em `/admin` e permite editar países, cidades, cursos, editais e r
 
 Para tirar o acesso, apague o documento. Só o console do Firebase cria ou apaga esses documentos: o app não consegue.
 
+### Acessos ao site
+`/admin/acessos` mostra páginas vistas e visitantes de hoje, dos últimos 7 e 30 dias, por dia e por tela. A contagem é anônima (sem nome, e-mail ou IP), ignora as suas visitas como admin e respeita o "não rastrear" do navegador. É uma estimativa: quem fecha a aba muito rápido pode não ser contado. Para dados mais ricos (origem, país, aparelho), o próximo passo é o Google Analytics.
+
 ### Cuidados
 - Depois de editar pelo painel, rode o seed só com `npm run seed -- --somente-novos`. Sem essa opção, o seed sobrescreve o que foi editado.
-- As regras (`firestore.rules`) mudaram: publique-as de novo (`firebase deploy --only firestore` ou pelo console).
+- As regras (`firestore.rules`) mudaram (agora também liberam o contador de acessos): publique-as de novo (`firebase deploy --only firestore` ou pelo console).
 - Editais: preencha `Fim das inscrições` só depois de confirmar a data no site oficial.

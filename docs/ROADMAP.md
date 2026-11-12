@@ -9,6 +9,7 @@ O MVP (v0.1) entrega login, perfil, o caminho com carimbos, destinos e recursos.
 - Favoritos, "Esqueci minha senha" e PWA com cache offline.
 - Acesso público sem login, página inicial, painel "próximo passo", busca e filtros, comparador de países e carimbo por país.
 - Cursos online (22) e editais e bolsas (11), com lembrete no calendário (.ics).
+- Canais do YouTube (`/canais`), mais voluntariado, cursos internacionais e bolsas (31 cursos, 24 editais, 49 recursos).
 - Painel admin (`/admin`) para editar países, cidades, cursos, editais e recursos, e página "Sobre e créditos".
 - Falta: alerta por notificação ou e-mail (precisa de Cloud Functions e do plano Blaze).
 

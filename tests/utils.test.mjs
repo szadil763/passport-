@@ -67,3 +67,43 @@ test('orçamento: valores em reais', () => {
   const t = budgetTotals({ curso: '10000', passagem: '5000', moradia: '2000', alimentacao: '1000' }, '6');
   assert.deepEqual([t.once, t.monthly, t.total], [15000, 3000, 33000]);
 });
+
+// ---- Contador de acessos ----
+import { SECTIONS, daysBetween, dayKey, sectionOf, summarize } from '../src/utils/analytics.js';
+
+test('sectionOf agrupa as rotas por seção', () => {
+  assert.equal(sectionOf('/'), 's_inicio');
+  assert.equal(sectionOf('/destinos/canada'), 's_destinos');
+  assert.equal(sectionOf('/comparar?p=a,b'), 's_destinos');
+  assert.equal(sectionOf('/lugares/toronto'), 's_lugares');
+  assert.equal(sectionOf('/canais'), 's_canais');
+  assert.equal(sectionOf('/perfil'), 's_conta');
+  assert.equal(sectionOf('/qualquer-coisa'), 's_outros');
+  assert.ok(SECTIONS.every((s) => s.field.startsWith('s_')));
+});
+
+test('dayKey usa o fuso de São Paulo', () => {
+  // 02:00 UTC ainda é o dia anterior em São Paulo (UTC-3)
+  assert.equal(dayKey(new Date('2027-03-15T02:00:00Z')), '2027-03-14');
+  assert.equal(dayKey(new Date('2027-03-15T15:00:00Z')), '2027-03-15');
+});
+
+test('daysBetween e summarize', () => {
+  assert.equal(daysBetween('2027-03-15', '2027-03-10'), 5);
+  assert.equal(daysBetween('2027-03-01', '2027-02-28'), 1);
+  const docs = [
+    { id: '2027-03-15', views: 10, visitors: 4, s_inicio: 6, s_cursos: 4 },
+    { id: '2027-03-14', views: 5, visitors: 2, s_inicio: 5 },
+    { id: '2027-03-01', views: 20, visitors: 8, s_editais: 20 },
+    { id: '2027-01-01', views: 99, visitors: 50 },
+    { id: 'lixo', views: 1000 },
+  ];
+  const r = summarize(docs, '2027-03-15');
+  assert.deepEqual(r.today, { views: 10, visitors: 4 });
+  assert.deepEqual(r.last7, { views: 15, visitors: 6 });
+  assert.deepEqual(r.last30, { views: 35, visitors: 14 });
+  assert.equal(r.days.length, 3);
+  assert.equal(r.days[0].day, '2027-03-15');
+  assert.equal(r.sections[0].field, 's_editais');
+  assert.equal(r.sections[0].views, 20);
+});

@@ -1,6 +1,8 @@
 // Campos de cada coleção no painel admin. "source: countries" preenche a lista com os países cadastrados.
 import {
   CATEGORIES,
+  CHANNEL_KINDS,
+  CHANNEL_TOPICS,
   CERTIFICATES,
   COURSE_KINDS,
   GOALS,
@@ -12,6 +14,21 @@ import {
 const fromMap = (map) => Object.entries(map).map(([id, label]) => ({ id, label }));
 
 export const COLLECTIONS = {
+  channels: {
+    label: 'Canais do YouTube',
+    singular: 'canal',
+    titleKey: 'name',
+    slugFrom: 'name',
+    fields: [
+      { key: 'name', label: 'Nome do canal', type: 'text', required: true },
+      { key: 'url', label: 'Endereço do canal', type: 'url', required: true, hint: 'Copie da página do canal no YouTube.' },
+      { key: 'description', label: 'Descrição', type: 'textarea', required: true },
+      { key: 'kind', label: 'Tipo', type: 'select', options: CHANNEL_KINDS, required: true },
+      { key: 'topics', label: 'Assuntos', type: 'chips', options: CHANNEL_TOPICS },
+      { key: 'countries', label: 'Países', type: 'chips', source: 'countries', hint: 'Deixe vazio se fala de vários países.' },
+      { key: 'note', label: 'Aviso (opcional)', type: 'text', hint: 'Ex.: o canal vende mentoria ou pacotes.' },
+    ],
+  },
   calls: {
     label: 'Editais e bolsas',
     singular: 'edital',
@@ -125,4 +142,4 @@ export const COLLECTIONS = {
   },
 };
 
-export const COLLECTION_ORDER = ['calls', 'courses', 'resources', 'places', 'countries'];
+export const COLLECTION_ORDER = ['calls', 'courses', 'channels', 'resources', 'places', 'countries'];

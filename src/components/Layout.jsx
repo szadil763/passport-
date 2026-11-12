@@ -4,14 +4,17 @@ import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { AUTHOR } from '../data/credits';
+import { statsDb } from '../firebase';
+import { trackView } from '../utils/track';
 import { IconBook, IconGlobe, IconHome, IconPin, IconUser, Logo } from './Icons';
 
 const starts = (...prefixes) => (path) => prefixes.some((p) => path === p || path.startsWith(`${p}/`));
 
 export default function Layout() {
-  const { user, logout } = useAuth();
+  const { user, isAdmin, adminChecked, logout } = useAuth();
   const { pathname } = useLocation();
   const mainRef = useRef(null);
+  const lastTracked = useRef(null);
 
   // Ao trocar de tela: volta ao topo e leva o foco para o conteúdo (ajuda leitores de tela).
   useEffect(() => {
@@ -19,11 +22,19 @@ export default function Layout() {
     mainRef.current?.focus({ preventScroll: true });
   }, [pathname]);
 
+  // Conta o acesso (anônimo). Espera saber se a pessoa é admin: as visitas de quem administra não entram.
+  useEffect(() => {
+    if (user && !adminChecked) return;
+    if (isAdmin || lastTracked.current === pathname) return;
+    lastTracked.current = pathname;
+    trackView(statsDb, pathname);
+  }, [pathname, user, isAdmin, adminChecked]);
+
   const tabs = [
     { to: '/', label: 'Início', Icon: IconHome, active: (p) => p === '/' || starts('/caminho')(p) },
     { to: '/destinos', label: 'Destinos', Icon: IconGlobe, active: starts('/destinos', '/comparar') },
     { to: '/lugares', label: 'Lugares', Icon: IconPin, active: starts('/lugares') },
-    { to: '/cursos', label: 'Estudar', Icon: IconBook, active: starts('/cursos', '/editais', '/recursos') },
+    { to: '/cursos', label: 'Estudar', Icon: IconBook, active: starts('/cursos', '/editais', '/canais', '/recursos') },
     user
       ? { to: '/perfil', label: 'Perfil', Icon: IconUser, active: starts('/perfil', '/favoritos', '/orcamento') }
       : { to: '/entrar', label: 'Entrar', Icon: IconUser, active: starts('/entrar') },

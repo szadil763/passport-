@@ -20,6 +20,10 @@ service cloud.firestore {
       allow read: if true;
       allow write: if isAdmin();
     }
+    match /channels/{channelId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
     match /resources/{resourceId} {
       allow read: if true;
       allow write: if isAdmin();
@@ -32,6 +36,21 @@ service cloud.firestore {
       allow write: if false;
     }
 
+    // Contador de acessos: um documento por dia (stats/AAAA-MM-DD). Qualquer visitante só consegue
+    // somar 1 página vista (e no máximo 1 visitante novo) por gravação; só administradores leem.
+    match /stats/{day} {
+      allow read: if isAdmin();
+      allow create: if validDay(day)
+        && request.resource.data.keys().hasOnly(statFields())
+        && request.resource.data.views == 1
+        && request.resource.data.visitors in [0, 1];
+      allow update: if validDay(day)
+        && request.resource.data.keys().hasOnly(statFields())
+        && request.resource.data.views == resource.data.views + 1
+        && request.resource.data.visitors in [resource.data.visitors, resource.data.visitors + 1];
+      allow delete: if false;
+    }
+
     // Dados do usuário: só o próprio dono lê e escreve.
     match /users/{uid} {
       allow read, delete: if isOwner(uid);
@@ -41,6 +60,15 @@ service cloud.firestore {
     function isAdmin() {
       return request.auth != null
         && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+
+    function validDay(day) {
+      return day.matches('^20[0-9]{2}-[01][0-9]-[0-3][0-9]$');
+    }
+
+    function statFields() {
+      return ['views', 'visitors', 's_inicio', 's_destinos', 's_lugares', 's_cursos', 's_editais',
+              's_canais', 's_recursos', 's_sobre', 's_conta', 's_outros'];
     }
 
     function isOwner(uid) {

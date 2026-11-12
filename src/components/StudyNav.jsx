@@ -1,9 +1,10 @@
-// Navegação entre as três telas de estudo: Cursos online, Editais e Recursos.
+// Navegação entre as telas de estudo: Cursos online, Editais e bolsas, Canais e Recursos.
 import { NavLink } from 'react-router-dom';
 
 const LINKS = [
-  { to: '/cursos', label: 'Cursos online' },
-  { to: '/editais', label: 'Editais e bolsas' },
+  { to: '/cursos', label: 'Cursos' },
+  { to: '/editais', label: 'Bolsas' },
+  { to: '/canais', label: 'Canais' },
   { to: '/recursos', label: 'Recursos' },
 ];
 

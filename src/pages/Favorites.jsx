@@ -15,9 +15,10 @@ export default function Favorites() {
   const resources = useCollection('resources');
   const courses = useCollection('courses');
   const calls = useCollection('calls');
+  const channels = useCollection('channels');
 
-  if (countries.loading || places.loading || resources.loading || courses.loading || calls.loading) return <Loading />;
-  if (countries.error || places.error || resources.error || courses.error || calls.error) return <LoadError what="seus favoritos" />;
+  if (countries.loading || places.loading || resources.loading || courses.loading || calls.loading || channels.loading) return <Loading />;
+  if (countries.error || places.error || resources.error || courses.error || calls.error || channels.error) return <LoadError what="seus favoritos" />;
 
   const pick = (list, ids = []) => list.filter((x) => ids.includes(x.id));
   const favCountries = pick(countries.data, favorites.countries);
@@ -25,8 +26,9 @@ export default function Favorites() {
   const favResources = pick(resources.data, favorites.resources);
   const favCourses = pick(courses.data, favorites.courses);
   const favCalls = pick(calls.data, favorites.calls);
+  const favChannels = pick(channels.data, favorites.channels);
   const byId = Object.fromEntries(countries.data.map((c) => [c.id, c]));
-  const empty = ![favCountries, favPlaces, favResources, favCourses, favCalls].some((l) => l.length);
+  const empty = ![favCountries, favPlaces, favResources, favCourses, favCalls, favChannels].some((l) => l.length);
 
   return (
     <section className="stack">
@@ -82,6 +84,22 @@ export default function Favorites() {
               <li key={c.id}>
                 <a href={c.officialUrl} target="_blank" rel="noopener noreferrer">
                   {c.title}<span className="sr-only"> (abre em nova aba)</span>
+                </a>
+                <p>{c.description}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {favChannels.length > 0 && (
+        <section aria-labelledby="f-canais">
+          <h2 id="f-canais">Canais do YouTube</h2>
+          <ul className="resource-list">
+            {favChannels.map((c) => (
+              <li key={c.id}>
+                <a href={c.url} target="_blank" rel="noopener noreferrer">
+                  {c.name}<span className="sr-only"> (abre em nova aba)</span>
                 </a>
                 <p>{c.description}</p>
               </li>
