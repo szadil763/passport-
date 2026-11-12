@@ -3,12 +3,15 @@ import { Link, useParams } from 'react-router-dom';
 import { useCollection, useDocument } from '../hooks/useFirestore';
 import { CATEGORIES, COST_LABELS, labelOf } from '../data/options';
 import { LoadError, Loading } from '../components/LoadState';
+import PlaceRow from '../components/PlaceRow';
+import FavoriteButton from '../components/FavoriteButton';
 import VisaNotice from '../components/VisaNotice';
 
 export default function Country() {
   const { id } = useParams();
   const { data: country, loading, error } = useDocument('countries', id);
   const { data: resources } = useCollection('resources');
+  const { data: places } = useCollection('places');
 
   if (loading) return <Loading />;
   if (error) return <LoadError what="este destino" />;
@@ -21,6 +24,7 @@ export default function Country() {
     );
   }
 
+  const countryPlaces = places.filter((p) => p.countryId === id).sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
   const related = resources.filter((r) => r.countries?.includes(id));
   const updated = country.updatedAt?.toDate?.().toLocaleDateString('pt-BR');
 
@@ -31,6 +35,7 @@ export default function Country() {
       <header className="country-head">
         <span className="flag" aria-hidden="true">{country.flag}</span>
         <h1>{country.name}</h1>
+        <FavoriteButton kind="countries" id={country.id} name={country.name} />
       </header>
       <p>{country.summary}</p>
 
@@ -65,6 +70,54 @@ export default function Country() {
           <h2 id="titulo-bom-saber">Bom saber</h2>
           <ul className="bullets">
             {country.highlights.map((h) => <li key={h}>{h}</li>)}
+          </ul>
+        </section>
+      )}
+
+      {country.work && (
+        <section className="stack" aria-labelledby="titulo-trabalho">
+          <h2 id="titulo-trabalho">Trabalhar em {country.name}</h2>
+          {country.work.students && <p><strong>Durante os estudos:</strong> {country.work.students}</p>}
+
+          {country.work.programs?.length > 0 && (
+            <ul className="resource-list">
+              {country.work.programs.map((p) => (
+                <li key={p.name}>
+                  {p.url ? (
+                    <a href={p.url} target="_blank" rel="noopener noreferrer">
+                      {p.name}<span className="sr-only"> (abre em nova aba)</span>
+                    </a>
+                  ) : (
+                    <strong>{p.name}</strong>
+                  )}
+                  <p>{p.description}</p>
+                </li>
+              ))}
+            </ul>
+          )}
+
+          {country.work.jobSites?.length > 0 && (
+            <div>
+              <h3>Onde procurar vagas</h3>
+              <ul className="link-list">
+                {country.work.jobSites.map((j) => (
+                  <li key={j.url}>
+                    <a href={j.url} target="_blank" rel="noopener noreferrer">
+                      {j.title}<span className="sr-only"> (abre em nova aba)</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </section>
+      )}
+
+      {countryPlaces.length > 0 && (
+        <section aria-labelledby="titulo-lugares">
+          <h2 id="titulo-lugares">Lugares em {country.name}</h2>
+          <ul className="place-list">
+            {countryPlaces.map((p) => <li key={p.id}><PlaceRow place={p} /></li>)}
           </ul>
         </section>
       )}

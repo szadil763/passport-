@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useCollection } from '../hooks/useFirestore';
 import { CATEGORIES, labelOf } from '../data/options';
 import ChipGroup from '../components/ChipGroup';
+import FavoriteButton from '../components/FavoriteButton';
 import { LoadError, Loading } from '../components/LoadState';
 
 const FILTERS = [{ id: 'todas', label: 'Todas' }, ...CATEGORIES];
@@ -52,6 +53,7 @@ export default function Resources() {
                 {r.free ? <span className="pill pill--free">Gratuito</span> : <span className="pill">Pago ou misto</span>}
               </span>
               <p>{r.description}</p>
+              <FavoriteButton kind="resources" id={r.id} name={r.title} />
             </li>
           ))}
         </ul>

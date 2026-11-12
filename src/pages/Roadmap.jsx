@@ -1,7 +1,8 @@
-// Tela inicial: as 8 etapas até o embarque. Cada etapa concluída ganha um carimbo.
+// Tela inicial: as etapas até a chegada. Cada etapa concluída ganha um carimbo.
 import { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
-import { ROADMAP_STEPS } from '../data/roadmap';
+import { Link } from 'react-router-dom';
+import { stepsFor } from '../data/roadmap';
 import Stamp from '../components/Stamp';
 
 export default function Roadmap() {
@@ -10,8 +11,9 @@ export default function Roadmap() {
   const [error, setError] = useState('');
 
   const done = profile?.roadmap ?? {};
-  const total = ROADMAP_STEPS.length;
-  const count = ROADMAP_STEPS.filter((s) => done[s.id]).length;
+  const steps = stepsFor(profile?.goal);
+  const total = steps.length;
+  const count = steps.filter((s) => done[s.id]).length;
 
   async function toggle(id) {
     const next = !done[id];
@@ -42,7 +44,7 @@ export default function Roadmap() {
       {error && <p className="error" role="alert">{error}</p>}
 
       <ol className="passport">
-        {ROADMAP_STEPS.map((step, i) => {
+        {steps.map((step, i) => {
           const isDone = Boolean(done[step.id]);
           return (
             <li key={step.id} className={`visa-page${isDone ? ' is-done' : ''}`}>
@@ -63,6 +65,7 @@ export default function Roadmap() {
                   <span className="stamp-slot" aria-hidden="true">{i + 1}</span>
                 )}
               </button>
+              {step.to && <Link to={step.to} className="step-link">{step.linkLabel}</Link>}
             </li>
           );
         })}

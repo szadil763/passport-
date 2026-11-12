@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
-import { authErrorMessage } from '../data/authErrors';
+import { authErrorMessage, resetErrorMessage } from '../data/authErrors';
 import { IconGoogle, Logo } from '../components/Icons';
 
 export default function Login() {
-  const { loginWithGoogle, loginWithEmail, signupWithEmail } = useAuth();
+  const { loginWithGoogle, loginWithEmail, signupWithEmail, resetPassword } = useAuth();
   const [mode, setMode] = useState('login'); // 'login' ou 'signup'
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
+  const [info, setInfo] = useState('');
 
   const isSignup = mode === 'signup';
 
@@ -32,6 +33,24 @@ export default function Login() {
   function switchMode() {
     setMode(isSignup ? 'login' : 'signup');
     setError('');
+    setInfo('');
+  }
+
+  async function handleReset() {
+    setError('');
+    setInfo('');
+    if (!email.trim()) {
+      setError('Digite seu e-mail no campo acima e toque em "Esqueci minha senha" de novo.');
+      return;
+    }
+    setBusy(true);
+    try {
+      await resetPassword(email.trim());
+      setInfo('Se esse e-mail tiver conta, você vai receber um link para criar uma nova senha. Olhe também o spam.');
+    } catch (e) {
+      setError(resetErrorMessage(e));
+    }
+    setBusy(false);
   }
 
   return (
@@ -81,11 +100,19 @@ export default function Login() {
             <p id="senha-dica" className="hint">Use pelo menos 6 caracteres.</p>
           )}
 
-          <div aria-live="polite">{error && <p className="error" role="alert">{error}</p>}</div>
+          <div aria-live="polite">
+            {error && <p className="error" role="alert">{error}</p>}
+            {info && <p className="saved">{info}</p>}
+          </div>
 
           <button className="btn btn-primary" type="submit" disabled={busy}>
             {busy ? 'Aguarde…' : isSignup ? 'Criar conta' : 'Entrar'}
           </button>
+          {!isSignup && (
+            <button className="link-button" type="button" onClick={handleReset} disabled={busy}>
+              Esqueci minha senha
+            </button>
+          )}
         </form>
 
         <button className="link-button" type="button" onClick={switchMode}>

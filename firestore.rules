@@ -8,6 +8,10 @@ service cloud.firestore {
       allow read: if true;
       allow write: if false;
     }
+    match /places/{placeId} {
+      allow read: if true;
+      allow write: if false;
+    }
     match /resources/{resourceId} {
       allow read: if true;
       allow write: if false;
@@ -25,11 +29,13 @@ service cloud.firestore {
 
     // Aceita só os campos do modelo, com os tipos esperados.
     function validProfile(data) {
-      return data.keys().hasOnly(['goal', 'languages', 'budget', 'roadmap', 'updatedAt'])
+      return data.keys().hasOnly(['goal', 'languages', 'budget', 'roadmap', 'budgetPlan', 'favorites', 'updatedAt'])
         && (!('goal' in data) || data.goal is string)
         && (!('languages' in data) || data.languages is list)
         && (!('budget' in data) || data.budget is string)
-        && (!('roadmap' in data) || data.roadmap is map);
+        && (!('roadmap' in data) || data.roadmap is map)
+        && (!('budgetPlan' in data) || data.budgetPlan is map)
+        && (!('favorites' in data) || data.favorites is map);
     }
   }
 }

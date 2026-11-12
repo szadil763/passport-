@@ -2,11 +2,12 @@
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 import { useAuth } from '../contexts/AuthContext';
-import { IconBook, IconGlobe, IconPath, IconUser, Logo } from './Icons';
+import { IconBook, IconGlobe, IconPath, IconPin, IconUser, Logo } from './Icons';
 
 const TABS = [
   { to: '/', label: 'Meu caminho', Icon: IconPath, end: true },
   { to: '/destinos', label: 'Destinos', Icon: IconGlobe },
+  { to: '/lugares', label: 'Lugares', Icon: IconPin },
   { to: '/recursos', label: 'Recursos', Icon: IconBook },
   { to: '/perfil', label: 'Perfil', Icon: IconUser },
 ];

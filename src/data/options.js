@@ -7,6 +7,7 @@ export const GOALS = [
   { id: 'pos-graduacao', label: 'Mestrado ou doutorado' },
   { id: 'intercambio', label: 'Intercâmbio curto' },
   { id: 'voluntariado', label: 'Voluntariado' },
+  { id: 'trabalho', label: 'Trabalhar no exterior' },
 ];
 
 // Os nomes precisam ser iguais aos usados em countries/{id}.languages.
@@ -17,6 +18,7 @@ export const LANGUAGES = [
   { id: 'alemão', label: 'Alemão' },
   { id: 'italiano', label: 'Italiano' },
   { id: 'português', label: 'Português' },
+  { id: 'japonês', label: 'Japonês' },
 ];
 
 export const BUDGETS = [
@@ -32,6 +34,8 @@ export const CATEGORIES = [
   { id: 'intercambio', label: 'Intercâmbio' },
   { id: 'voluntariado', label: 'Voluntariado' },
   { id: 'orientacao', label: 'Orientação oficial' },
+  { id: 'testes', label: 'Testes de idioma' },
+  { id: 'trabalho', label: 'Trabalho' },
 ];
 
 export const COST_LABELS = { 1: 'Custo baixo', 2: 'Custo médio', 3: 'Custo alto' };

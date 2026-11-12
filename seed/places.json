@@ -1,0 +1,1019 @@
+[
+  {
+    "id": "lisboa",
+    "countryId": "portugal",
+    "name": "Lisboa",
+    "summary": "Capital e maior cidade do país. Reúne universidades, empresas e a maior oferta de vagas, e também os aluguéis mais altos.",
+    "costNote": "Mais cara que o resto de Portugal, principalmente a moradia.",
+    "goals": [
+      "graduacao",
+      "pos-graduacao",
+      "intercambio",
+      "trabalho"
+    ],
+    "study": [
+      "Concentra várias universidades públicas e privadas e cursos de pós-graduação.",
+      "Boa opção para áreas como tecnologia, negócios, design e turismo."
+    ],
+    "work": [
+      "É o maior mercado de trabalho do país, com vagas em tecnologia, turismo e atendimento.",
+      "Muitas vagas pedem inglês além do português."
+    ],
+    "living": [
+      "Procure moradia com antecedência: a demanda por quartos é alta.",
+      "Cidades vizinhas com trem até Lisboa podem custar menos."
+    ],
+    "universities": [
+      {
+        "name": "Universidade de Lisboa",
+        "url": "https://www.ulisboa.pt"
+      },
+      {
+        "name": "Universidade NOVA de Lisboa",
+        "url": "https://www.unl.pt"
+      }
+    ]
+  },
+  {
+    "id": "porto",
+    "countryId": "portugal",
+    "name": "Porto",
+    "summary": "Segunda maior cidade de Portugal, com vida universitária forte e um centro histórico fácil de percorrer.",
+    "costNote": "Tende a custar menos que Lisboa.",
+    "goals": [
+      "graduacao",
+      "pos-graduacao",
+      "intercambio",
+      "trabalho"
+    ],
+    "study": [
+      "Tem uma das maiores universidades do país e vários institutos politécnicos na região."
+    ],
+    "work": [
+      "Mercado em crescimento em tecnologia, indústria e serviços.",
+      "Veja também as vagas das cidades próximas."
+    ],
+    "living": [
+      "Metrô e ônibus atendem bem o centro e a área universitária.",
+      "O clima é mais chuvoso que o de Lisboa: leve casaco."
+    ],
+    "universities": [
+      {
+        "name": "Universidade do Porto",
+        "url": "https://www.up.pt"
+      }
+    ]
+  },
+  {
+    "id": "coimbra",
+    "countryId": "portugal",
+    "name": "Coimbra",
+    "summary": "Cidade universitária tradicional, pequena e com muita vida estudantil.",
+    "costNote": "Tende a ser mais barata que Lisboa e Porto.",
+    "goals": [
+      "graduacao",
+      "pos-graduacao",
+      "intercambio"
+    ],
+    "study": [
+      "A universidade é o centro da cidade e recebe muitos estudantes estrangeiros."
+    ],
+    "work": [
+      "O mercado é menor que o de Lisboa e do Porto: planeje a renda antes de ir."
+    ],
+    "living": [
+      "Dá para fazer quase tudo a pé, mas há ladeiras.",
+      "Estudantes costumam dividir apartamento."
+    ],
+    "universities": [
+      {
+        "name": "Universidade de Coimbra",
+        "url": "https://www.uc.pt"
+      }
+    ]
+  },
+  {
+    "id": "toronto",
+    "countryId": "canada",
+    "name": "Toronto",
+    "summary": "Maior cidade do Canadá, muito diversa, com muitas escolas de idiomas, colleges e universidades.",
+    "costNote": "Uma das cidades mais caras do país, principalmente a moradia.",
+    "goals": [
+      "idioma",
+      "graduacao",
+      "pos-graduacao",
+      "trabalho"
+    ],
+    "study": [
+      "Muitas escolas de inglês e colleges com cursos técnicos.",
+      "Universidades grandes, com cursos de graduação e pós."
+    ],
+    "work": [
+      "Maior mercado de trabalho do país, em áreas como finanças, tecnologia e serviços.",
+      "Confira as regras de trabalho do seu tipo de permissão antes de procurar vaga."
+    ],
+    "living": [
+      "O transporte público é amplo, mas o inverno é rigoroso.",
+      "Muita gente mora em cidades vizinhas para pagar menos."
+    ],
+    "universities": [
+      {
+        "name": "University of Toronto",
+        "url": "https://www.utoronto.ca"
+      },
+      {
+        "name": "Toronto Metropolitan University",
+        "url": "https://www.torontomu.ca"
+      },
+      {
+        "name": "York University",
+        "url": "https://www.yorku.ca"
+      }
+    ]
+  },
+  {
+    "id": "vancouver",
+    "countryId": "canada",
+    "name": "Vancouver",
+    "summary": "Cidade litorânea, cercada de montanhas, com inverno mais ameno que o do resto do Canadá e muita chuva.",
+    "costNote": "Moradia muito cara, em geral no mesmo nível de Toronto.",
+    "goals": [
+      "idioma",
+      "graduacao",
+      "pos-graduacao",
+      "trabalho"
+    ],
+    "study": [
+      "Boa oferta de escolas de inglês, colleges e universidades.",
+      "Forte em áreas como tecnologia, cinema e ciências ambientais."
+    ],
+    "work": [
+      "Vagas em turismo, serviços, tecnologia e cinema.",
+      "Confira as regras de trabalho do seu tipo de permissão."
+    ],
+    "living": [
+      "Boa parte da vida é ao ar livre: trilhas, praias e parques.",
+      "Leve capa de chuva: o inverno é úmido."
+    ],
+    "universities": [
+      {
+        "name": "University of British Columbia",
+        "url": "https://www.ubc.ca"
+      },
+      {
+        "name": "Simon Fraser University",
+        "url": "https://www.sfu.ca"
+      }
+    ]
+  },
+  {
+    "id": "montreal",
+    "countryId": "canada",
+    "name": "Montreal",
+    "summary": "Cidade de língua francesa, com cultura forte e universidades conhecidas. Dá para estudar em francês ou em inglês.",
+    "costNote": "Moradia tende a ser mais barata que em Toronto e Vancouver.",
+    "goals": [
+      "idioma",
+      "graduacao",
+      "pos-graduacao",
+      "trabalho"
+    ],
+    "study": [
+      "Boa escolha para aprender francês ou fazer um curso em francês.",
+      "Várias universidades, algumas com cursos em inglês."
+    ],
+    "work": [
+      "Muitas vagas pedem francês. Em algumas, o inglês basta.",
+      "Tem destaque em tecnologia, jogos e áreas criativas."
+    ],
+    "living": [
+      "O inverno é longo e frio.",
+      "O metrô liga as principais áreas universitárias."
+    ],
+    "universities": [
+      {
+        "name": "McGill University",
+        "url": "https://www.mcgill.ca"
+      },
+      {
+        "name": "Université de Montréal",
+        "url": "https://www.umontreal.ca"
+      }
+    ]
+  },
+  {
+    "id": "dublin",
+    "countryId": "irlanda",
+    "name": "Dublin",
+    "summary": "Capital da Irlanda e principal polo de escolas de inglês, universidades e empresas internacionais.",
+    "costNote": "Moradia muito cara e difícil de achar: comece a busca cedo.",
+    "goals": [
+      "idioma",
+      "graduacao",
+      "pos-graduacao",
+      "trabalho"
+    ],
+    "study": [
+      "Muitas escolas de inglês, com cursos curtos e longos.",
+      "Universidades conhecidas e cursos de pós-graduação."
+    ],
+    "work": [
+      "Sede europeia de muitas empresas de tecnologia e serviços.",
+      "Confira se o seu curso dá direito a trabalhar durante os estudos."
+    ],
+    "living": [
+      "Algumas escolas e universidades oferecem acomodação ou ajudam na busca.",
+      "Chove com frequência durante o ano todo."
+    ],
+    "universities": [
+      {
+        "name": "Trinity College Dublin",
+        "url": "https://www.tcd.ie"
+      },
+      {
+        "name": "University College Dublin",
+        "url": "https://www.ucd.ie"
+      }
+    ]
+  },
+  {
+    "id": "cork",
+    "countryId": "irlanda",
+    "name": "Cork",
+    "summary": "Segunda maior cidade da Irlanda. Menor e mais tranquila que Dublin, com boa vida estudantil.",
+    "costNote": "Tende a custar menos que Dublin.",
+    "goals": [
+      "idioma",
+      "graduacao",
+      "pos-graduacao",
+      "trabalho"
+    ],
+    "study": [
+      "Tem universidade, escolas de inglês e institutos técnicos."
+    ],
+    "work": [
+      "Mercado ligado a tecnologia, farmacêutica e serviços.",
+      "A oferta é menor que a de Dublin."
+    ],
+    "living": [
+      "Centro compacto, fácil de percorrer a pé ou de bicicleta."
+    ],
+    "universities": [
+      {
+        "name": "University College Cork",
+        "url": "https://www.ucc.ie"
+      }
+    ]
+  },
+  {
+    "id": "galway",
+    "countryId": "irlanda",
+    "name": "Galway",
+    "summary": "Cidade pequena na costa oeste, conhecida pela música e pela vida cultural.",
+    "costNote": "Tende a custar menos que Dublin, mas a moradia também é disputada.",
+    "goals": [
+      "idioma",
+      "graduacao",
+      "intercambio"
+    ],
+    "study": [
+      "Boa opção para quem quer um ambiente menor e mais próximo da natureza."
+    ],
+    "work": [
+      "O mercado é pequeno: vagas aparecem mais em turismo, serviços e tecnologia."
+    ],
+    "living": [
+      "Vida social concentrada no centro, a pé.",
+      "O tempo é chuvoso e ventoso."
+    ],
+    "universities": [
+      {
+        "name": "University of Galway",
+        "url": "https://www.universityofgalway.ie"
+      }
+    ]
+  },
+  {
+    "id": "berlim",
+    "countryId": "alemanha",
+    "name": "Berlim",
+    "summary": "Capital da Alemanha, muito internacional, com cena de startups e cultura. Dá para viver em inglês no dia a dia, mas aprender alemão ajuda muito.",
+    "costNote": "Mais barata que Munique, mas a moradia vem ficando difícil.",
+    "goals": [
+      "idioma",
+      "graduacao",
+      "pos-graduacao",
+      "trabalho"
+    ],
+    "study": [
+      "Várias universidades públicas e cursos em inglês, principalmente na pós.",
+      "Há escolas de alemão para estrangeiros."
+    ],
+    "work": [
+      "Forte em startups, tecnologia, criação e serviços.",
+      "Em muitas vagas, o alemão é exigido."
+    ],
+    "living": [
+      "O transporte público funciona bem e cobre a cidade toda.",
+      "Reserve tempo para achar moradia: a concorrência é alta."
+    ],
+    "universities": [
+      {
+        "name": "Humboldt-Universität zu Berlin",
+        "url": "https://www.hu-berlin.de"
+      },
+      {
+        "name": "Technische Universität Berlin",
+        "url": "https://www.tu-berlin.de"
+      },
+      {
+        "name": "Freie Universität Berlin",
+        "url": "https://www.fu-berlin.de"
+      }
+    ]
+  },
+  {
+    "id": "munique",
+    "countryId": "alemanha",
+    "name": "Munique",
+    "summary": "Cidade rica do sul da Alemanha, com universidades técnicas fortes e muita indústria.",
+    "costNote": "Uma das cidades mais caras da Alemanha, principalmente a moradia.",
+    "goals": [
+      "graduacao",
+      "pos-graduacao",
+      "trabalho"
+    ],
+    "study": [
+      "Universidades de destaque em engenharia, ciências e medicina."
+    ],
+    "work": [
+      "Muitas empresas de engenharia, automóveis e tecnologia.",
+      "O alemão costuma ser exigido."
+    ],
+    "living": [
+      "Veja se a universidade oferece vaga em residência estudantil.",
+      "Perto dos Alpes, com muitas opções de atividades ao ar livre."
+    ],
+    "universities": [
+      {
+        "name": "Technische Universität München",
+        "url": "https://www.tum.de"
+      },
+      {
+        "name": "Ludwig-Maximilians-Universität München",
+        "url": "https://www.lmu.de"
+      }
+    ]
+  },
+  {
+    "id": "heidelberg",
+    "countryId": "alemanha",
+    "name": "Heidelberg",
+    "summary": "Cidade pequena e histórica, com uma das universidades mais antigas da Alemanha.",
+    "costNote": "Mais barata que Munique, mas a moradia estudantil é disputada.",
+    "goals": [
+      "graduacao",
+      "pos-graduacao",
+      "idioma"
+    ],
+    "study": [
+      "Ambiente universitário forte, bom para quem prefere uma cidade menor."
+    ],
+    "work": [
+      "O mercado é menor. Cidades próximas ampliam as opções."
+    ],
+    "living": [
+      "Cidade compacta, fácil de percorrer de bicicleta."
+    ],
+    "universities": [
+      {
+        "name": "Universität Heidelberg",
+        "url": "https://www.uni-heidelberg.de"
+      }
+    ]
+  },
+  {
+    "id": "madri",
+    "countryId": "espanha",
+    "name": "Madri",
+    "summary": "Capital da Espanha, grande e central, com muitas universidades, escolas de espanhol e empresas.",
+    "costNote": "Moradia mais cara que em outras cidades do país.",
+    "goals": [
+      "idioma",
+      "graduacao",
+      "pos-graduacao",
+      "trabalho"
+    ],
+    "study": [
+      "Muitas escolas de espanhol para estrangeiros.",
+      "Universidades grandes, com graduação e pós."
+    ],
+    "work": [
+      "Maior mercado de trabalho do país.",
+      "Muitas vagas pedem inglês além de espanhol."
+    ],
+    "living": [
+      "Metrô e trem cobrem a cidade e os arredores.",
+      "Dividir apartamento é comum entre estudantes."
+    ],
+    "universities": [
+      {
+        "name": "Universidad Complutense de Madrid",
+        "url": "https://www.ucm.es"
+      },
+      {
+        "name": "Universidad Autónoma de Madrid",
+        "url": "https://www.uam.es"
+      }
+    ]
+  },
+  {
+    "id": "barcelona",
+    "countryId": "espanha",
+    "name": "Barcelona",
+    "summary": "Cidade litorânea, muito procurada por estudantes e turistas, com vida cultural intensa.",
+    "costNote": "Uma das cidades mais caras do país.",
+    "goals": [
+      "idioma",
+      "graduacao",
+      "pos-graduacao",
+      "trabalho"
+    ],
+    "study": [
+      "Escolas de espanhol e de catalão para estrangeiros.",
+      "Parte dos cursos pode ser em catalão: confira o idioma de cada curso."
+    ],
+    "work": [
+      "Forte em turismo, tecnologia e criação.",
+      "Em muitas vagas, o inglês é pedido."
+    ],
+    "living": [
+      "Moradia é disputada: comece a busca cedo.",
+      "Metrô e bicicleta ajudam no dia a dia."
+    ],
+    "universities": [
+      {
+        "name": "Universitat de Barcelona",
+        "url": "https://www.ub.edu"
+      },
+      {
+        "name": "Universitat Autònoma de Barcelona",
+        "url": "https://www.uab.cat"
+      }
+    ]
+  },
+  {
+    "id": "paris",
+    "countryId": "franca",
+    "name": "Paris",
+    "summary": "Capital da França, com universidades, escolas de arte e moda e muita oferta cultural.",
+    "costNote": "A cidade mais cara do país, principalmente a moradia.",
+    "goals": [
+      "idioma",
+      "graduacao",
+      "pos-graduacao",
+      "trabalho"
+    ],
+    "study": [
+      "Muitos cursos de francês para estrangeiros.",
+      "Candidaturas de estrangeiros costumam passar pelo Campus France."
+    ],
+    "work": [
+      "Grande mercado em moda, turismo, finanças e pesquisa.",
+      "O francês costuma ser exigido."
+    ],
+    "living": [
+      "Metrô e trem cobrem a região toda.",
+      "Residências estudantis têm lista de espera: peça cedo."
+    ],
+    "universities": [
+      {
+        "name": "Sorbonne Université",
+        "url": "https://www.sorbonne-universite.fr"
+      },
+      {
+        "name": "Université Paris-Saclay",
+        "url": "https://www.universite-paris-saclay.fr"
+      }
+    ]
+  },
+  {
+    "id": "lyon",
+    "countryId": "franca",
+    "name": "Lyon",
+    "summary": "Terceira maior cidade do país, com muitos estudantes e custo menor que Paris.",
+    "costNote": "Tende a custar menos que Paris.",
+    "goals": [
+      "idioma",
+      "graduacao",
+      "pos-graduacao"
+    ],
+    "study": [
+      "Vários cursos de francês e universidades públicas."
+    ],
+    "work": [
+      "Mercado ligado a indústria, saúde e tecnologia.",
+      "Menor oferta que em Paris."
+    ],
+    "living": [
+      "Cidade com transporte público bom e bairros estudantis."
+    ],
+    "universities": [
+      {
+        "name": "Université Claude Bernard Lyon 1",
+        "url": "https://www.univ-lyon1.fr"
+      },
+      {
+        "name": "Université Lumière Lyon 2",
+        "url": "https://www.univ-lyon2.fr"
+      }
+    ]
+  },
+  {
+    "id": "roma",
+    "countryId": "italia",
+    "name": "Roma",
+    "summary": "Capital da Itália, com universidades grandes, patrimônio histórico e escolas de italiano.",
+    "costNote": "Moradia cara, mas mais barata que em Milão.",
+    "goals": [
+      "idioma",
+      "graduacao",
+      "pos-graduacao"
+    ],
+    "study": [
+      "Escolas de italiano para estrangeiros.",
+      "Universidades de grande porte."
+    ],
+    "work": [
+      "Muitas vagas em turismo e serviços.",
+      "Falar italiano ajuda muito."
+    ],
+    "living": [
+      "Transporte público tem limites: considere morar perto do metrô.",
+      "Dividir apartamento é comum."
+    ],
+    "universities": [
+      {
+        "name": "Sapienza Università di Roma",
+        "url": "https://www.uniroma1.it"
+      }
+    ]
+  },
+  {
+    "id": "bolonha",
+    "countryId": "italia",
+    "name": "Bolonha",
+    "summary": "Cidade universitária histórica, com muitos estudantes e vida social intensa.",
+    "costNote": "Tende a custar menos que Milão e Roma, mas a moradia é disputada.",
+    "goals": [
+      "idioma",
+      "graduacao",
+      "pos-graduacao"
+    ],
+    "study": [
+      "A universidade é a principal da cidade e recebe muitos estrangeiros."
+    ],
+    "work": [
+      "Mercado menor, ligado a indústria e serviços."
+    ],
+    "living": [
+      "Dá para andar a pé pelo centro.",
+      "Procure moradia com antecedência."
+    ],
+    "universities": [
+      {
+        "name": "Università di Bologna",
+        "url": "https://www.unibo.it"
+      }
+    ]
+  },
+  {
+    "id": "londres",
+    "countryId": "reino-unido",
+    "name": "Londres",
+    "summary": "Capital do Reino Unido, com universidades de renome, escolas de inglês e grande mercado de trabalho.",
+    "costNote": "A cidade mais cara do país.",
+    "goals": [
+      "idioma",
+      "graduacao",
+      "pos-graduacao",
+      "trabalho"
+    ],
+    "study": [
+      "Cursos de inglês e universidades de nome.",
+      "Candidaturas de graduação costumam passar pelo UCAS."
+    ],
+    "work": [
+      "Maior mercado de trabalho do país.",
+      "Confira as regras de trabalho do seu visto."
+    ],
+    "living": [
+      "Moradia e transporte pesam no orçamento.",
+      "Muita gente mora fora do centro."
+    ],
+    "universities": [
+      {
+        "name": "University College London",
+        "url": "https://www.ucl.ac.uk"
+      },
+      {
+        "name": "King's College London",
+        "url": "https://www.kcl.ac.uk"
+      }
+    ]
+  },
+  {
+    "id": "edimburgo",
+    "countryId": "reino-unido",
+    "name": "Edimburgo",
+    "summary": "Capital da Escócia, com universidade antiga e centro histórico compacto.",
+    "costNote": "Tende a custar menos que Londres, mas a moradia é disputada.",
+    "goals": [
+      "idioma",
+      "graduacao",
+      "pos-graduacao"
+    ],
+    "study": [
+      "Universidade de destaque e cursos de inglês."
+    ],
+    "work": [
+      "Mercado menor que o de Londres, com vagas em turismo e serviços."
+    ],
+    "living": [
+      "Clima frio e chuvoso, com ventos fortes.",
+      "Dá para andar a pé."
+    ],
+    "universities": [
+      {
+        "name": "University of Edinburgh",
+        "url": "https://www.ed.ac.uk"
+      }
+    ]
+  },
+  {
+    "id": "nova-york",
+    "countryId": "estados-unidos",
+    "name": "Nova York",
+    "summary": "Maior cidade dos EUA, com muitas escolas de inglês, universidades e mercado de trabalho.",
+    "costNote": "Uma das cidades mais caras do mundo.",
+    "goals": [
+      "idioma",
+      "graduacao",
+      "pos-graduacao"
+    ],
+    "study": [
+      "Muitas escolas de inglês e colleges.",
+      "Confirme se a escola está autorizada a receber estudantes estrangeiros."
+    ],
+    "work": [
+      "As regras de trabalho para estudantes são restritas.",
+      "Confirme tudo com a escola."
+    ],
+    "living": [
+      "Metrô funciona o dia todo.",
+      "Moradia é muito cara: muitos dividem quarto."
+    ],
+    "universities": [
+      {
+        "name": "Columbia University",
+        "url": "https://www.columbia.edu"
+      },
+      {
+        "name": "New York University",
+        "url": "https://www.nyu.edu"
+      }
+    ]
+  },
+  {
+    "id": "miami",
+    "countryId": "estados-unidos",
+    "name": "Miami",
+    "summary": "Cidade com muita presença latina, escolas de inglês e clima quente.",
+    "costNote": "Moradia cara, mas pode custar menos que em Nova York.",
+    "goals": [
+      "idioma",
+      "graduacao",
+      "intercambio"
+    ],
+    "study": [
+      "Muitas escolas de inglês.",
+      "Dá para usar o espanhol em muitos lugares, mas o objetivo é praticar inglês."
+    ],
+    "work": [
+      "As regras de trabalho para estudantes são restritas."
+    ],
+    "living": [
+      "Carro ajuda muito, pois o transporte público é limitado.",
+      "Temporada de furacões vai de junho a novembro."
+    ],
+    "universities": [
+      {
+        "name": "University of Miami",
+        "url": "https://www.miami.edu"
+      }
+    ]
+  },
+  {
+    "id": "sydney",
+    "countryId": "australia",
+    "name": "Sydney",
+    "summary": "Maior cidade da Austrália, com praias, universidades e muitas escolas de inglês.",
+    "costNote": "Uma das cidades mais caras do país.",
+    "goals": [
+      "idioma",
+      "graduacao",
+      "pos-graduacao",
+      "trabalho"
+    ],
+    "study": [
+      "Universidades de destaque e cursos de inglês."
+    ],
+    "work": [
+      "Mercado grande em serviços, saúde e tecnologia.",
+      "Estudantes têm limite de horas."
+    ],
+    "living": [
+      "Moradia cara: considere subúrbios com trem até o centro."
+    ],
+    "universities": [
+      {
+        "name": "University of Sydney",
+        "url": "https://www.sydney.edu.au"
+      },
+      {
+        "name": "UNSW Sydney",
+        "url": "https://www.unsw.edu.au"
+      }
+    ]
+  },
+  {
+    "id": "melbourne",
+    "countryId": "australia",
+    "name": "Melbourne",
+    "summary": "Cidade cultural, conhecida pelos cafés, pela arte e pela vida estudantil.",
+    "costNote": "Tende a custar menos que Sydney.",
+    "goals": [
+      "idioma",
+      "graduacao",
+      "pos-graduacao",
+      "trabalho"
+    ],
+    "study": [
+      "Muitas universidades e escolas de inglês."
+    ],
+    "work": [
+      "Mercado grande em serviços, saúde e tecnologia.",
+      "Estudantes têm limite de horas."
+    ],
+    "living": [
+      "Bondes, trens e ônibus cobrem a cidade.",
+      "O tempo muda muito num mesmo dia."
+    ],
+    "universities": [
+      {
+        "name": "University of Melbourne",
+        "url": "https://www.unimelb.edu.au"
+      },
+      {
+        "name": "Monash University",
+        "url": "https://www.monash.edu"
+      }
+    ]
+  },
+  {
+    "id": "auckland",
+    "countryId": "nova-zelandia",
+    "name": "Auckland",
+    "summary": "Maior cidade da Nova Zelândia, com universidades, escolas de inglês e praias.",
+    "costNote": "A cidade mais cara do país.",
+    "goals": [
+      "idioma",
+      "graduacao",
+      "pos-graduacao"
+    ],
+    "study": [
+      "Maior oferta de cursos do país."
+    ],
+    "work": [
+      "Maior mercado do país, mas pequeno em relação a outros destinos."
+    ],
+    "living": [
+      "Transporte público é limitado em áreas afastadas."
+    ],
+    "universities": [
+      {
+        "name": "University of Auckland",
+        "url": "https://www.auckland.ac.nz"
+      }
+    ]
+  },
+  {
+    "id": "wellington",
+    "countryId": "nova-zelandia",
+    "name": "Wellington",
+    "summary": "Capital da Nova Zelândia, compacta, com cena cultural e universidade conhecida.",
+    "costNote": "Moradia costuma ser cara, mas a cidade é pequena.",
+    "goals": [
+      "idioma",
+      "graduacao",
+      "pos-graduacao"
+    ],
+    "study": [
+      "Ambiente universitário forte."
+    ],
+    "work": [
+      "Mercado ligado a governo e serviços."
+    ],
+    "living": [
+      "Dá para andar a pé pelo centro.",
+      "Chove e venta bastante."
+    ],
+    "universities": [
+      {
+        "name": "Victoria University of Wellington",
+        "url": "https://www.wgtn.ac.nz"
+      }
+    ]
+  },
+  {
+    "id": "santiago",
+    "countryId": "chile",
+    "name": "Santiago",
+    "summary": "Capital do Chile, cercada pela cordilheira, com universidades fortes e escolas de espanhol.",
+    "costNote": "Mais barata que a maioria das capitais da Europa e da América do Norte.",
+    "goals": [
+      "idioma",
+      "graduacao",
+      "pos-graduacao",
+      "trabalho"
+    ],
+    "study": [
+      "Boa oferta de cursos de espanhol.",
+      "Universidades de destaque na América Latina."
+    ],
+    "work": [
+      "Maior mercado do país."
+    ],
+    "living": [
+      "O metrô cobre grande parte da cidade.",
+      "A poluição aumenta no inverno."
+    ],
+    "universities": [
+      {
+        "name": "Universidad de Chile",
+        "url": "https://www.uchile.cl"
+      },
+      {
+        "name": "Pontificia Universidad Católica de Chile",
+        "url": "https://www.uc.cl"
+      }
+    ]
+  },
+  {
+    "id": "valparaiso",
+    "countryId": "chile",
+    "name": "Valparaíso",
+    "summary": "Cidade portuária no litoral, conhecida pelos morros coloridos e pela vida cultural.",
+    "costNote": "Tende a custar menos que Santiago.",
+    "goals": [
+      "idioma",
+      "graduacao",
+      "intercambio"
+    ],
+    "study": [
+      "Universidades e escolas de espanhol."
+    ],
+    "work": [
+      "Mercado pequeno: planeje a renda antes de ir."
+    ],
+    "living": [
+      "Muitas ladeiras e escadas.",
+      "Santiago fica a poucas horas por estrada."
+    ],
+    "universities": [
+      {
+        "name": "Pontificia Universidad Católica de Valparaíso",
+        "url": "https://www.pucv.cl"
+      }
+    ]
+  },
+  {
+    "id": "toquio",
+    "countryId": "japao",
+    "name": "Tóquio",
+    "summary": "Capital do Japão, muito grande, com escolas de japonês, universidades e empresas.",
+    "costNote": "Moradia cara, principalmente no centro.",
+    "goals": [
+      "idioma",
+      "graduacao",
+      "pos-graduacao",
+      "trabalho"
+    ],
+    "study": [
+      "Muitas escolas de japonês.",
+      "Alguns cursos de pós são em inglês."
+    ],
+    "work": [
+      "Estudantes precisam de autorização específica para trabalhar.",
+      "O japonês é exigido na maioria das vagas."
+    ],
+    "living": [
+      "O trem e o metrô cobrem tudo e funcionam com muita pontualidade.",
+      "Moradias são pequenas."
+    ],
+    "universities": [
+      {
+        "name": "The University of Tokyo",
+        "url": "https://www.u-tokyo.ac.jp"
+      },
+      {
+        "name": "Waseda University",
+        "url": "https://www.waseda.jp"
+      }
+    ]
+  },
+  {
+    "id": "osaka",
+    "countryId": "japao",
+    "name": "Osaka",
+    "summary": "Segunda maior área urbana do Japão, conhecida pela culinária e pelo clima mais descontraído.",
+    "costNote": "Tende a custar menos que Tóquio.",
+    "goals": [
+      "idioma",
+      "graduacao",
+      "pos-graduacao"
+    ],
+    "study": [
+      "Escolas de japonês e universidades grandes."
+    ],
+    "work": [
+      "Estudantes precisam de autorização específica para trabalhar."
+    ],
+    "living": [
+      "Transporte público bom e bairros estudantis."
+    ],
+    "universities": [
+      {
+        "name": "Osaka University",
+        "url": "https://www.osaka-u.ac.jp"
+      }
+    ]
+  },
+  {
+    "id": "buenos-aires",
+    "countryId": "argentina",
+    "name": "Buenos Aires",
+    "summary": "Capital da Argentina, com muitas universidades públicas, escolas de espanhol e vida cultural.",
+    "costNote": "Costuma ser mais barata que as capitais europeias, mas o câmbio varia muito.",
+    "goals": [
+      "idioma",
+      "graduacao",
+      "pos-graduacao",
+      "trabalho"
+    ],
+    "study": [
+      "Escolas de espanhol para estrangeiros.",
+      "Universidades públicas muito procuradas."
+    ],
+    "work": [
+      "Confira as regras de trabalho do seu tipo de residência."
+    ],
+    "living": [
+      "Metrô, ônibus e trem atendem a cidade.",
+      "Confira a segurança do bairro antes de alugar."
+    ],
+    "universities": [
+      {
+        "name": "Universidad de Buenos Aires",
+        "url": "https://www.uba.ar"
+      }
+    ]
+  },
+  {
+    "id": "cordoba",
+    "countryId": "argentina",
+    "name": "Córdoba",
+    "summary": "Segunda maior cidade do país, com universidade antiga e vida estudantil forte.",
+    "costNote": "Tende a custar menos que Buenos Aires.",
+    "goals": [
+      "idioma",
+      "graduacao",
+      "pos-graduacao"
+    ],
+    "study": [
+      "Universidade pública grande e escolas de espanhol."
+    ],
+    "work": [
+      "Mercado menor que o de Buenos Aires."
+    ],
+    "living": [
+      "Muitos estudantes dividem apartamento."
+    ],
+    "universities": [
+      {
+        "name": "Universidad Nacional de Córdoba",
+        "url": "https://www.unc.edu.ar"
+      }
+    ]
+  }
+]
