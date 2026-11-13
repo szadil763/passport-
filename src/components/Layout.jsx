@@ -58,7 +58,7 @@ export default function Layout() {
       <main id="conteudo" className="page" ref={mainRef} tabIndex={-1}>
         <Outlet />
         <footer className="site-footer">
-          <p>Feito para alunos e para quem quer expandir o conhecimento e as fronteiras.</p>
+          <p>Feito para os meus alunos e ex-alunos, e para quem quer expandir o conhecimento e as fronteiras.</p>
           <p>
             {AUTHOR && <>Desenvolvido por {AUTHOR} · </>}
             <Link to="/mitos">Mitos e verdades</Link> · <Link to="/sobre">Sobre e créditos</Link>

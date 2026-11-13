@@ -25,7 +25,7 @@ export default function About() {
       <section aria-labelledby="para-quem">
         <h2 id="para-quem">Para quem é</h2>
         <p>
-          Para alunos, ex-alunos e quem quer ir além do que conhece. Estudar fora é mais possível do que
+          Para os meus alunos e ex-alunos, e para quem quer ir além do que conhece. Estudar fora é mais possível do que
           parece, com ou sem dinheiro. O Carimbo existe para mostrar os caminhos.{' '}
           <Link to="/mitos">Veja os mitos e as verdades.</Link>
         </p>

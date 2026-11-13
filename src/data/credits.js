@@ -1,6 +1,6 @@
 // Textos da página "Sobre e créditos".
 // AUTHOR: quem desenvolveu o app (aparece nos créditos e no rodapé). CONTACT: e-mail público de contato.
-export const MISSION = 'O Carimbo foi feito para alunos e para todas as pessoas com interesse em expandir o conhecimento e as fronteiras.';
+export const MISSION = 'O Carimbo foi feito para os meus alunos e ex-alunos, e para todas as pessoas com interesse em expandir o conhecimento e as fronteiras.';
 
 // A história do Carimbo, na voz de quem criou. Um item por parágrafo.
 export const STORY = [
