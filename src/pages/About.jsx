@@ -1,7 +1,7 @@
 // Sobre o Carimbo: para quem é, como o conteúdo é feito, privacidade e créditos.
 import { Link } from 'react-router-dom';
 import { usePageTitle } from '../hooks/usePageTitle';
-import { AUTHOR, CONTACT, MISSION, TECH } from '../data/credits';
+import { AUTHOR, CONTACT, MISSION, STORY, TECH } from '../data/credits';
 import { Logo } from '../components/Icons';
 
 export default function About() {
@@ -12,11 +12,22 @@ export default function About() {
       <h1>Sobre o Carimbo</h1>
       <p className="lead">{MISSION}</p>
 
+      {STORY.length > 0 && (
+        <section aria-labelledby="historia">
+          <h2 id="historia">A história do Carimbo</h2>
+          <blockquote className="story">
+            {STORY.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+            {AUTHOR && <footer>{AUTHOR}</footer>}
+          </blockquote>
+        </section>
+      )}
+
       <section aria-labelledby="para-quem">
         <h2 id="para-quem">Para quem é</h2>
         <p>
-          Estudar fora é mais possível do que parece, com ou sem dinheiro. O Carimbo existe para mostrar os
-          caminhos. <Link to="/mitos">Veja os mitos e as verdades.</Link>
+          Para alunos, ex-alunos e quem quer ir além do que conhece. Estudar fora é mais possível do que
+          parece, com ou sem dinheiro. O Carimbo existe para mostrar os caminhos.{' '}
+          <Link to="/mitos">Veja os mitos e as verdades.</Link>
         </p>
         <p>
           Para quem quer aprender um idioma, fazer intercâmbio, estudar ou trabalhar fora do Brasil, e para
