@@ -7,6 +7,7 @@ import { usePageTitle } from '../hooks/usePageTitle';
 import { stepsFor } from '../data/roadmap';
 import { CERTIFICATES, labelOf, PRICE_TYPES } from '../data/options';
 import { daysUntil, deadlineText } from '../utils/dates';
+import { MYTHS } from '../data/myths';
 import { Logo } from '../components/Icons';
 import CountryCard from '../components/CountryCard';
 import { Loading } from '../components/LoadState';
@@ -44,8 +45,8 @@ function Landing() {
         <Logo className="hero-stamp" />
         <h1>Seu passaporte para estudar e trabalhar fora.</h1>
         <p className="muted">
-          Destinos, cidades, cursos online, bolsas e um passo a passo até a chegada. Tudo em português, com
-          links oficiais.
+          Estudar fora é mais possível do que parece, com ou sem dinheiro. Veja destinos, cidades, cursos
+          online, bolsas e um passo a passo até a chegada. Tudo em português, com links oficiais.
         </p>
         <div className="hero-actions">
           <Link to="/destinos" className="btn btn-primary">Explorar destinos</Link>
@@ -60,6 +61,18 @@ function Landing() {
           ))}
         </ul>
       )}
+
+      <section className="panel myth-panel" aria-labelledby="mitos-home">
+        <h2 id="mitos-home">Mito: estudar fora é para poucos</h2>
+        <p>
+          Existem caminhos com pouco ou nenhum custo. E conseguir uma bolsa lá fora pode ser mais acessível do
+          que parece: muitas instituições avaliam a sua história completa, e não só uma prova longa.
+        </p>
+        <ul className="bullets">
+          {MYTHS.slice(0, 3).map((m) => <li key={m.id}><strong>Mito:</strong> {m.myth}</li>)}
+        </ul>
+        <p><Link to="/mitos" className="btn btn-primary btn-inline">Ver mitos e verdades</Link></p>
+      </section>
 
       <section aria-labelledby="como-funciona">
         <h2 id="como-funciona">Como funciona</h2>
@@ -199,7 +212,10 @@ function Dashboard() {
         </section>
       )}
 
-      <p><Link to="/favoritos">Meus favoritos</Link> · <Link to="/orcamento">Meu orçamento</Link></p>
+      <p>
+        <Link to="/mitos">Mitos e verdades</Link> · <Link to="/favoritos">Meus favoritos</Link> ·{' '}
+        <Link to="/orcamento">Meu orçamento</Link>
+      </p>
     </div>
   );
 }

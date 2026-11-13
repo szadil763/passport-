@@ -18,6 +18,7 @@ import Courses from './pages/Courses';
 import Destinations from './pages/Destinations';
 import Favorites from './pages/Favorites';
 import Home from './pages/Home';
+import Myths from './pages/Myths';
 import Login from './pages/Login';
 import Place from './pages/Place';
 import Places from './pages/Places';
@@ -69,6 +70,7 @@ function AppRoutes() {
         <Route path="editais" element={<Calls />} />
         <Route path="canais" element={<Channels />} />
         <Route path="recursos" element={<Resources />} />
+        <Route path="mitos" element={<Myths />} />
         <Route path="sobre" element={<About />} />
         {/* Pessoais */}
         <Route path="caminho" element={<RequireAuth><Roadmap /></RequireAuth>} />

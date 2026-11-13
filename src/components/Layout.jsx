@@ -61,7 +61,7 @@ export default function Layout() {
           <p>Feito para alunos e para quem quer expandir o conhecimento e as fronteiras.</p>
           <p>
             {AUTHOR && <>Desenvolvido por {AUTHOR} · </>}
-            <Link to="/sobre">Sobre e créditos</Link>
+            <Link to="/mitos">Mitos e verdades</Link> · <Link to="/sobre">Sobre e créditos</Link>
           </p>
         </footer>
       </main>
