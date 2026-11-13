@@ -20,6 +20,27 @@ export const MYTHS = [
     links: [{ to: '/mitos#holistico', label: 'Entender o processo holístico' }],
   },
   {
+    id: 'prova',
+    myth: 'Eu entendo a matéria, mas vou mal na prova, então não sirvo.',
+    truth:
+      'Uma prova mede um dia, e não mede tudo o que você sabe. Muitos processos no exterior olham o conjunto: notas ao longo dos anos, projetos, cartas de recomendação e a sua história. Isso não acaba com a competição, mas dá mais de um jeito de mostrar o que você sabe.',
+    links: [
+      { to: '/mitos#holistico', label: 'Entender o processo holístico' },
+      { to: '/editais', label: 'Ver bolsas' },
+    ],
+  },
+  {
+    id: 'redacao',
+    myth: 'Sou ruim em redação, então não consigo.',
+    truth:
+      'Muitos processos pedem um texto pessoal, mas ele é diferente de uma prova: você escreve com tempo, revisa, pede ajuda e conta a sua própria história. Muitas vezes é em inglês, o que exige treino. Os testes de idioma, como IELTS e TOEFL, têm uma parte de escrita com tempo marcado, e isso também se treina. Escrever melhora com prática, e há cursos e canais que ajudam.',
+    links: [
+      { to: '/cursos', label: 'Ver cursos de idioma' },
+      { to: '/recursos', label: 'Ver testes de idioma' },
+      { to: '/canais', label: 'Ver canais' },
+    ],
+  },
+  {
     id: 'ingles',
     myth: 'Preciso falar inglês perfeito.',
     truth:
