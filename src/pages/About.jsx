@@ -15,6 +15,10 @@ export default function About() {
       <section aria-labelledby="para-quem">
         <h2 id="para-quem">Para quem é</h2>
         <p>
+          Estudar fora é mais possível do que parece, com ou sem dinheiro. O Carimbo existe para mostrar os
+          caminhos. <Link to="/mitos">Veja os mitos e as verdades.</Link>
+        </p>
+        <p>
           Para quem quer aprender um idioma, fazer intercâmbio, estudar ou trabalhar fora do Brasil, e para
           professores e escolas que apoiam esses alunos. O app reúne destinos, cidades, cursos online e bolsas
           em português, com um passo a passo até a chegada.

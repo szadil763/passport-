@@ -56,7 +56,9 @@ export default function Destinations() {
           ? 'Os países que falam os idiomas do seu perfil aparecem primeiro.'
           : 'Compare idioma, custo e regras de visto.'}
       </p>
-      <p><Link to="/comparar">Comparar países lado a lado</Link></p>
+      <p>
+        <Link to="/comparar">Comparar países lado a lado</Link> · <Link to="/mitos">Acha que é difícil? Veja mitos e verdades</Link>
+      </p>
 
       <div className="filters">
         <SearchField label="Buscar país" value={query} onChange={setQuery} placeholder="Ex.: Canadá, francês" />

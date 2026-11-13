@@ -6,6 +6,7 @@ import { LEVELS, labelOf } from '../data/options';
 import { addDaysIso, daysUntil, deadlineText, formatDate, isIsoDate } from '../utils/dates';
 import { buildIcs, downloadIcs } from '../utils/ics';
 import { matchesQuery } from '../utils/text';
+import { Link } from 'react-router-dom';
 import { IconCalendar } from '../components/Icons';
 import ChipGroup from '../components/ChipGroup';
 import FavoriteButton from '../components/FavoriteButton';
@@ -116,6 +117,10 @@ export default function Calls() {
       <p className="muted">
         Programas que financiam estudo e pesquisa no exterior. Os prazos mudam a cada ciclo: confirme no site
         oficial e crie um lembrete no calendário.
+      </p>
+      <p className="panel notice-soft">
+        Muitas instituições estrangeiras escolhem de forma holística: olham a sua história completa, e não só
+        uma prova. <Link to="/mitos#holistico">Entenda como isso ajuda.</Link>
       </p>
 
       <div className="filters">

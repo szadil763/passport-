@@ -27,12 +27,12 @@ Para usar os emuladores no app, coloque `VITE_USE_EMULATORS=true` no `.env`.
 - `src/firebase.js`: inicialização do Firebase (lê o `.env`)
 - `src/contexts/AuthContext.jsx`: usuário logado + perfil `users/{uid}` em tempo real, `saveProfile()` com merge
 - `src/hooks/useFirestore.js`: `useCollection` e `useDocument` com cache em memória, loading e erro; `useFavorites.js`: favoritos em `users/{uid}.favorites`; `usePageTitle.js`: título da aba
-- `src/data/`: opções fixas (`options.js`), etapas do caminho (`roadmap.js`), itens e contas do orçamento (`budget.js`), mensagens de erro do Auth (`authErrors.js`)
+- `src/data/`: textos de `myths.js` (mitos e verdades), `credits.js`, opções fixas (`options.js`), etapas do caminho (`roadmap.js`), itens e contas do orçamento (`budget.js`), mensagens de erro do Auth (`authErrors.js`)
 - `src/admin/`: painel admin. `schemas.js` (campos de cada coleção), `forms.js` (conversão e validação, testada), `useFresh.js` (leitura sem cache). Para um campo novo em uma coleção, acrescente-o em `schemas.js`.
 - `src/utils/`: `text.js` (busca sem acento), `dates.js` (prazos de editais), `ics.js` (lembrete de calendário), `analytics.js` e `track.js` (contador de acessos)
 - `public/`: `manifest.webmanifest`, ícones e `sw.js` (PWA: app abre sem internet)
 - `src/components/`: `Layout`, `Stamp` (carimbo SVG), `ChipGroup`, `VisaNotice`, `LoadState`, `Icons`, `PlaceRow`, `FavoriteButton`, `CountryCard`, `CountryStamp`, `CostScale`, `SearchField`, `SelectField`, `ShareButton`, `StudyNav`
-- `src/pages/`: `Login`, `Profile` (onboarding e aba Perfil), `Roadmap`, `Destinations`, `Country`, `Home` (landing pública e painel), `Compare`, `Places`, `Place`, `Courses`, `Calls`, `Channels`, `Resources`, `Favorites`, `Budget`, `About` (créditos), `admin/` (`AdminHome`, `AdminList`, `AdminEdit`)
+- `src/pages/`: `Login`, `Profile` (onboarding e aba Perfil), `Roadmap`, `Destinations`, `Country`, `Home` (landing pública e painel), `Compare`, `Places`, `Place`, `Courses`, `Calls`, `Channels`, `Resources`, `Favorites`, `Budget`, `About` (créditos), `Myths` (mitos e verdades), `admin/` (`AdminHome`, `AdminList`, `AdminEdit`)
 - `seed/`: conteúdo curado (`countries`, `places`, `courses`, `calls`, `channels`, `resources`); `scripts/seed.mjs`: envia o seed com firebase-admin
 
 ## Modelo de dados (Firestore)
@@ -52,7 +52,7 @@ Ao adicionar campos em `users/{uid}`, atualize também `validProfile()` em `fire
 
 ## Rotas
 - Públicas (sem login): `/`, `/destinos`, `/destinos/:id`, `/comparar`, `/lugares`, `/lugares/:id`, `/cursos`, `/editais`, `/canais`, `/recursos`, `/entrar`.
-- Também públicas: `/sobre` (créditos e missão; quem desenvolveu (`AUTHOR`) e o e-mail de contato (`CONTACT`) ficam em `src/data/credits.js`).
+- Também públicas: `/mitos` (mitos e verdades sobre estudar fora; textos em `src/data/myths.js`), `/sobre` (créditos e missão; quem desenvolveu (`AUTHOR`) e o e-mail de contato (`CONTACT`) ficam em `src/data/credits.js`).
 - Pessoais (`RequireAuth` em `App.jsx`): `/caminho`, `/orcamento`, `/favoritos`, `/perfil`. Quem não tem objetivo salvo faz o onboarding.
 - Admin (`RequireAdmin`): `/admin`, `/admin/acessos` (contador de acessos), `/admin/:colecao`, `/admin/:colecao/:id` (`novo` cria).
 
@@ -62,6 +62,7 @@ Ao adicionar campos em `users/{uid}`, atualize também `validProfile()` em `fire
 - Textos: voz ativa, frases curtas, botões dizem exatamente o que fazem.
 - Mensagens de erro explicam o que aconteceu e o que a pessoa pode fazer.
 - Editais: nunca inventar datas. `opensAt` e `closesAt` ficam vazios até alguém confirmar no site oficial; a tela mostra "confirme no site oficial".
+- Mitos e verdades: o tom é encorajar sem prometer. Dizer o que costuma acontecer, com ressalvas, e mandar conferir nas fontes oficiais. Não afirmar que bolsa lá fora é sempre mais fácil.
 - Cursos de diploma online: manter o aviso de revalidação do diploma.
 - Canais do YouTube: só entram canais cujo endereço foi confirmado. Canal de agência ou de quem vende mentoria leva o aviso (`kind: agencia` ou `note`). O app não tem vínculo com os canais.
 - Visto: sempre com link oficial do governo e o aviso "Regras de visto mudam. Confirme no site oficial." (componente `VisaNotice`). Não inventar valores nem prazos.
