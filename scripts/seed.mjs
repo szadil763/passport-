@@ -13,6 +13,7 @@
  *        npm run seed:emulador
  *
  * O script é idempotente: rodar de novo sobrescreve os mesmos documentos.
+ * Com --ids=a,b (npm run seed -- --ids=a,b), grava só esses itens, sobrescrevendo.
  * Com --somente-novos (npm run seed -- --somente-novos), só grava o que ainda não existe:
  * use depois de editar conteúdo pelo painel admin, para não desfazer as edições.
  */
@@ -57,7 +58,13 @@ async function load(file) {
 // --somente-novos: não mexe em documentos que já existem (preserva o que foi editado no painel admin).
 const onlyNew = process.argv.includes('--somente-novos');
 
-async function seed(collectionName, items) {
+// --ids=a,b,c: grava só esses itens (sobrescrevendo), em qualquer coleção. Use para publicar correções
+// pontuais sem desfazer o resto do que foi editado no painel admin.
+const idsArg = process.argv.find((a) => a.startsWith('--ids='));
+const onlyIds = idsArg ? new Set(idsArg.slice(6).split(',').map((x) => x.trim()).filter(Boolean)) : null;
+
+async function seed(collectionName, allItems) {
+  const items = onlyIds ? allItems.filter((i) => onlyIds.has(i.id)) : allItems;
   const batch = db.batch();
   let written = 0;
   let skipped = 0;

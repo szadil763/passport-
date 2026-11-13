@@ -189,8 +189,8 @@
     "levels": [
       "pos-graduacao"
     ],
-    "officialUrl": "https://www.rotary.org",
-    "description": "Bolsas para mestrado e certificado em estudos de paz e desenvolvimento, em universidades parceiras do Rotary.",
+    "officialUrl": "https://www.rotary.org/pt/our-programs/peace-fellowships",
+    "description": "Bolsas do Rotary para mestrado e certificado em estudos de paz e desenvolvimento. Pedem experiência profissional na área e não cobrem doutorado. A inscrição é pelo site do Rotary.",
     "opensAt": null,
     "closesAt": null,
     "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
@@ -206,7 +206,7 @@
       "pos-graduacao"
     ],
     "officialUrl": "https://www.rhodeshouse.ox.ac.uk",
-    "description": "Bolsas para estudar na Universidade de Oxford. A seleção é feita por país: confira se há processo aberto para brasileiros.",
+    "description": "Bolsas de pós-graduação na Universidade de Oxford. Brasileiros concorrem na categoria global e precisam ser indicados por uma universidade brasileira. Confira o processo na Rhodes Trust e na sua universidade.",
     "opensAt": null,
     "closesAt": null,
     "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
@@ -251,8 +251,8 @@
       "pos-graduacao",
       "pesquisa"
     ],
-    "officialUrl": "https://www.campuschina.org",
-    "description": "Bolsas do governo chinês para estudar na China. Confira os programas e os requisitos atuais.",
+    "officialUrl": "https://www.csc.edu.cn",
+    "description": "Bolsas do governo chinês, administradas pelo China Scholarship Council. A Embaixada da China no Brasil divulga os processos. Confira o ciclo atual.",
     "opensAt": null,
     "closesAt": null,
     "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
@@ -267,7 +267,7 @@
       "pos-graduacao"
     ],
     "officialUrl": "https://www.studyinkorea.go.kr",
-    "description": "Bolsas do governo sul-coreano para estudar na Coreia do Sul. Veja os programas abertos.",
+    "description": "Bolsas do governo sul-coreano para graduação e pós-graduação. O Brasil tem vagas, e a inscrição varia por nível: pela Embaixada da Coreia ou pelas universidades. Os prazos costumam fechar no segundo semestre.",
     "opensAt": null,
     "closesAt": null,
     "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
@@ -283,22 +283,22 @@
       "pesquisa"
     ],
     "officialUrl": "https://turkiyeburslari.gov.tr",
-    "description": "Bolsas do governo turco para estudantes internacionais. Confira as categorias e os requisitos.",
+    "description": "Bolsas do governo turco para graduação, mestrado e doutorado. A candidatura é individual, pelo site oficial, e o prazo costuma fechar no início do ano. Confira as regras do ciclo atual.",
     "opensAt": null,
     "closesAt": null,
     "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
   },
   {
     "id": "holland-scholarship",
-    "title": "Holland Scholarship",
+    "title": "NL Scholarship (antiga Holland Scholarship)",
     "organization": "Governo dos Países Baixos",
     "countries": [],
     "levels": [
       "graduacao",
       "pos-graduacao"
     ],
-    "officialUrl": "https://www.studyinnl.org",
-    "description": "Bolsa para estudantes de fora do Espaço Econômico Europeu que estudam em instituições dos Países Baixos. Confira as instituições participantes.",
+    "officialUrl": "https://www.studyinnl.org/finances/nl-scholarship",
+    "description": "Bolsa para estudantes de fora do Espaço Econômico Europeu, o que inclui brasileiros. Cada instituição participante faz a própria seleção: confira a lista e os prazos no site oficial.",
     "opensAt": null,
     "closesAt": null,
     "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
@@ -314,7 +314,7 @@
       "pesquisa"
     ],
     "officialUrl": "https://stipendiumhungaricum.hu",
-    "description": "Bolsas do governo húngaro para estudantes de vários países. Veja se o Brasil participa no ciclo atual.",
+    "description": "Bolsas do governo húngaro para graduação, mestrado e doutorado. Brasileiros se inscrevem em um processo próprio, que costuma passar pela CAPES. Confira o edital do ano.",
     "opensAt": null,
     "closesAt": null,
     "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
@@ -332,7 +332,7 @@
       "pesquisa"
     ],
     "officialUrl": "https://studyinitaly.esteri.it",
-    "description": "Bolsas do governo italiano para estudar na Itália. Confira se há vagas para brasileiros no ciclo atual.",
+    "description": "Bolsas do governo italiano para mestrado, doutorado, pesquisa e cursos de italiano. O Brasil consta entre os países elegíveis, e a inscrição é feita pelo portal Study in Italy. Confira o edital do ano.",
     "opensAt": null,
     "closesAt": null,
     "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
@@ -346,8 +346,8 @@
       "pos-graduacao",
       "pesquisa"
     ],
-    "officialUrl": "https://www.sbfi.admin.ch",
-    "description": "Bolsas do governo suíço para pesquisa e pós-graduação. Veja a lista de países elegíveis no site oficial.",
+    "officialUrl": "https://www.sbfi.admin.ch/scholarships_en",
+    "description": "Bolsas do governo suíço para pesquisa e doutorado. O Brasil está na lista de países elegíveis. Confira o ciclo atual no site oficial e use só os canais oficiais: há ofertas falsas.",
     "opensAt": null,
     "closesAt": null,
     "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
@@ -361,7 +361,7 @@
       "pos-graduacao"
     ],
     "officialUrl": "https://fundacaolemann.org.br",
-    "description": "Programas para brasileiros estudarem em universidades parceiras no exterior. Confira os que estão abertos.",
+    "description": "Apoia brasileiros em mestrado e doutorado no exterior. Inclui a Bolsa Alcance, um auxílio complementar para pessoas negras e indígenas já aprovadas. Confira os programas e os requisitos da chamada atual.",
     "opensAt": null,
     "closesAt": null,
     "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."
@@ -375,7 +375,7 @@
       "pos-graduacao"
     ],
     "officialUrl": "https://www.oas.org",
-    "description": "A OEA oferece bolsas acadêmicas em parceria com universidades. Confira os programas abertos.",
+    "description": "A OEA oferece bolsas em parceria com universidades para cidadãos dos países membros, o que inclui o Brasil. Cada chamada tem regras próprias. O programa PAEC é para estrangeiros estudarem no Brasil, não o contrário.",
     "opensAt": null,
     "closesAt": null,
     "datesNote": "As datas mudam a cada ciclo. Confirme no site oficial."

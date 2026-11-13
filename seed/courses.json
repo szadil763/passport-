@@ -347,7 +347,7 @@
     "priceType": "gratuito",
     "certificate": "nenhum",
     "officialUrl": "https://oyc.yale.edu",
-    "description": "Aulas gravadas de disciplinas de Yale, de graça e abertas a qualquer pessoa."
+    "description": "Aulas gravadas de disciplinas de Yale, de graça e sem cadastro. Parte dos cursos migrou para o Coursera. Não dá certificado."
   },
   {
     "id": "delft-online",
@@ -402,7 +402,7 @@
     ],
     "priceType": "gratuito",
     "certificate": "nenhum",
-    "officialUrl": "https://www3.nhk.or.jp/nhkworld/en/learnjapanese/",
+    "officialUrl": "https://www.nhk.or.jp/lesson/en/",
     "description": "Lições curtas de japonês para iniciantes, da emissora pública do Japão, de graça."
   },
   {
