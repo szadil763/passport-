@@ -18,7 +18,7 @@ Toda a interface, os comentários de código e a documentação são em **portug
 - `npm run preview`: serve o build localmente
 - `npm run emulators`: emuladores de Auth e Firestore (projeto `demo-carimbo`; precisa do Firebase CLI e de Java)
 - `npm run seed:emulador`: envia `seed/*.json` para o emulador
-- `npm run seed`: envia `seed/*.json` para o Firestore de produção (usa `serviceAccount.json` ou `GOOGLE_APPLICATION_CREDENTIALS`). Com `-- --somente-novos`, só grava o que ainda não existe
+- `npm run seed`: envia `seed/*.json` para o Firestore de produção (usa `serviceAccount.json` ou `GOOGLE_APPLICATION_CREDENTIALS`). Com `-- --somente-novos`, só grava o que ainda não existe; com `-- --ids=a,b`, grava só esses itens (sobrescrevendo)
 - `npm run deploy`: build + deploy manual de Hosting e regras do Firestore
 
 Para usar os emuladores no app, coloque `VITE_USE_EMULATORS=true` no `.env`.
