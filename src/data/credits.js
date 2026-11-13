@@ -5,7 +5,7 @@ export const MISSION = 'O Carimbo foi feito para os meus alunos e ex-alunos, e p
 // A história do Carimbo, na voz de quem criou. Um item por parágrafo.
 export const STORY = [
   'Sou professor e convivo com muitos alunos que perderam a esperança. Vejo falta de confiança nos processos seletivos das universidades brasileiras. E vejo que muitos nem imaginam uma carreira e uma vida de estudos fora do país.',
-  'Sempre que posso, mostro a eles que é possível, sim, estudar lá fora. Muitas vezes por caminhos mais acessíveis do que o processo a que estão acostumados.',
+  'Sempre que posso, procuro empoderá-los mostrando que, sim, é possível estudar lá fora. Muitas vezes por caminhos mais acessíveis do que o processo a que estão acostumados.',
   'O Carimbo nasceu para mostrar esse caminho. Ele é para os meus alunos, para os ex-alunos que se empoderaram e para todas as pessoas que querem expandir o conhecimento e as fronteiras.',
 ];
 
